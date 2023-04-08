@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="css/header.css" />
-  <link rel="stylesheet" href="css/navigation.css" />
-  <link rel="stylesheet" href="css/login.css" />
-  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/navigation.css">
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="css/footer.css">
   
 </head>
 <body >
