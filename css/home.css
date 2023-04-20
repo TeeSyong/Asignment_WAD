@@ -1,8 +1,19 @@
 #myVideo {
-    position: fixed;
-    right: 50%;
-    width: 60%;
-    height: 60%;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+video {
+    width:100%;
+    height:100%;
+}
+
+#videoWords >h1, #videoWords>p {
+    position:absolute;
+    bottom: 120px;
+    left: 16px;
+
 }
 
 body {
@@ -85,7 +96,6 @@ body {
 }
 
 .flex-container > div { 
-    border:1px solid black;  /*temporary*/
     position:relative;
     width:380px;
     height:454px;
@@ -130,10 +140,19 @@ body {
     transition: .3s;
 }
 
-a, a:link, a:visited, a:hover {
+.middle > a, .middle > a:link, .middle > a:visited, .middle > a:hover {
     color:white;
 }
 
-a:visited {
+.middle > a:visited {
     color:#f6f6f6;
+}
+
+.LoginSignUpWords {
+    text-align: center;
+
+}
+
+.LoginSignUpButton {
+    
 }

@@ -16,16 +16,25 @@
 <?php include('includes/navigation.php'); ?>
 
 <!--video -->
-<!-- <div id = "myVideo">
-<video autoplay muted loop>8
-    <source src="images/home/banner_video.mp4" type="video/mp4">
-</video>
-</div>* -->
+<div id = "myVideo">
+    <video autoplay muted>
+        <source src="images/home/banner_video.mp4" type="video/mp4">
+    </video>
+    <div id = "videoWords">
+        <h1>MOVE</h1>
+        <h3>Move It Will Do It</h3>
+        <p></p><!---->
+    </div>
+</div>
 <!--scroll down to start play, stop after play once-->
 
+<!--About-->
+<div>
+    <h1>About Us</h1>
+</div>
 
 <!--shop by category-->
-<h1>Shop by Category</h1>
+<h1>Our Products</h1>
 <div class="flex-container">
     <div>  
         <img class="flex-img" src="images/home/Category-clothing.png" alt="Clothing">
@@ -114,36 +123,39 @@
 </div>
     </div>
 
-<!-- JavaScript for adding
-    slider for multiple images
-    shown at once-->
-    
-
 <!--top picks-->
-<div class="homeDisplay">
-    <h1>Top Picks</h1>
-    <div>
-        <img> <!---->
-        <p>Monthly Favourites</p>
+
+<h1>Top Picks</h1>
+<div class="flex-container">
+    <div>  
+        <img class="flex-img" src="images/home/Category-clothing.png" alt="Clothing">
+        <div class="middle">
+            <a href="#"><div class="text">Monthly Favourites</div></a>
+        </div>
     </div>
     <div>
-        <p>Most favourite shoes</p>
+        <img class="flex-img" src="images/home/Category-footwear.jpg" alt="Footwear">
+        <div class="middle">
+            <a href="#"><div class="text">Featured Products</div></a>
+        </div>
     </div>
     <div>
-        <p>Trending</p>
+        <img class="flex-img" src="images/home/Category-accessories.png" alt="Accessories">
+        <div class="middle">
+            <a href="#"><div class="text">2023 Trending</div></a>
+        </div>
     </div>
 </div>
 
-<!--MOVE-->
-<div>
-    <div>M</div>
-    <div>O</div>
-    <div>V</div>
-    <div>E</div>
-</div>
+<!--search-->
 
 <!--sign up/login-->
-<div></div>
+<div>
+    <h3 class="LoginSignUpWords">Sign up now to get early access to latest product</h3>
+    <button type="button" class="LoginSignUpButton" onclick="window.open('login.php','_self')">Login</button>
+    <button type="button" class="LoginSignUpButton" onclick="window.open('signup.php', '_self')">Sign Up</button>
+</div>
+
 
 <!--footer-->
 <?php include('includes/footer.php'); ?>
