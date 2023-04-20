@@ -101,58 +101,58 @@ body {
     height:454px;
 } 
 
-.flex-img:hover {
-    opacity:0.3;
-}
-
-.middle:hover::before { /*want to hover middle to change opacity of flex-img*/
-    opacity:0.3;
-}
-
 .flex-img {
     max-width: 100%;
     max-height: 100%;
     margin: 0px 30px;
     border-radius:25px;
-    opacity:1;
-    transition: .5s;
     overflow:hidden;
 }
 
 .middle {
-    transition: .5s ease;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%)
+    opacity: 0.7;
 }
 
-.text {
-    background-color: rgb(155, 4, 4);
-    font-size: 16px;
-    padding:16px 32px;
+.middle:hover{
+    opacity: 1;
+    transition-duration: 0.3s;
 }
 
-.text:hover{
-    opacity:0.6;
-    border-radius:15px;
-    transition: .3s;
+#LoginSignUpHome {
+    background-size: cover;
+    width:auto;
+    height:700px;
 }
 
-.middle > a, .middle > a:link, .middle > a:visited, .middle > a:hover {
-    color:white;
-}
-
-.middle > a:visited {
-    color:#f6f6f6;
-}
-
-.LoginSignUpWords {
+#LoginSignUpWords {
     text-align: center;
-
+    font-size:40px;
 }
 
-.LoginSignUpButton {
-    
+#buttonFlex {
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    margin:0 40px;
+    padding: 14px 40px;
+    background-color:rgb(155, 4, 4);
+    color:white;
+    font-weight:bold;
+    font-size:20px;
+    border-style: none;
+    border-radius: 5px;
+    transition-duration: 0.3s;
+}
+
+.hoverButton:hover {
+    cursor:pointer;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    transform: translateY(-7px);
+    opacity:1;
 }

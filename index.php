@@ -39,19 +39,19 @@
     <div>  
         <img class="flex-img" src="images/home/Category-clothing.png" alt="Clothing">
         <div class="middle">
-            <a href="#"><div class="text">Clothing</div></a>
+            <button type="button" class="button hoverButton" onclick="window.open('#')">Clothing</button>
         </div>
     </div>
     <div>
         <img class="flex-img" src="images/home/Category-footwear.jpg" alt="Footwear">
         <div class="middle">
-            <a href="#"><div class="text">Footwear</div></a>
+            <button type="button" class="button hoverButton" onclick="window.open('#')">Footwear</button>
         </div>
     </div>
     <div>
         <img class="flex-img" src="images/home/Category-accessories.png" alt="Accessories">
         <div class="middle">
-            <a href="#"><div class="text">Accessories</div></a>
+            <button type="button" class="button hoverButton" onclick="window.open('#')">Accessories</button>
         </div>
     </div>
 </div>
@@ -130,19 +130,19 @@
     <div>  
         <img class="flex-img" src="images/home/Category-clothing.png" alt="Clothing">
         <div class="middle">
-            <a href="#"><div class="text">Monthly Favourites</div></a>
+            <button type="button" class="button hoverButton" onclick="window.open('#')">Monthly Favourites</button>
         </div>
     </div>
     <div>
         <img class="flex-img" src="images/home/Category-footwear.jpg" alt="Footwear">
         <div class="middle">
-            <a href="#"><div class="text">Featured Products</div></a>
+            <button type="button" class="button hoverButton" onclick="window.open('#')">Featured Products</button>
         </div>
     </div>
     <div>
         <img class="flex-img" src="images/home/Category-accessories.png" alt="Accessories">
         <div class="middle">
-            <a href="#"><div class="text">2023 Trending</div></a>
+            <button type="button" class="button hoverButton" onclick="window.open('#')">2023 Trending</button>
         </div>
     </div>
 </div>
@@ -150,10 +150,12 @@
 <!--search-->
 
 <!--sign up/login-->
-<div>
-    <h3 class="LoginSignUpWords">Sign up now to get early access to latest product</h3>
-    <button type="button" class="LoginSignUpButton" onclick="window.open('login.php','_self')">Login</button>
-    <button type="button" class="LoginSignUpButton" onclick="window.open('signup.php', '_self')">Sign Up</button>
+<div id="LoginSignUpHome" style="background-image: url('images/home/loginSignupBgr.jpg');">
+    <h3 id="LoginSignUpWords">Sign up now to get early access to latest product</h3>
+    <div class="buttonFlex">
+        <button type="button" class="button hoverButton" onclick="window.open('login.php','_self')">Login</button>
+        <button type="button" class="button hoverButton" onclick="window.open('signup.php', '_self')">Sign Up</button>
+    </div>
 </div>
 
 
