@@ -135,13 +135,20 @@
             </div>
 
         </div>
-
     </div>
 </div>
 
 
 <!--search-->
-
+<div id="searchDiv" style="background-image: url('images/home/searchBgr.jpg');">
+    <form action="$_SERVER['PHP_SELF']" method="post"> <!-- need form action method? -->
+        <h1 id="searchTitle">Find more products?</h1>
+        <br>
+        <input type="text" name="search" id="search" onkeyup="searchFunc()" placeholder="Enter product keyword to search">
+    </form>
+</div>
+<!-- haven't done javascript & php for search -->
+<!-- refer Filter/Search List of w3schools -->
 
 <!--top picks-->
 <h1 class="subtitle">Top Picks</h1>

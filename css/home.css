@@ -178,6 +178,35 @@ video {
     transition-duration: 0.3s;
 }
 
+#searchDiv {
+    width: auto;
+    height: 350px;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+#searchTitle {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: none;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#search {
+    width: 800px;
+    font-size: 16px;
+    margin: 0px 155px 12px 155px;
+    padding: 12px 20px 12px 40px;
+    border-radius: 25px;
+    border: 1px solid #ddd;
+}
+
+#search:hover {
+    box-shadow: 0 8px 8px 0 rgba(0,0,0,0.15), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
 #LoginSignUpHome {
     background-size: cover;
     width:auto;

@@ -1,5 +1,5 @@
 .pageHeader{
-  background:white;
+  background:#f6f6f6;
   position: sticky;
   top: 0px;
   z-index: 999;
@@ -11,7 +11,7 @@
   margin: 0px 15px;
   height: 40px;
   width: 1485px;
-  background-color: white;
+  background-color: #f6f6f6;
 }
 .header_center{
   display: flex;
