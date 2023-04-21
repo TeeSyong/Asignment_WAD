@@ -4,13 +4,16 @@
 <head>
     <title>Move</title>
     <link rel="icon" type="image/x-icon" href = "images/home/Move_logo_wo_bg.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/navigation.css">
     <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/footer.css">        
+    <link rel="stylesheet" href="css/footer.css">   
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">              
 </head>
 
-<body>
+<body id="homeBody">
 <!--header with navigation bar-->
 <?php include('includes/header.php'); ?>
 <?php include('includes/navigation.php'); ?>
@@ -20,47 +23,35 @@
     <video autoplay muted>
         <source src="images/home/banner_video.mp4" type="video/mp4">
     </video>
-    <div id = "videoWords">
-        <h1>MOVE</h1>
-        <h1>Move It Will Do It</h1>
-        <h1>COMING SOON</h1>
+
+
+    <div id="videoButton">
+        <button type="button" class="scrollDownButton" onclick="scrollDown()">
+            <span class="material-symbols-outlined">
+                keyboard_double_arrow_down
+            </span>
+        </button>
+    </div>
+
+    <div id = "videoWordsHeader">
+        <h1>
+            "Move It Will Do It"
+            <br>
+            MOVE 
+        </h1>
+    </div>    
+    <div id = "videoWordsPara">
+        <p>
+            The ultimate one stop sport shop for the biggest brands
+            <br>
+            Shop all the exclusive designs that suits your needs!
+        </p>
     </div>
 </div>
 
-<!--scroll down to start play-->
-<!-- <script>
-        // Get the video element and its offset top position from the top of the document
-    const video = document.getElementById('myVideo');
-    const videoOffsetTop = video.offsetTop;
-
-    // Function to check if the video is in the viewport
-    function isInViewport() {
-        const scrollTop = window.pageYOffset;
-        const videoTop = videoOffsetTop - scrollTop;
-        const videoBottom = videoTop + video.offsetHeight;
-        const viewportTop = scrollTop + window.innerHeight;
-        const viewportBottom = scrollTop;
-
-        return (videoTop < viewportTop) && (videoBottom > viewportBottom);
-    }
-
-    // Function to play the video when it's in the viewport
-    function playVideoOnScroll() {
-    if (isInViewport()) {
-        video.play();
-        // Remove the scroll event listener to prevent the video from playing multiple times
-        window.removeEventListener('scroll', playVideoOnScroll());
-    }
-    }
-
-    // Add the scroll event listener to trigger the video to play
-    window.addEventListener('scroll', playVideoOnScroll());
-
-</script> -->
-
 <!--shop by category-->
-<h1>Our Products</h1>
-<div class="flex-container">
+<h1 class="subtitle">Our Products</h1>
+<div class="flex-container" id="scrollTarget">
     <div>  
         <img class="flex-img" src="images/home/Category-clothing.png" alt="Clothing">
         <div class="middle">
@@ -153,7 +144,7 @@
 
 
 <!--top picks-->
-<h1>Top Picks</h1>
+<h1 class="subtitle">Top Picks</h1>
 <div class="flex-container">
     <div>  
         <img class="flex-img" src="images/home/Category-clothing.png" alt="Clothing">
@@ -184,7 +175,7 @@
     </div>
 </div>
 
-<button onclick="topFunction()" id="topBtn">Back to Top</button>
+<button type="button" onclick="topFunction()" id="topBtn">Back to Top</button>
 <script src="js/home.js"></script>
 
 <!--footer-->
