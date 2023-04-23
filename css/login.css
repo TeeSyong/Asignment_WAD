@@ -7,8 +7,29 @@ body{
   background-color: rgb(155, 4, 4);
 }
 
+#wrapper_container {
+  background-size: cover;
+  width:auto;
+  height:850px;
+  padding-top: 10%;
+}
+
+#img{
+  align-items: center;
+}
+
 .form_imgcontainer{
   text-align:center;
+  width:100%;
+}
+.wrapper{
+  border-radius: 7px;
+  background-color: #f6f6f6;
+  padding:3%;
+  width:25%;
+  height:60%;
+  top: 250px;
+  margin: 0% 33.5%;
 }
 
 input[type=email], input[type=password],input[type=text]{
@@ -48,15 +69,7 @@ span.show, span.forgetpw{
   float: right;
 }
 
-.loginform_container{
-  border-radius: 7px;
-  background-color: white;
-  padding: 80px 60px;
-  margin: 150px 480px;
-  width:430px;
-  height:500px;
-  top: 250px;
-}
+
 
 .link
 {
