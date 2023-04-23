@@ -1,5 +1,6 @@
 .pageHeader{
   background:#f6f6f6;
+  
   position: sticky;
   top: 0px;
   z-index: 999;
@@ -8,26 +9,35 @@
 .header_container{
   display: flex;
   justify-content: space-between;
-  margin: 0px 15px;
-  height: 40px;
-  width: 1485px;
+  height: 50px;
+  z-index: 1;
+  width: 100%;
+  margin: 0 ;
   background-color: #f6f6f6;
 }
 .header_center{
   display: flex;
   align-items: center;
-  margin: 0px 0px 0px 515px;
+  background-color: #f6f6f6;
+  margin-left: 33%;
+  padding-top: 10px;
+  width:550px;
+  height: 35px;
 }
 .header_right{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: #f6f6f6;
   width:180px;
+  height: 35px;
+  padding-top: 10px;
+  padding-right: 10px;
 }
 
 .h_item{
   text-decoration: none;
-  font-size: 15px;
+  font-size: 17px;
   font-family:Arial, Helvetica, sans-serif;
   color: black;
   font-weight: bold;
