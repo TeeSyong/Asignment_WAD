@@ -3,7 +3,7 @@
       <div class="footer1_left">
         <div class="footer_subcontainer1">
           <div class="footer_item">
-            <h5 class="f_item_title">Product</h5>
+            <p class="f_item_title">Product</p>
           </div>
           <div class="footer_item">
             <a href="#" class="f_item"><p>Clothing</p></a>
@@ -18,7 +18,7 @@
   
         <div class="footer_subcontainer2">
           <div class="footer_item">
-            <h5 class="f_item_title">Customer Care</h5>
+            <p class="f_item_title">Customer Care</p>
           </div>
           <div class="footer_item">
             <a href="#" class="f_item"><p>Contact Us</p></a>
@@ -36,7 +36,7 @@
   
         <div class="footer_subcontainer3">
           <div class="footer_item">
-            <h5 class="f_item_title">About Move</h5>
+            <p class="f_item_title">About Move</p>
           </div>
           <div class="footer_item">
             <a href="#" class="f_item"><p>Company Info</p></a>
@@ -81,7 +81,7 @@
       <p style="text-align: center;" class="f2_item">We accept the following payment methods</p>
       <div class="f2_container">
         
-        <img src=images/icons/payment_method.png  width="500px">
+        <img src=images/icons/payment_methods.png  width="500px">
         
       </div>
     </div>
