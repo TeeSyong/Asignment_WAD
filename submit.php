@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Register successfully</title>
+    <link rel="icon" type="image/x-icon" href = "images/home/Move_logo_wo_bg.png">
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/navigation.css" />
     <link rel="stylesheet" href="css/submit.css" />
