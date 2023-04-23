@@ -1,25 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="css/header.css">
-  <link rel="stylesheet" href="css/navigation.css">
-  <link rel="stylesheet" href="css/login.css">
-  <link rel="stylesheet" href="css/footer.css">
-  
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/navigation.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/footer.css" />
 </head>
 <body >
   <?php include('includes/header.php'); ?>
   <?php include('includes/navigation.php'); ?>
-
-  <div class="img_body">
-    
-    <div class="loginform_container" >
-
-      <div class="form_imgcontainer">
-        <img src="images/logo/Move_logo.png" alt="logo" class="logo" width="350px">
-      </div>
-
-      <div class="form_subcontainer">
+    <div id="wrapper_container" style="background-image: url('images/background/background_sports.jpg');">
+    <div class="wrapper" >
+        <center>
+        <img src="images/logo/MoveLogo.png" alt="logo" class="logo" width="250px" id="img">
+        </center>
+        
         <h2 style="text-align: center; padding:20px 0 0 0;"><b>Good to see you again</b> </h2><br>
         <form class="loginform">
           <label for="email"><b>Email</b></label>
@@ -31,15 +26,14 @@
           <br><br>
           <input type="submit" value="Log in">
         </form>
-        <p style="padding:40px 0;">
+        <p style="padding:15px 0;">
           <a href="signup.php" class="link">Don't have an account?</a>
           <span class="forgetpw"><a href="#" class="link">Forget Password?</a></span>
         </p>
       </div>
-
     </div>
+      
 
-  </div>
 
   <script>
     function pwVisibility() {
