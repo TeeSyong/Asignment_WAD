@@ -2,7 +2,7 @@
        <div class="navbar_container">
           <div class="navbar_logo">
            <div class="navbar_item1">
-             <a href="index.html" id="navbar__logo"><img href="index.html" src="images/logo/Move_logo_withoutslogan.png" alt="logo" class="logo" height ="42px" width="130px"></a>
+             <a href="index.html" id="navbar__logo"><img href="index.html" src="images/logo/MoveLogo_withoutslogan.png" alt="logo" class="logo" height ="42px" width="130px"></a>
            </div>
          </div>
           <div class="navbar_categories">
