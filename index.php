@@ -138,7 +138,6 @@
     </div>
 </div>
 
-
 <!--search-->
 <div id="searchDiv" style="background-image: url('images/home/searchBgr.jpg');">
     <form action="$_SERVER['PHP_SELF']" method="post"> <!-- need form action method? -->
@@ -150,8 +149,9 @@
 <!-- haven't done javascript & php for search -->
 <!-- refer Filter/Search List of w3schools -->
 
+<!--haven't add slider to display products-->
 <!--top picks-->
-<h1 class="subtitle">Top Picks</h1>
+<h1 class="subtitle">What's New</h1>
 <div class="flex-container">
     <div>  
         <img class="flex-img" src="images/home/Category-clothing.png" alt="Clothing">
