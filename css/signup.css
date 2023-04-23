@@ -10,8 +10,8 @@ body{
 #wrapper_container {
   background-size: cover;
   width:auto;
-  height:900px;
-  padding-top: 4.5%;
+  height:1000px;
+  padding-top: 4%;
 }
 
 .imgcontainer{
@@ -23,7 +23,7 @@ body{
   background-color: #f6f6f6;
   padding:3% 3% 4% 3%;
   width:25%;
-  height:75%;
+  height:83%;
   top: 250px;
   margin: 0% 33.5%;
 }
@@ -58,7 +58,7 @@ input[type=text]:focus {
   outline: none;
 }
 
-input[type=submit]
+input[type=button]
 {
   width:80%;
   padding: 10px 20px;
@@ -72,7 +72,7 @@ input[type=submit]
   font-weight: bold;
 }
 
-input[type=submit]:hover
+input[type=button]:hover
 {
   background-color: rgba(4, 206, 41, 0.811);
 }
