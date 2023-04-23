@@ -3,7 +3,7 @@
   border-top:1px solid grey;
   opacity:100%;
   position: sticky;
-  top: 40px;
+  top: 50px;
   z-index: 1000;
   height: 65px;
 }
@@ -13,14 +13,15 @@
   flex-direction:row;
   justify-content: space-between;
   background:	#f6f6f6 ;
-  margin: 5px 30px 1px 30px;
+  margin: 5px 0px 1px 0px;
   height: 60px;
-  width: 1465px;
+  width: 100%;
 }
 
 .navbar_logo{
   display:flex;
   align-items: center;
+  margin-left: 10px;
 }
 
 .navbar_categories{
@@ -75,6 +76,7 @@
   width:150px;
   justify-content: space-between;
   align-items: center;
+  margin-right: 10px;
 }
 
 .n_item_title{
