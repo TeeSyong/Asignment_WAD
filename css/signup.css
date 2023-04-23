@@ -7,12 +7,32 @@ body{
   background-color: rgb(155, 4, 4);
 }
 
-.imgcontainer{
-  text-align:center;
+#wrapper_container {
+  background-size: cover;
+  width:auto;
+  height:900px;
+  padding-top: 4.5%;
 }
+
+.imgcontainer{
+  background-color: #f6f6f6;
+}
+
+.wrapper{
+  border-radius: 7px;
+  background-color: #f6f6f6;
+  padding:3% 3% 4% 3%;
+  width:25%;
+  height:75%;
+  top: 250px;
+  margin: 0% 33.5%;
+}
+
+
+
 div.signupform{
   border-radius: 7px;
-  background-color: white;
+  background-color: #f6f6f6;
   padding: 50px 45px;
   margin: 100px 450px;
   height:730px;
