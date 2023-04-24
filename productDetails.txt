@@ -91,6 +91,38 @@ Style: DM6182-010
 Country/Region of Origin: China
 
 no   :4
+name :Nike Dri-FIT Phenom Elite
+price:329
+image:Nike Dri-FIT Phenom Elite
+description:
+Step out in our lightweight, Phenom Elite Trousers. We know you're out there giving your all, so we keep you feeling comfortable with buttery smooth, sweat-wicking fabric. Plus, there's pockets for your phone, keys or anything else you need.
+
+
+Benefits
+
+Nike Dri-FIT Technology moves sweat away from your skin for quicker evaporation, helping you stay dry and comfortable.
+Knit fabric has a smooth sensation.
+A zip back pocket with sweat-proof lining is large enough to hold your phone.
+Zip side pockets help secure small items
+At the right pocket, a mesh inner pocket can hold a key or card.
+Mesh on the upper back, back of the knees, ankles and inside leg panel feels breathable and airy.
+Zip leg hems provide easy on and off over your shoes.
+
+Product Details
+
+Reflective design tape and graphics
+Standard fit for a relaxed, easy feel
+"Nike Running" elastic waistband with drawcord
+Zip side pockets
+100% polyester
+Machine wash
+Imported
+Not intended for use as Personal Protective Equipment (PPE)
+Colour Shown: Black
+Style: DQ4741-010
+Country/Region of Origin: Cambodia
+
+no   :5
 name :Nike Everyday Plus
 price:129
 image:Nike Everyday Plus
@@ -113,71 +145,310 @@ Colour Shown: Multi-Colour
 Style: DX7670-904
 Country/Region of Origin: Pakistan
 
-no   :5
-name :
-price:
-image:
-description:
-
 no   :6
-name :
-price:
-image:
+name :Nike Quest 5
+price:309
+image:Nike Quest 5
 description:
+You lace up in pursuit of new personal goals. Let the Nike Quest 5 help you reach those aspirations. This neutral sneaker gives you a smooth, comfortable ride with plenty of traction. We focused on our foam, adding more cushioning for a better transition from heel to toe.
+
+
+Cool, Light, Fast
+
+Mesh throughout the upper adds a lightweight, breathable feel. The mesh was placed in key zones based on runner feedback, providing you with cooling where it counts.
+
+
+Lace Up, Support Up
+
+Feel the stability with the midfoot fitband. It works with your laces, keeping your foot more secure the tighter your laces are. A translucent material shows off the components at the midfoot.
+
+
+Run Hard with a Soft Feel
+
+Super-soft foam through the midsole helps cushion your foot with every step. The increased height means a softer sensation as you run.
+
+
+Traction for the Long Haul
+
+The rubber outsole has the traction to keep your feet gripped to the pavement.
+
+
+More Benefits
+
+Super-soft padding and cushioning on the collar help keep your ankle comfortable.
+Skins at the toes and eyelets offer durability.
+Colour Shown: Black/Smoke Grey/Dark Smoke Grey/White
+Style: DD0204-001
+Country/Region of Origin: Vietnam
 
 no   :7
-name :
-price:
-image:
-description:
+name :LeBron Witness 7 EP
+price:339
+image:LeBron Witness 7 EP
+description:The longer LeBron's legendary career continues, the more his game needs a design that doesn't weigh him down, yet can still control all that sublime power. So, we've created our lightest LeBron model but with the kind of bankable support that can help you stay in front of your opponent with the game on the line. Full-length Max Air cushioning helps you take off and land confidently, while lightweight mesh blends with containment cables to help keep you locked in for four quarters or more. This version is made for outdoor-court use with its extra-durable rubber outsole.
+
+
+Cushioned Comfort
+
+A full-length Max Air unit in a low-profile midsole is combined with a foam wrap-up for support when you're moving in lateral directions. The Air is specifically placed in the forefoot to help reduce weight and increase responsiveness. It helps with impact absorption while supporting the smooth transition from heel to toe. Also, it provides side-to-side stability and helps harness and direct your force.
+
+
+Reinforced Materials
+
+Breathable mesh provides a lightweight, conforming fit in the upper, from the webbing that harnesses your forefoot to the external moulded pieces that help lock in your heel. Reinforced stitching along the sides helps the shoe fit snugly for full-foot containment.
+
+
+Aggressive Traction
+
+The rubber outsole is split and partially cut out under the arch to help it bend and flex while helping reduce its overall weight. A classic herringbone pattern adds durable traction.
+
+
+Product Details
+
+Padded collar
+Foam and mesh tongue
+Colour Shown: Fuchsia Dream/Sail/White/Citron Tint
+Style: DM1122-500
+Country/Region of Origin: Vietnam
 
 no   :8
-name :
-price:
-image:
+name :Nike Zoom Mercurial Superfly 9 Academy MG
+price:399
+image:Nike Zoom Mercurial Superfly 9 Academy MG
 description:
+Instantly tilt the pitch in the bold design of the Superfly 9 Academy MG. It's loaded with a Zoom Air unit and flexible NikeSkin up top for exceptional touch, so you can dominate in the waning minutes of a match—when it matters most. Fast is in the Air.
+
+
+Welcome to the Pitch, Zoom
+
+For the first time in our history, Nike has developed an all-new Zoom Air unit. It sits in the plate and provides an additional level of springy underfoot feel that helps you move faster on the pitch and create separation when it matters the most—whether you're scoring goals, being first to the ball or going by defenders.
+
+
+Drive Your Speed
+
+The speed cage inside of the structure is made from a thin but strong material that secures the foot to the outsole without adding additional weight for optimal lockdown.
+
+
+Dig In, Take Off
+
+Unique traction pattern offers super-charged traction with quick release to create separation.
+
+
+Improved Fit
+
+Flyknit wraps your ankle in soft, stretchy fabric for a secure feel. A redone design improves the fit, so that it better simulates the foot. We did this by conducting multiple wear tests on hundreds of athletes. The result is a more contoured toe box and better lockdown in the heel.
+
+
+Barefoot Feel
+
+The upper has NikeSkin, a soft and flexible mesh material linked together by a thin coating. It helps provide ball control and truly gives you a feeling of barefoot football.
+
+
+Product Details
+
+For use on natural and synthetic surfaces
+Cushioned insole
+Colour Shown: Pink Blast/Gridiron/Volt
+Style: DJ5625-605
+Country/Region of Origin: China
 
 no   :9
-name :
-price:
-image:
+name :Nike Free Metcon 5
+price:539
+image:Nike Free Metcon 5
 description:
+When your workouts wade into the nitty-gritty, the Nike Free Metcon 5 can meet you in the depths, help you dig deep to find that final ounce of force and come out of the other side on a high. It matches style with substance, forefoot flexibility with back-end stability, perfect for flying through a cardio day or enhancing your agility. A revamped upper offers easier entry with a collar made just for your ankle.
+
+
+Revamped Upper
+
+A breathable, lightweight upper has a comfortable, sock-like feel with a 7/8-length inner sleeve and provides easy entry. Plush foam around the collar provides comfort and support around your ankle.
+
+
+Stability for Strength
+
+The wide heel creates a solid base for lifting. A softer foam core cushions your foot, while a firmer outer layer is durable and stable. Wide internal webbing distributes pressure around your midfoot for a comfortable yet secure feel during sudden stops and quick cuts.
+
+
+Move Freely
+
+Nike Free technology in the forefoot creates flexibility for agility moves like burpees, planks and sprints. Stretch around the collar lets your foot move naturally as you burst, cut and brake.
+
+
+More Benefits
+
+Moulded heel clip offers support.
+Webbing eyelets offer dynamic containment.
+Rubber tread in high-wear areas gives you durable traction.
+Colour Shown: Light Iron Ore/Phantom/Flat Pewter/Green Strike
+Style: DV3949-002
+Country/Region of Origin: Vietnam
 
 no   :10
-name :
-price:
-image:
+name :Nike Boonie
+price:119
+image:Nike Boonie
 description:
+ALL-ROUND COMFORTABLE COVERAGE.
+
+
+The Nike Boonie Bucket Hat has you covered with a 360-degree brim and a drawcord that cinches down for a stay-put fit when you're on the move.Sweat-wicking power and built-in vents team up to help keep your head dry and cool.
+
+
+Benefits
+
+Stretchy, smooth and lightweight fabric is durable and flexible.﻿
+Dri-FIT Technology helps keep you dry and comfortable.
+Drawcord with cord lock holds the hat in place while you move.
+Webbing loops around the crown let you attach accessories.
+Embroidered eyelets help keep your head cool.
+
+Product Details
+
+55% cotton/42% nylon/3% elastane
+Hand wash
+Imported
+Colour Shown: Black
+Style: DM3329-010
+Country/Region of Origin: Vietnam
 
 no   :11
-name :
-price:
-image:
+name :Nike Sportswear RPM
+price:369
+image:Nike Sportswear RPM
 description:
+The Nike Sportswear RPM Backpack is made to hold it all. With a padded back for comfort and a versatile strap system, it's ideal for all your on-the-go needs.
+
+
+Benefits
+
+Fits most 15" laptops.
+Multiple zip compartments provide ample storage for all your gear.
+Curved shoulder straps adjust to make carrying easy.
+Padded back panel adds comfort.
+Versatile strap system offers multiple storage options.
+
+Product Details
+
+Dimensions: 48cm H x 33cm W x 20cm D (approx.)
+26 L
+100% polyester
+Spot clean
+Imported
+Colour Shown: Black/Black/Black
+Style: BA5971-014
+Country/Region of Origin: Vietnam,China
 
 no   :12
-name :
-price:
-image:
-description:
+name :Nike Sportswear Club Fleece
+price:55
+image:Nike Sportswear Club Fleece
+description:A closet staple, the Nike Sportswear Club Fleece Crew combines a classic embroidered logo on the left chest with the soft comfort of fleece for an elevated everyday look.
+
+
+Soft Comfort
+
+Brushed-back fleece is soft and smooth against the skin.
+
+
+Secure Fit
+
+Ribbing around the hem and cuffs ensure a secure fit.
+
+
+Product Details
+
+Standard fit for a relaxed, easy feel
+Fabric: 80-82% cotton/18-20% polyester
+Machine wash
+Imported
+Note: Material percentages may vary depending on factory. Check label for actual content.
+Shown: Oil Green/White
+Style: BV2662-386
+
 
 no   :13
-name :
-price:
-image:
+name :Nike Sportswear Premium Essentials
+price:149
+image:Nike Sportswear Premium Essentials
 description:
+The Nike Sportswear Premium Essentials T-Shirt has a loose fit for a carefree, comfortable look. Its heavyweight organic cotton fabric feels thick and soft. This product is made from at least 75% organic cotton fibres.
+
+
+Benefits
+
+Loose-fitting design features dropped shoulders and room through the chest and shoulders for a relaxed look and feel.
+Heavyweight cotton jersey has a stiff drape and dry hand for a crisp, thick feel.
+Embroidered logo front and centre makes a subtle statement.
+
+Product Details
+
+Loose fit for a roomy feel
+100% cotton
+Machine wash
+Imported
+Woven label
+Colour Shown: Oil Green
+Style: DO7393-386
+Country/Region of Origin: China
 
 no   :14
-name :
-price:
-image:
+name :Nike x Billie Eilish
+price:335
+image:Nike x Billie Eilish
 description:
+Nike and Billie Eilish join forces to bring you this roomy, ultra-soft hoodie. A vertical Swoosh design and Billie Eilish graphics are printed in silicone, highlighting the powerful collab.
+
+
+Soft Warmth
+
+Brushed-back fleece feels soft and warm against your skin.
+
+
+Easy Fit
+
+The roomy fit and dropped shoulders give you extra space to layer underneath. It also lets you move freely through your days and nights.
+
+
+More Benefits
+
+Hood with adjustable drawcord lets you personalise your style and coverage.
+Ribbed cuffs and hem help seal in your body heat for natural warmth in cooler weather.
+Front kangaroo pocket gives you an easy place to stash small items and warm your hands.
+
+Product Details
+
+Loose fit for a roomy feel
+84% cotton/16% polyester
+Machine wash
+Imported
+Colour Shown: Sequoia/Mushroom/Mushroom
+Style: DQ7751-355
+Country/Region of Origin: Pakistan
 
 no   :15
-name :
-price:
-image:
+name :Nike Air
+price:435
+image:Nike Air
 description:
+Don't let a little rain stop you from enjoying your day. This poncho-style jacket keeps you and your outfit covered. Press studs on the sides let you personalise the style and fit.
+
+
+Benefits
+
+Unlined woven fabric feels lightweight and smooth.
+Store your essentials in the front flap pocket.
+
+Product Details
+
+Body: 100% nylon. Pocket bags: 100% polyester.
+Drawcord on the hood
+Printed Nike Air graphics
+Machine wash
+Imported
+Colour Shown: Ale Brown/Fossil Stone
+Style: DV8061-270
+Country/Region of Origin: Vietnam
 
 no   :16
 name :

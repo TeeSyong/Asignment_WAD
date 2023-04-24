@@ -56,7 +56,7 @@
                <button href="#" class="n_item_title">Brands</button>
              </div>
              <div class="dropdown-content">
-               <a href="#" class="n_item">Nike</a>
+               <a href="/ASiGNMENT_WAD/productCategories/nike.php" class="n_item">Nike</a>
                <a href="#" class="n_item">Under Armour</a>
                <a href="#" class="n_item">Jordan</a>
                <a href="#" class="n_item">Adidas</a>

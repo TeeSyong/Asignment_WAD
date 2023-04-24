@@ -8,9 +8,8 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/navigation.css">
     <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/footer.css">   
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/product.css"/>         
+    <link rel="stylesheet" href="css/product.css">         
 </head>
 <body>
 <?php include('includes/header.php'); ?>
