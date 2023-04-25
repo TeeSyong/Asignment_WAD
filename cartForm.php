@@ -134,11 +134,13 @@
                     <td><input type="text" name="cvv" placeholder="123" class="textInput"></td>
                 </tr>
 
-                <tr>
-                    <td><input type="submit" name="checkout" value="Checkout" id="checkoutButton"></td>
-                </tr>
+                <!-- <tr>
+                    <td></td>
+                </tr> -->
             </table>
+            
         </div>
+        <input type="submit" name="task" value="checkout" id="checkoutButton">
     </form>
 </div>
 

@@ -50,6 +50,9 @@ input[type=text]:focus, textarea:focus{
   border: none;
   border-radius: 5px;
   transition-duration: 0.3s;
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 
 #checkoutButton:hover {
