@@ -1,6 +1,8 @@
 .pageFooter1{
   background:#f6f6f6;
   border-bottom:1px solid grey;
+  height:260px;
+  width:100%;
 }
 .footer_container1{
   display: flex;

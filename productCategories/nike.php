@@ -5,11 +5,10 @@
     <link rel="icon" type="image/x-icon" href = "../images/home/Move_logo_wo_bg.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/navigation.css">
-    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="/ASIGNMENT_WAD/css/header.css">
+    <link rel="stylesheet" href="/ASIGNMENT_WAD/css/navigation.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/product.css">         
+    <link rel="stylesheet" href="/ASIGNMENT_WAD/css/product.css">         
 </head>
 <body>
 <?php include('../includes/header.php'); ?>
@@ -21,7 +20,7 @@
 
 
 <div class="gallery" id="div2">
-    <a href="index.php">
+    <a href="../index.php">
     <div class="content">
     <img src="..\images\products\Nike Sportswear Tech Pack.png" id="img">
     <p>Nike Sportswear Tech Pack</p>

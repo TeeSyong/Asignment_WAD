@@ -53,19 +53,19 @@
       <div class="footer1_right">
         <div class="footer_subcontainer4">
           <div class="footer_item4">
-            <a href="https://www.facebook.com/" id="facebook-icon"><img src=../images/icons/facebook.png  width="30px"></a>
+            <a href="https://www.facebook.com/" id="facebook-icon"><img src=images/icons/facebook.png  width="30px"></a>
           </div>
           <div class="footer_item4">
-            <a href="https://www.instagram.com/" id="instagram-icon"><img src=../images/icons/instagram.png  width="30px"></a>
+            <a href="https://www.instagram.com/" id="instagram-icon"><img src=images/icons/instagram.png  width="30px"></a>
           </div>
           <div class="footer_item4">
-            <a href="https://twitter.com/" id="twitter-icon"><img src=../images/icons/twitter.png  width="30px"></a>
+            <a href="https://twitter.com/" id="twitter-icon"><img src=images/icons/twitter.png  width="30px"></a>
           </div>
           <div class="footer_item4">
-            <a href="https://www.tiktok.com/" id="tiktok-icon"><img src=../images/icons/tiktok.png  width="30px"></a>
+            <a href="https://www.tiktok.com/" id="tiktok-icon"><img src=images/icons/tiktok.png  width="30px"></a>
           </div>
           <div class="footer_item4">
-            <a href="https://www.youtube.com/" id="youtube-icon"><img src=../images/icons/youtube.png  width="30px"></a>
+            <a href="https://www.youtube.com/" id="youtube-icon"><img src=images/icons/youtube.png  width="30px"></a>
           </div>
         </div>
       </div>
@@ -81,7 +81,7 @@
       <p style="text-align: center;" class="f2_item">We accept the following payment methods</p>
       <div class="f2_container">
         
-        <img src=../images/icons/payment_methods.png  width="500px">
+        <img src=images/icons/payment_methods.png  width="500px">
         
       </div>
     </div>
