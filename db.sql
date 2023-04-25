@@ -17,8 +17,8 @@ CREATE TABLE IF NOT EXISTS product(
     id int(11) AUTO_INCREMENT PRIMARY KEY,
     name varchar(255),
     price numeric(10,2),
-    categories ENUM("",""),
-    brands ENUM()
+    categories ENUM("t-shirt","hoodies","jackets","trouser","socks","running","basketball","football","training","accessories","bags","fashion"),
+    brands ENUM("nike","underArmour","jordan","Adidas")
 );
 
 CREATE TABLE IF NOT EXISTS cart(
