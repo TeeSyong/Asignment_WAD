@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="../css/navigation.css">
         <link rel="stylesheet" href="../css/cart.css">
         <link rel="stylesheet" href="../css/footer.css">
-        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
         <div class="cartPage" style="background-image: url('../images/background/background_sports.jpg');">
@@ -114,7 +114,14 @@
                             <td><h2>Accepted Cards</h2></td>
                         </tr>
                         <tr>
-                            <td>Card Images</td>
+                            <td>
+                            <div class="icon-container">
+                            <i class="fa fa-cc-visa" style="color:navy;"></i>
+                            <i class="fa fa-cc-amex" style="color:blue;"></i>
+                            <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                            <i class="fa fa-cc-discover" style="color:orange;"></i>
+                            </div>
+                            </td>
                         </tr>
 
                         <tr>

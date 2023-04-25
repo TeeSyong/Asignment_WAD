@@ -13,13 +13,13 @@
         include('../includes/header.php');
         include('../includes/navigation.php');
         
-        // echo "
-        // <div>
-        //     <h1>Shopping Cart</h1><hr>
+        echo "
+        <div>
+            <h1>Shopping Cart</h1><hr>
             
-        // </div>
+        </div>
         
-        // ";
+        ";
 
 
 
