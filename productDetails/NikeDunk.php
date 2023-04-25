@@ -3,35 +3,35 @@
   <head>
     <title>Product details</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="icon" type="image/x-icon" href = "images/home/Move_logo_wo_bg.png">
-    <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/navigation.css" />
-    <link rel="stylesheet" href="css/NikeDunk.css" />
-    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="icon" type="image/x-icon" href = "/ASIGNMENT_WAD/images/home/Move_logo_wo_bg.png">
+    <link rel="stylesheet" href="/ASIGNMENT_WAD/css/header.css" />
+    <link rel="stylesheet" href="/ASIGNMENT_WAD/css/navigation.css" />
+    <link rel="stylesheet" href="/ASIGNMENT_WAD/css/NikeDunk.css" />
+    <link rel="stylesheet" href="/ASIGNMENT_WAD/css/footer.css" />
   </head>
   <body>
-  <?php include('includes/header.php'); ?>
-  <?php include('includes/navigation.php'); ?>
+  <?php include('../includes/header.php'); ?>
+  <?php include('../includes/navigation.php'); ?>
     <div class="content_wrapper">
       <div class="left-container">
         <div class="row">
-          <img src="images/nike/nike1.png" alt="nike1" onclick="clickImage(this);" onmouseover="hoverImage(this);">
+          <img src="/ASIGNMENT_WAD/images/nike/nike1.png" alt="nike1" onclick="clickImage(this);" onmouseover="hoverImage(this);">
         </div>
         <div class="row">
-          <img src="images/nike/nike2.png" alt="nike2" onclick="clickImage(this);" onmouseover="hoverImage(this);">
+          <img src="/ASIGNMENT_WAD/images/nike/nike2.png" alt="nike2" onclick="clickImage(this);" onmouseover="hoverImage(this);">
         </div>
         <div class="row">
-          <img src="images/nike/nike3.png" alt="nike3" onclick="clickImage(this);" onmouseover="hoverImage(this);">
+          <img src="/ASIGNMENT_WAD/images/nike/nike3.png" alt="nike3" onclick="clickImage(this);" onmouseover="hoverImage(this);">
         </div>
         <div class="row">
-          <img src="images/nike/nike4.png" alt="nike4" onclick="clickImage(this);" onmouseover="hoverImage(this);">
+          <img src="/ASIGNMENT_WAD/images/nike/nike4.png" alt="nike4" onclick="clickImage(this);" onmouseover="hoverImage(this);">
         </div>
         <div class="row">
-          <img src="images/nike/nike5.png" alt="nike5" onclick="clickImage(this);" onmouseover="hoverImage(this);">
+          <img src="/ASIGNMENT_WAD/images/nike/nike5.png" alt="nike5" onclick="clickImage(this);" onmouseover="hoverImage(this);">
         </div>
       </div>
       <div class="middle-container">
-        <img id="expandedImg"  src="images/nike/nike1.png">
+        <img id="expandedImg"  src="/ASIGNMENT_WAD/images/nike/nike1.png">
       </div>
 
       <div class="right-container">
@@ -40,13 +40,13 @@
         <p id="price">RM 1000</p>
         <div class="othercolours">
           <div class="othercolours_row">
-            <img src="images/nike/nike3.png" alt="nike3" onclick="location.href = 'index.php';">
+            <img src="/ASIGNMENT_WAD/images/nike/nike3.png" alt="nike3" onclick="location.href = 'index.php';">
           </div>
           <div class="othercolours_row">
-            <img src="images/nike/nike4.png" alt="nike4" >
+            <img src="/ASIGNMENT_WAD/images/nike/nike4.png" alt="nike4" >
           </div>
           <div class="othercolours_row">
-            <img src="images/nike/nike5.png" alt="nike5">
+            <img src="/ASIGNMENT_WAD/images/nike/nike5.png" alt="nike5">
           </div>
         </div>
         <p id="selectsize">Select Size</p>
@@ -220,6 +220,6 @@
 
 
     </script>
-    <?php include('includes/footer.php'); ?>
+    <?php include('../includes/footer.php'); ?>
   </body>
 </html>

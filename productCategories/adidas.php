@@ -12,25 +12,59 @@
     <link rel="stylesheet" href="/ASIGNMENT_WAD/css/product.css">           
 </head>
 <body>
+    
 <?php include('../includes/header.php'); ?>
 <?php include('../includes/navigation.php'); ?>
+
 <div class="row mt-5 mx-2">
 <div clsaa="container-fluid mx-2">
 <div class="row">
 
+<?php 
+require "../env.php";
+$conn = mysqli_connect(DB_HOST,DB_USER,DB_PASSWORD,DB_DATABASE);
 
-<div class="col-md-3 mb-4">
-<a href="/ASIGNMENT_WAD/NikeDunk.html">
-<div class="card" >
-  <img src="..\images\products\Nike Sportswear Tech Pack.png" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Nike Sportswear Tech Pack</h5>
-    <p class="card-title">RM200.00</p>
+if(!$conn)
+{
+    die("Connection Error".myslqi_connect_error());
+}
+$query = "SELECT * FROM product WHERE brands = ?";
 
-  </div>
-</div>
-</a>
-</div>
+$stmt = mysqli_prepare($conn,$query);
+
+$brands = "nike";
+
+mysqli_stmt_bind_param($stmt,"s",$brands);
+
+
+
+if(mysqli_stmt_execute($stmt)){
+    ;
+}else{
+    die("Error".mysqli_error()); 
+}
+$result = mysqli_stmt_get_result($stmt);
+foreach($result as $row){
+    echo"
+    <div class='col-md-3 mb-4'>
+    <a href='{$row['detailLink']}'>
+    <div class='card' >
+      <img src='{$row['imageLink']}' class='card-img-top'>
+      <div class='card-body'>
+        <h5 class='card-title'>{$row['name']}</h5>
+        <p class='card-title'>RM{$row['price']}</p>
+    
+      </div>
+    </div>
+    </a>
+    </div>
+    ";
+}
+?>
+
+
+
+
 
 </div>
 </div>
