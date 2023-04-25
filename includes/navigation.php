@@ -69,10 +69,10 @@
              <a href="login.php" id="login-page"><img src="../images/icons/user.png"  width="25px"></a>
            </div>
            <div class="navbar_item3">
-             <a href="wishlist.html" id="wishlist-page"><img src="../images/icons/wishlist-icon.png"  width="25px"></a>
+             <a href="#" id="wishlist-page"><img src="../images/icons/wishlist-icon.png"  width="25px"></a>
            </div>
            <div class="navbar_item3">
-             <a href="add_to_cart.html" id="shopping-bag-page"><img src="../images/icons/shopping-bag-icon.png"  width="25px"></a>
+             <a href="cart.php" id="shopping-bag-page"><img src="../images/icons/shopping-bag-icon.png"  width="25px"></a>
            </div>
          </div>
          

@@ -2,7 +2,7 @@ CREATE DATABASE IF NOT EXISTS move_database COLLATE utf8mb4_general_ci;
 
 USE move_database;
 
-CREATE TABLE users(
+CREATE TABLE IF NOT EXISTS users(
     id int(11) AUTO_INCREMENT,
     fname varchar(255),
     lname varchar(255),
@@ -13,7 +13,7 @@ CREATE TABLE users(
     PRIMARY KEY(id)
 );
 
-CREATE TABLE checkout{
+CREATE TABLE IF NOT EXISTS checkout(
     id int(11) AUTO_INCREMENT NOT NULL,
     name varchar(100),
     email varchar(190),
@@ -28,7 +28,8 @@ CREATE TABLE checkout{
     exp varchar(10) NULL,
     cvv varchar(5) NULL,
     PRIMARY KEY(id)
-}
+);
+
 
 
     
