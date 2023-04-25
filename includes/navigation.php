@@ -2,7 +2,7 @@
        <div class="navbar_container">
           <div class="navbar_logo">
            <div class="navbar_item1">
-             <a href="index.php" id="navbar__logo"><img src="../images/logo/MoveLogo_withoutslogan.png" alt="logo" class="logo" height ="42px" width="130px"></a>
+             <a href="/ASIGNMENT_WAD/index.php" id="navbar__logo"><img src="/ASIGNMENT_WAD/images/logo/MoveLogo_withoutslogan.png" alt="logo" class="logo" height ="42px" width="130px"></a>
            </div>
          </div>
           <div class="navbar_categories">
@@ -59,20 +59,20 @@
                <a href="/ASiGNMENT_WAD/productCategories/nike.php" class="n_item">Nike</a>
                <a href="#" class="n_item">Under Armour</a>
                <a href="#" class="n_item">Jordan</a>
-               <a href="#" class="n_item">Adidas</a>
+               <a href="/ASiGNMENT_WAD/productCategories/adidas.php" class="n_item">Adidas</a>
              </div>
            </div>
            
          </div>
           <div class="navbar_icons">
            <div class="navbar_item3">
-             <a href="../login.php" id="login-page"><img src="../images/icons/user.png"  width="25px"></a>
+             <a href="/ASIGNMENT_WAD/login.php" id="login-page"><img src="/ASIGNMENT_WAD/images/icons/user.png"  width="25px"></a>
            </div>
            <div class="navbar_item3">
-             <a href="#" id="wishlist-page"><img src="../images/icons/wishlist-icon.png"  width="25px"></a>
+             <a href="#" id="wishlist-page"><img src="/ASIGNMENT_WAD/images/icons/wishlist-icon.png"  width="25px"></a>
            </div>
            <div class="navbar_item3">
-             <a href="cart/index.php" id="shopping-bag-page"><img src="../images/icons/shopping-bag-icon.png"  width="25px"></a>
+             <a href="/ASIGNMENT_WAD/cart/index.php" id="shopping-bag-page"><img src="/ASIGNMENT_WAD/images/icons/shopping-bag-icon.png"  width="25px"></a>
            </div>
          </div>
          

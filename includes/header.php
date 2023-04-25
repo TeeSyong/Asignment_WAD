@@ -7,13 +7,13 @@
 
     <div class="header_right">
       <div class="header_item2">
-        <a href="signup.php" class="h_item" id="register">Register</a>
+        <a href="/ASIGNMENT_WAD/signup.php" class="h_item" id="register">Register</a>
       </div>
       <div class="header_item2">
         <a href="#" class="h_item">|</a>
       </div>
       <div class="header_item2">
-        <a href="login.php" class="h_item" id="li">Log In</a>
+        <a href="/ASIGNMENT_WAD/login.php" class="h_item" id="li">Log In</a>
       </div>
     </div>
     

@@ -100,3 +100,7 @@ a{
     width:75%;
     float:right;
 }
+.card-img-top{
+
+    object-fit: contain;
+}

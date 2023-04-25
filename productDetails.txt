@@ -1,7 +1,7 @@
 no   :1
 name :Nike Sportswear Tech Pack
 price:425
-image:images/products/Nike Sportswear Tech Pack.png
+image:../images/products/Nike Sportswear Tech Pack.png
 description:
 Enjoy the sun without getting cooked in this versatile button-down. Designed to keep you more comfortable in a variety of conditions, the fabric sheds water and UV rays on the trail and in the wilderness. A subtle Tech Pack look helps you be just as comfortable if you style it up for a chill evening out.
 

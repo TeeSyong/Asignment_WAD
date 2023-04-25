@@ -18,7 +18,9 @@ CREATE TABLE IF NOT EXISTS product(
     name varchar(255),
     price numeric(10,2),
     categories ENUM("t-shirt","hoodies","jackets","trouser","socks","running","basketball","football","training","accessories","bags","fashion"),
-    brands ENUM("nike","underArmour","jordan","Adidas")
+    brands ENUM("nike","underArmour","jordan","Adidas"),
+    imageLink varchar(255),
+    detailLink varchar(255)
 );
 
 CREATE TABLE IF NOT EXISTS cart(
