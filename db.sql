@@ -23,6 +23,7 @@ CREATE TABLE IF NOT EXISTS product(
 
 CREATE TABLE IF NOT EXISTS cart(
     id int(11) AUTO_INCREMENT NOT NULL,
+    link varchar(255),
     name varchar(255),
     description varchar(255),
     qtt int(3),
