@@ -42,7 +42,7 @@
     $password=MD5(trim($_POST['password']));
     $cpassword=MD5(trim($_POST['cpassword']));
 
-    $conn = new mysqli('localhost','root','','move');
+    $conn = new mysqli('localhost','root','','move_database');
     if($conn->connect_error){
       die("Connection failed: ". $conn->connect_error);
     }
