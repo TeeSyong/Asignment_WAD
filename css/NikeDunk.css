@@ -1,146 +1,231 @@
+*{
+  margin:0;
+  padding:0;
+}
+
 .content_wrapper{
   display:flex;
-  background-color: blanchedalmond;
-  width:90%;
-  height: 100%;
-  margin:0 5%;
+  background-color: #f6f6f6;
+  margin:0% auto;
+  max-width: 100%;
+  height:1100px;
+  width:fit-content;
+  -webkit-transform: scale(0.8);
+  
 }
 
 .left-container{
-  display:block;
-  background-color: yellow;
-  width:10%;
-  height:100%;
+  background-color: #f6f6f6;
+  
+  margin:5% 0 5% 3%;
+
+  max-width: 7%;
+  width:fit-content;
 }
 
 .row{
-  background-color: aqua;
+  background-color: #f6f6f6;
   margin: 3%;
   width:fit-content;
   height: fit-content;
 }
 
 .row img{
-  width: 58%;
-  border-radius: 3%;
+  max-width: 100%;
+  border-radius: 5%;
+  max-height: 100%;
 }
 .row img:hover{
-  border-radius: 50%;
+  border-radius: 10%;
+  border: 1px solid black;
 }
 
 
 .middle-container{
-  width:500px;
-  height: 100px;
-  background-color: blue;
+  width:fit-content;
+  height: fit-content;
+  background-color: #f6f6f6;
+  margin:5% 2% 0% 1%;
 }
 
 .middle-container img{
-  width:80%;
-  padding:5px;
+  width: 800px;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 5%;
 }
 
 .right-container{
-  background-color: aquamarine;
-  width: 35%;
-  height: 500px;
-  padding: 3%;
-  margin-top: 50px;
-  overflow: scroll;
-
-}
-
-.right-container button{
-  width:25%;
-  border-radius: 5px;
-  padding: 3.5% 0;
-  margin: 0 0.5% 1% 0;
   background-color: #f6f6f6;
-  border-color: #f6f6f6;
+  width: 790px;
+  height: 1000px;
+  overflow-x: scroll;
+  margin:5% 2% 5% 0;
+  padding: 0% 4%;
+
 }
 
-.right-container button:hover{
-  border-color: black;
+.right-container::-webkit-scrollbar {
+  display: none;
 }
 
 .size{
-  background-color: aqua;
-  width:470px;
-  height:300px;
+  background-color: #f6f6f6;
+  width:fit-content;
+  width: 550px;
 }
 
+.size button{
+  width:180px;
+  height: 70px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  background-color: #f6f6f6;
+  border-color: #f6f6f6;
+  box-sizing: border-box;
+  font-size: 23px;
+  font-weight: 300;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+
+.size button:hover{
+  border-color: black;
+}
+
+
+
 #product_name{
-  margin:0%;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   letter-spacing: 0.007em;
-  font-size: 30px;
-  padding: 0;
+  font-size: 50px;
+  font-weight: 500;
   line-height: 1.5;
-  background-color: antiquewhite;
+  background-color: #f6f6f6;
+  width:fit-content;
+  height:fit-content;
+  
 }
 #product_subname{
-  margin:0%;
   padding-bottom: 3%;
+  background-color: #f6f6f6;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 30px;
+  width:fit-content;
+  height:fit-content;
 }
 
 #price{
+  width:fit-content;
   margin:0%;
-  background-color: rgb(0, 255, 157);
+  background-color: #f6f6f6;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-
+  font-size: 27px;
 }
 
 .othercolours{
-  display: flex;
-  background-color: blanchedalmond;
+  display:flex;
+  width:fit-content;
+  max-width: 100%;
+  max-height: 100%;
+  background-color: #f6f6f6;
   margin: 5% 0;
 }
+
+
 .othercolours_row{
   margin-right: 2%;
 }
 
 .othercolours_row img{
-  width:80px;
+  width:130px;
+  border-radius: 5%;
+}
+
+.othercolours_row:hover img{
+  border-radius: 10%;
+  border: 1px solid black;
 }
 
 
 #selectsize{
   margin:0%;
   padding-bottom: 3%;
-  background-color: rgb(0, 255, 238);
+  background-color: #f6f6f6;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 27px;
+  max-width: 100%;
+  max-height: 100%;
+  width:fit-content;
+  height:fit-content
 }
 
 
 #addToBag{
-  width:75%;
+  width: 550px;
   padding:4.5% 0%;
-  font-size: 15px;
   border-radius: 100px;
   background-color: black;
   color: aliceblue;
   margin-top: 4%;
-  margin-bottom: 2%;
+  margin-bottom: 3.5%;
+
+  font-size: 23px;
+  font-weight: 300;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
+#addToBag button:hover{
+  border: 1px solid black;
+}
 
-#favourite{
-  width:75%;
+#favourite {
+  width: 550px;
   padding:4.5% 0%;
-  font-size: 15px;
+  margin-bottom: 80px;
   border-radius: 100px;
   background-color: #f6f6f6;
   color: black;
+  font-size: 23px;
+  font-weight: 300;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+#favourite :hover{
+  background-color: #d01414;
 }
 
 .details{
-  background-color: azure;
-  width:76%;
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-  letter-spacing: 0.007em;
+  background-color: #f6f6f6;
+  width: 580px;
   text-align:left;
 }
 
+.details p{
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 1.75;
+  vertical-align: baseline;
+}
+
+.details h1{
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 1.2;
+}
+
+.fa fa-star{
+  font-size: 50px;
+}
+
+.review{
+  display: flex;
+  justify-content: space-between;
+}
+.reviewDetails{
+  display: flex;
+  justify-content: space-between;
+}

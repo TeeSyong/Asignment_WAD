@@ -14,7 +14,7 @@
     <body>
         <div class="cartPage">
             <form action="<?php htmlspecialchars($_SERVER['PHP_SELF']); ?>" method ="POST">
-                <div class="column">
+                <div class="column" id="column1">
                     <table>
                         <tr>
                             <td><h1>Shipping Info</h1></td>
@@ -91,7 +91,7 @@
                     
                 </div>
 
-                <div class="column">
+                <div class="column" id="column2">
                     <table>
                         <tr>
                             <td><h1>Payment Info</h1></td>

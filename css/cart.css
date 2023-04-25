@@ -21,7 +21,7 @@ input[type=text]:focus, textarea:focus{
 
 
 .column {
-  float:left;
+  
   padding: 30px;
   position:relative;
 }
