@@ -21,7 +21,7 @@
             <p class="f_item_title">Customer Care</p>
           </div>
           <div class="footer_item">
-            <a href="#" class="f_item"><p>Contact Us</p></a>
+            <a href="/Asignment_WAD/contact.php" class="f_item"><p>Contact Us</p></a>
           </div>
           <div class="footer_item">
             <a href="#" class="f_item"><p>Live Chat</p></a>

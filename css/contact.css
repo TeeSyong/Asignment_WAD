@@ -1,0 +1,206 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box ;
+    font-family: 'Poppins';
+}
+.error {
+    color: #FF0001;
+}
+.contact
+{
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* here need to change the background img */
+    background: url(images/background/background1.png);
+    background-position:100%;
+    background-size: cover;
+}
+.contact .content
+{
+    max-width: 800px;
+    text-align: center;
+}
+.contact .content h2
+{
+    font-size: 50px;
+    font-weight: 500;
+    color: rgba(250, 250, 250, 0.751);
+    font-weight: bold;
+}
+.contact .content p
+{
+    font-weight: 300;
+    font-size: 20px;
+    color: rgba(250, 250, 250, 0.751);
+    
+}
+.container
+{
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.container .contactInfo
+{
+
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.contact .contactInfo .box
+{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+.contact .contactInfo .box .icon
+{
+    min-width: 60px;
+    height: 60px;
+    background: rgba(244, 244, 244, 0.336);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+.logo
+{
+    width: 30px;
+    height: 30px;
+    align-items: center;
+}
+
+.container .contactInfo .box .text
+{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: rgba(2, 2, 2, 0.819);
+    flex-direction: column;
+    font-weight:600 ;
+}
+
+.container .contactInfo .box .text h3
+{
+    font-weight: 500;
+    font-size: 20px;
+    color:  rgb(4, 4, 4);
+    font-weight: bold;
+}
+
+.contactForm
+{
+
+    /* background-color:white ; */
+    background: rgba(255, 254, 254, 0.511);
+    width: 40%;
+    padding: 40px;
+}
+
+.contactForm  h2
+{
+    font-size: 30px;
+    color: rgba(27, 27, 27, 0.79);
+    font-size:500 ;
+}
+
+.contactForm .inputBox
+{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contactForm .inputBox input,
+.contactForm .inputBox textarea
+{
+    background-color: rgba(198, 197, 197, 0.27);
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+
+.contactForm .inputBox span
+{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color:rgb(0, 0, 0);
+}
+.contact .inputBox input:focus ~ span,
+.contact .inputBox input:valid ~ span,
+.contact .inputBox textarea:focus ~ span,
+.contact .inputBox textarea:valid ~ span
+{
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    transform: translateY(-20px);
+    font-weight: 300;
+}
+.contact .inputBox input:invalid ,
+.contact .inputBox textarea:invalid
+{
+    animation: shake .3s;
+}
+@keyframes shake {
+    25% {transform: translateX(4px)}
+    50% {transform: translateX(-4px);}
+    75% {transform: translateX(4px);}
+    
+}
+
+.contact .inputBox input[type="submit"]
+{
+
+    background: rgba(125, 125, 125, 0.489);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+.contact .inputBox input[type="submit"]:hover
+{
+    background: rgba(125, 125, 125, 0.859);
+}
+
+@media (max-width:991px)
+{
+    .contact
+    {
+        padding: 50px;
+    }
+    .container
+    {
+        flex-direction: column;
+    }
+    .container .contactInfo
+    {
+        margin-bottom: 40px;
+    }
+    .container .contactInfo,
+    .contactForm
+    
+    {
+        width: 100%;
+    }
+}
