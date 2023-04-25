@@ -2,5 +2,5 @@
     define("DB_HOST","localhost");
     define("DB_USER","root");
     define("DB_PASSWORD","");
-    define("DB_DATABASE","uecs2094_pie");
+    define("DB_DATABASE","move_database");
 ?>
