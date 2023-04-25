@@ -66,13 +66,13 @@
          </div>
           <div class="navbar_icons">
            <div class="navbar_item3">
-             <a href="login.php" id="login-page"><img src="../images/icons/user.png"  width="25px"></a>
+             <a href="../login.php" id="login-page"><img src="../images/icons/user.png"  width="25px"></a>
            </div>
            <div class="navbar_item3">
              <a href="#" id="wishlist-page"><img src="../images/icons/wishlist-icon.png"  width="25px"></a>
            </div>
            <div class="navbar_item3">
-             <a href="cart.php" id="shopping-bag-page"><img src="../images/icons/shopping-bag-icon.png"  width="25px"></a>
+             <a href="cart/index.php" id="shopping-bag-page"><img src="../images/icons/shopping-bag-icon.png"  width="25px"></a>
            </div>
          </div>
          

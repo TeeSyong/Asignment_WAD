@@ -13,11 +13,36 @@
         include('../includes/header.php');
         include('../includes/navigation.php');
         
+        // echo "
+        // <div>
+        //     <h1>Shopping Cart</h1><hr>
+            
+        // </div>
+        
+        // ";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         $nameErr=$emailErr=$addErr=$cityErr=$stateErr=$postcodeErr="";
         
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             
-            $task = S_POST['task'];
+            $task = $_POST['task'];
             if($task === 'checkout') {
                 $isValid = true;
 
