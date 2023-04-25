@@ -28,7 +28,7 @@ if(!$conn)
 {
     die("Connection Error".myslqi_connect_error());
 }
-$query = "SELECT * FROM product WHERE brands = ?";
+$query = "SELECT * FROM product WHERE brands = ? ORDER BY id ASC";
 
 $stmt = mysqli_prepare($conn,$query);
 
