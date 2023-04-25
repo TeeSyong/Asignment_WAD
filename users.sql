@@ -13,6 +13,15 @@ CREATE TABLE IF NOT EXISTS users(
     PRIMARY KEY(id)
 );
 
+CREATE TABLE IF NOT EXISTS cart(
+    id int(11) AUTO_INCREMENT NOT NULL,
+    name varchar(255),
+    description varchar(255),
+    qtt int(3),
+    price float(8,2),
+    PRIMARY KEY(id)
+);
+
 CREATE TABLE IF NOT EXISTS checkout(
     id int(11) AUTO_INCREMENT NOT NULL,
     name varchar(100),
