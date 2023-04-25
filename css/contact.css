@@ -18,7 +18,7 @@
     align-items: center;
     flex-direction: column;
     /* here need to change the background img */
-    background: url(images/background/background1.png);
+    /* background: url(images/background/background1.png); */
     background-position:100%;
     background-size: cover;
 }

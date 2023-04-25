@@ -60,7 +60,7 @@
     ?>
 
 
-    <section class="contact">
+    <section class="contact" style="background-image: url('images/background/background1.png');">
         <div class="content">
             <h2> Contact Us</h2>
             <p>Our Customer Care Team are on hand to help, you can contact us:
