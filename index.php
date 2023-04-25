@@ -140,7 +140,7 @@
 
 <!--search-->
 <div id="searchDiv" style="background-image: url('images/home/searchBgr.jpg');">
-    <form action="$_SERVER['PHP_SELF']" method="post"> <!-- need form action method? -->
+    <form action="<?php htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post"> <!-- need form action method? -->
         <h1 id="searchTitle">Find more products?</h1>
         <br>
         <input type="text" name="search" id="search" onkeyup="searchFunc()" placeholder="Enter product keyword to search">
