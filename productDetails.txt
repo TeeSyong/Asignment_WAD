@@ -1064,7 +1064,7 @@ Imported
 no   :49
 name :Adult HeatGear® Lo Cut Socks 3-Pack
 price:79
-image:Adult HeatGear® Lo Cut Socks 3-Pack   
+image:Adult HeatGear® Lo Cut Socks 3-Pack
 description:
 HeatGear® fabric wicks sweat away from your skin to keep you cool, dry & light
 Dynamic Arch Support helps reduce foot fatigue
@@ -1077,7 +1077,7 @@ Imported
 
 no   :50
 name :Men's UA Surge 3 Running Shoes
-price:
+price:179.00
 image:Men's UA Surge 3 Running Shoes
 description:
 These shoes are going to feel cushioned and comfortable, but also light and breathable. Why? Because when you never slow down, that's what you need.
