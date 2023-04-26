@@ -16,20 +16,30 @@ CREATE TABLE IF NOT EXISTS users(
 CREATE TABLE IF NOT EXISTS product(
     id int(11) AUTO_INCREMENT PRIMARY KEY,
     name varchar(255),
+    productLink varchar(500),
+    categories ENUM("Clothing", "Footwear", "Accessories"),
+    subCategories ENUM("T-Shirts","Hoodies","Jackets","Trouser","Socks","Running","Basketball","Football","Gym","Accessories","Bags","Fashion"),
+    brands ENUM("Nike","UnderArmour","Jordan","Adidas"),
     price numeric(10,2),
-    categories ENUM("t-shirt","hoodies","jackets","trouser","socks","running","basketball","football","training","accessories","bags","fashion"),
-    brands ENUM("nike","underArmour","jordan","adidas"),
-    imageLink varchar(255),
-    detailLink varchar(255)
+    colour varchar(255),
+    prod_description text,
+    prod_attribute1 varchar(255),
+    prod_attribute2 varchar(255),
+    prod_attribute3 varchar(255),
+    prod_attribute4 varchar(255),
+    imageLink varchar(500)
 );
+
 
 CREATE TABLE IF NOT EXISTS cart(
     id int(11) AUTO_INCREMENT NOT NULL,
-    link varchar(255),
+    link varchar(500),
     name varchar(255),
-    description varchar(255),
-    qtt int(3),
+    categories varchar(255),
+    colour varchar(255),
     price float(8,2),
+    size varchar(10),
+    quantity int(5),
     PRIMARY KEY(id)
 );
 
@@ -50,66 +60,21 @@ CREATE TABLE IF NOT EXISTS checkout(
     PRIMARY KEY(id)
 );
 
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Sportswear Tech Pack',425.00,'t-shirt','nike','/ASIGNMENT_WAD/images/products/Nike Sportswear Tech Pack.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Solo Swoosh',339.00,'hoodies','nike','/ASIGNMENT_WAD/images/products/Nike Solo Swoosh.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Sportswear Essential',425.00,'jackets','nike','/ASIGNMENT_WAD/images/products/Nike Sportswear Essential.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Dri-FIT Phenom Elite',329.00,'trouser','nike','/ASIGNMENT_WAD/images/products/Nike Dri-FIT Phenom Elite.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Solo Swoosh',339.00,'socks','nike','/ASIGNMENT_WAD/images/products/Nike Solo Swoosh.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Sportswear Essential',425.00,'running','nike','/ASIGNMENT_WAD/images/products/Nike Sportswear Essential.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Sportswear Tech Pack',425.00,'basketball','nike','/ASIGNMENT_WAD/images/products/Nike Sportswear Tech Pack.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Solo Swoosh',339.00,'football','nike','/ASIGNMENT_WAD/images/products/Nike Solo Swoosh.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Sportswear Essential',425.00,'training','nike','/ASIGNMENT_WAD/images/products/Nike Sportswear Essential.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Sportswear Tech Pack',425.00,'accessories','nike','/ASIGNMENT_WAD/images/products/Nike Sportswear Tech Pack.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Solo Swoosh',339.00,'bags','nike','/ASIGNMENT_WAD/images/products/Nike Solo Swoosh.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Sportswear Essential',425.00,'fashion','nike','/ASIGNMENT_WAD/images/products/Nike Sportswear Essential.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Sportswear Tech Pack',425.00,'basketball','nike','/ASIGNMENT_WAD/images/products/Nike Sportswear Tech Pack.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Solo Swoosh',339.00,'football','nike','/ASIGNMENT_WAD/images/products/Nike Solo Swoosh.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Sportswear Essential',425.00,'training','nike','/ASIGNMENT_WAD/images/products/Nike Sportswear Essential.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
+INSERT INTO product VALUES ('', 'Nike Dunk High Retro', 'http://localhost/Asignment_WAD/productdetails/NikeDunkHighRetro_BlackWhite.php', 
+'Footwear', 'Basketball', 'Nike', '1289.99', 'White', "Created for the hardwood but taken to the streets, the '80s basketball icon returns 
+with perfectly sheened overlays and original university colours. With its classic hoops design, the Nike Dunk High Retro channels '80s 
+vintage back onto the streets while its padded, high-top collar adds an old-school look rooted in comfort.", 'Foam insole', 'Perforations 
+on the toe', 'Style: DD1399-105', 'Country / Region of Origin: Vietnam, Indonesia', '/ASIGNMENT_WAD/images/nike/NikeDunkHighRetro_BlackWhite_4.png');
 
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Sportswear Tech Pack',425.00,'t-shirt','underArmour','/ASIGNMENT_WAD/images/products/Nike Sportswear Tech Pack.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Sportswear Tech Pack',425.00,'hoodies','underArmour','/ASIGNMENT_WAD/images/products/Nike Sportswear Tech Pack.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Sportswear Tech Pack',425.00,'jackets','underArmour','/ASIGNMENT_WAD/images/products/Nike Sportswear Tech Pack.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Sportswear Tech Pack',425.00,'trouser','underArmour','/ASIGNMENT_WAD/images/products/Nike Sportswear Tech Pack.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Sportswear Tech Pack',425.00,'socks','underArmour','/ASIGNMENT_WAD/images/products/Nike Sportswear Tech Pack.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Sportswear Tech Pack',425.00,'running','underArmour','/ASIGNMENT_WAD/images/products/Nike Sportswear Tech Pack.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Sportswear Tech Pack',425.00,'basketball','underArmour','/ASIGNMENT_WAD/images/products/Nike Sportswear Tech Pack.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Sportswear Tech Pack',425.00,'football','underArmour','/ASIGNMENT_WAD/images/products/Nike Sportswear Tech Pack.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Sportswear Tech Pack',425.00,'training','underArmour','/ASIGNMENT_WAD/images/products/Nike Sportswear Tech Pack.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Sportswear Tech Pack',425.00,'accessories','underArmour','/ASIGNMENT_WAD/images/products/Nike Sportswear Tech Pack.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Sportswear Tech Pack',425.00,'bags','underArmour','/ASIGNMENT_WAD/images/products/Nike Sportswear Tech Pack.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Sportswear Tech Pack',425.00,'fashion','underArmour','/ASIGNMENT_WAD/images/products/Nike Sportswear Tech Pack.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Sportswear Tech Pack',425.00,'basketball','underArmour','/ASIGNMENT_WAD/images/products/Nike Sportswear Tech Pack.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Sportswear Tech Pack',425.00,'football','underArmour','/ASIGNMENT_WAD/images/products/Nike Sportswear Tech Pack.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Sportswear Tech Pack',425.00,'training','underArmour','/ASIGNMENT_WAD/images/products/Nike Sportswear Tech Pack.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
 
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Sportswear Tech Pack',425.00,'t-shirt','jordan','/ASIGNMENT_WAD/images/products/Nike Sportswear Tech Pack.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Sportswear Tech Pack',425.00,'hoodies','jordan','/ASIGNMENT_WAD/images/products/Nike Sportswear Tech Pack.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Sportswear Tech Pack',425.00,'jackets','jordan','/ASIGNMENT_WAD/images/products/Nike Sportswear Tech Pack.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Sportswear Tech Pack',425.00,'trouser','jordan','/ASIGNMENT_WAD/images/products/Nike Sportswear Tech Pack.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Sportswear Tech Pack',425.00,'socks','jordan','/ASIGNMENT_WAD/images/products/Nike Sportswear Tech Pack.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Sportswear Tech Pack',425.00,'running','jordan','/ASIGNMENT_WAD/images/products/Nike Sportswear Tech Pack.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Sportswear Tech Pack',425.00,'basketball','jordan','/ASIGNMENT_WAD/images/products/Nike Sportswear Tech Pack.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Sportswear Tech Pack',425.00,'football','jordan','/ASIGNMENT_WAD/images/products/Nike Sportswear Tech Pack.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Sportswear Tech Pack',425.00,'training','jordan','/ASIGNMENT_WAD/images/products/Nike Sportswear Tech Pack.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Sportswear Tech Pack',425.00,'accessories','jordan','/ASIGNMENT_WAD/images/products/Nike Sportswear Tech Pack.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Sportswear Tech Pack',425.00,'bags','jordan','/ASIGNMENT_WAD/images/products/Nike Sportswear Tech Pack.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Sportswear Tech Pack',425.00,'fashion','jordan','/ASIGNMENT_WAD/images/products/Nike Sportswear Tech Pack.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Sportswear Tech Pack',425.00,'accessories','jordan','/ASIGNMENT_WAD/images/products/Nike Sportswear Tech Pack.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Sportswear Tech Pack',425.00,'bags','jordan','/ASIGNMENT_WAD/images/products/Nike Sportswear Tech Pack.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Sportswear Tech Pack',425.00,'fashion','jordan','/ASIGNMENT_WAD/images/products/Nike Sportswear Tech Pack.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
+INSERT INTO product VALUES ('', 'Nike Dunk High Retro', 'http://localhost/Asignment_WAD/productdetails/NikeDunkHighRetro_Orange.php', 
+'Footwear', 'Basketball', 'Nike', '899.99', 'Orange', "Created for the hardwood but taken to the streets, the '80s basketball icon returns 
+with perfectly sheened overlays and original university colours. With its classic hoops design, the Nike Dunk High Retro channels '80s 
+vintage back onto the streets while its padded, high-top collar adds an old-school look rooted in comfort.", 'Foam insole', 'Perforations 
+on the toe', 'Style: DD1399-105', 'Country / Region of Origin: Vietnam, Indonesia', '/ASIGNMENT_WAD/images/nike/NikeDunkHighRetro_Orange_4.png');
 
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Sportswear Tech Pack',425.00,'t-shirt','adidas','/ASIGNMENT_WAD/images/products/Nike Sportswear Tech Pack.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Sportswear Tech Pack',425.00,'hoodies','adidas','/ASIGNMENT_WAD/images/products/Nike Sportswear Tech Pack.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Sportswear Tech Pack',425.00,'jackets','adidas','/ASIGNMENT_WAD/images/products/Nike Sportswear Tech Pack.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Sportswear Tech Pack',425.00,'trouser','adidas','/ASIGNMENT_WAD/images/products/Nike Sportswear Tech Pack.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Sportswear Tech Pack',425.00,'socks','adidas','/ASIGNMENT_WAD/images/products/Nike Sportswear Tech Pack.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Sportswear Tech Pack',425.00,'running','adidas','/ASIGNMENT_WAD/images/products/Nike Sportswear Tech Pack.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Sportswear Tech Pack',425.00,'basketball','adidas','/ASIGNMENT_WAD/images/products/Nike Sportswear Tech Pack.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Sportswear Tech Pack',425.00,'football','adidas','/ASIGNMENT_WAD/images/products/Nike Sportswear Tech Pack.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Sportswear Tech Pack',425.00,'training','adidas','/ASIGNMENT_WAD/images/products/Nike Sportswear Tech Pack.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Sportswear Tech Pack',425.00,'accessories','adidas','/ASIGNMENT_WAD/images/products/Nike Sportswear Tech Pack.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Sportswear Tech Pack',425.00,'bags','adidas','/ASIGNMENT_WAD/images/products/Nike Sportswear Tech Pack.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Sportswear Tech Pack',425.00,'fashion','adidas','/ASIGNMENT_WAD/images/products/Nike Sportswear Tech Pack.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Sportswear Tech Pack',425.00,'trouser','adidas','/ASIGNMENT_WAD/images/products/Nike Sportswear Tech Pack.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Sportswear Tech Pack',425.00,'socks','adidas','/ASIGNMENT_WAD/images/products/Nike Sportswear Tech Pack.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
-INSERT INTO product (name, price,categories,brands,imageLink,detailLink) VALUES ('Nike Sportswear Tech Pack',425.00,'running','adidas','/ASIGNMENT_WAD/images/products/Nike Sportswear Tech Pack.png','/ASIGNMENT_WAD/productDetails/NikeDunk.php');
+INSERT INTO product VALUES ('', 'Nike Dunk High Retro', 'http://localhost/Asignment_WAD/productdetails/NikeDunkHighRetro_Green.php', 
+'Footwear', 'Basketball', 'Nike', '739.99', 'Green', "Created for the hardwood but taken to the streets, the '80s basketball icon returns 
+with perfectly sheened overlays and original university colours. With its classic hoops design, the Nike Dunk High Retro channels '80s 
+vintage back onto the streets while its padded, high-top collar adds an old-school look rooted in comfort.", 'Foam insole', 'Perforations 
+on the toe', 'Style: DD1399-105', 'Country / Region of Origin: Vietnam, Indonesia', '/ASIGNMENT_WAD/images/nike/NikeDunkHighRetro_Green_4.png');

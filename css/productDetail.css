@@ -161,6 +161,43 @@
   height:fit-content
 }
 
+.counter {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 550px;
+  height: 80px;
+  margin-top: 4%;
+  border-radius: 100px;
+  border: 1px solid #000000;
+  color: black;
+}
+.counter input {
+  width: 100px;
+  border: 0;
+  padding-top: 10px;
+  line-height: 30px;
+  text-align: center;
+  background: #f6f6f6;
+  color: black;
+  appearance: none;
+  outline: 0;
+
+  font-size: 30px;
+  font-weight: 300;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.counter span {
+  text-align: center;
+  font-size: 50px;
+  font-weight: 1000;
+  padding: 0 10px;
+  cursor: pointer;
+  color: black;
+  user-select: none;
+  background-color: #f6f6f6;
+  width: 100px;
+}
 
 #addToBag{
   width: 550px;
