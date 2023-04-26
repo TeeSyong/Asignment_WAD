@@ -1,6 +1,4 @@
-<!-- <div class="cartPage">
-    
-</div> -->
+
 <!DOCTYPE html>
 <html>
     <head>

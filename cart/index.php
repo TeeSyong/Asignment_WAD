@@ -65,7 +65,7 @@
             </tr>
 
             <tr>
-                <td><input type='button' value='Proceed to Payment' onclick='location.href='payment.php''></td>
+                <td><a href='payment.php'>Proceed to Payment></a></td>
             </tr>
             ";
 
