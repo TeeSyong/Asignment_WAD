@@ -47,7 +47,7 @@ $result = mysqli_stmt_get_result($stmt);
 foreach($result as $row){
     echo"
     <div class='col-md-3 mb-4'>
-    <a href='{$row['detailLink']}'>
+    <a href='{$row['productLink']}'>
     <div class='card' >
       <img src='{$row['imageLink']}' class='card-img-top'>
       <div class='card-body'>
