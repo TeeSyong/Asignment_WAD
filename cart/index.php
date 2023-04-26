@@ -6,6 +6,8 @@
         <link rel="stylesheet" href="../css/navigation.css">
         <link rel="stylesheet" href="../css/cart.css">
         <link rel="stylesheet" href="../css/footer.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
         
     </head>
     <body>
@@ -31,7 +33,7 @@
             echo "
                 <table>
                 <tr>
-                    <td colspan='5' style='text-align:right;'> <button value='Remove all' id='remove_button'> Remove All </button> </td> 
+                    <td colspan='6' style='text-align:right;'> <button value='Remove all' id='remove_button'> Remove All </button> </td> 
                 </tr>
             ";
 
@@ -46,12 +48,23 @@
                         <td rowspan='2' width='5' height='5'><input type='checkbox' id='checkbox$count' onclick='onCheck($count)'> </td>
                         <td rowspan='2' style='padding:inherit;'> <img width='100%' height='150px' src='../images/products/{$row['link']}' alt='{$row['name']}'> </td>
                         <td>{$row['name']}</td>                            
-                        <td rowspan='2'>  
+                        <td rowspan='2'> 
+                        <form> 
                         <div class='value-button' id='decrease$count' onclick='decreaseValue($count)' value='Decrease Value'>-</div>
                         <input type='number' id='number$count' value='{$row['qtt']}'>
                         <div class='value-button' id='increase$count' onclick='increaseValue($count)' value='Increase Value'>+</div>
+                        </form>
                         </td>
                         <td rowspan='2'>RM{$row['price']}</td>
+                        <td rowspan='2'>    
+                        <form style='margin:auto;'action='<?php htmlspecialchars({$_SERVER['PHP_SELF']}); ?>' method ='POST'>
+                         <input type='hidden' name='cart_id' value='{$row['id']}'>
+                        <button type='submit' class='delete$count' value='Delete'>
+                        <span class='material-symbols-outlined'>close
+                        </span>
+                        </button>
+                        </form>
+                        </td>
                     </tr>
                     <tr>   
                         <td>{$row['description']}</td>                 
@@ -64,12 +77,12 @@
                             
             echo "
             <tr>
-                <td colspan='4'>Subtotal </td>
-                <td id='total'> </td>
+                <td colspan='5'>Subtotal </td>
+                <td id='total'> RM0 </td>
             </tr>
 
             <tr>
-                <td><a href='payment.php'>Proceed to Payment></a></td>
+                <td colspan='6'><a href='payment.php'>Proceed to Payment></a></td>
             </tr>
             ";
 
