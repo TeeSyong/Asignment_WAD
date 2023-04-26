@@ -37,6 +37,10 @@
 
             while($row = mysqli_fetch_assoc($result)){
                 $data[] =$row;
+            }
+            
+            foreach($data as $row){
+
                 echo "
                     <tr>
                         <td rowspan='2' width='5' height='5'><input type='checkbox' id='checkbox$count' onclick='onCheck($count)'> </td>
@@ -98,10 +102,11 @@
                 document.getElementById('number'+id).value = value;
             }
 
-            var count = '<?php echo $count; ?>';
+            
             var cartArr = [];
             class cart {
-            constructor(link, name,description,quantity,price) {
+            constructor(productId,link, name,description,quantity,price) {
+                this.productId= productId;
                 this.link = link;
                 this.name = name;
                 this.description=description;
@@ -109,26 +114,34 @@
                 this.price = price;
             }
             }
+
             <?php 
                 $results = mysqli_num_rows($result);
-
+                $count=0;
                 foreach($data as $row){
+                    $productId = htmlspecialchars_decode($row['productId']);
                     $link = htmlspecialchars($row['link']);
                     $description = htmlspecialchars($row['description']);
                     $name = htmlspecialchars($row['name']);
                     $qtt = htmlspecialchars($row['qtt']);
-                    $price = htmlspecialchars($row['price']);
+                    $price = $row['price'];
                     echo"
+                    var qttId = document.getElementById('number$count');
+                    var qttText = qttId.value;
+                    var productId = encodeURI('$productId');
                     var link = encodeURI('$link');
                     var name = encodeURI('$name');
                     var description = encodeURI('$description');
-                    var qtt = encodeURI('qtt');
+                    var qtt = encodeURI(qttText);
                     var price = encodeURI('$price');
+
+                    
                                    
-                    var cartObject =new cart(link,name,description,qtt,price);
+                    var cartObject =new cart(productId,link,name,description,qtt,price);
                     cartArr.push(cartObject);
                     
                     ";
+                    $count++;
                 }
                 
             ?>
@@ -136,25 +149,38 @@
             function onCheck(count){               
                 //Get the checkbox
                 var checkBox = document.getElementById("checkbox"+count);
-                var qttId = document.getElementById('number'+count);
-                if (checkBox.checked == true){
-                    cartArr[count].quantity =qttId.value;
+                
+                var isEmpty = cartArrForPrice.length==0;
+                var sProductId = cartArr[count].productId;
+
+                if (checkBox.checked == true)
+                {
                     cartArrForPrice.push(cartArr[count]);
-                    console.log(cartArrForPrice);
-                    computeTotal(cartArrForPrice);
-                } else {
-                    cartArrForPrice.splice(count,1);
-                    console.log(cartArrForPrice);
-                    computeTotal(cartArrForPrice);
+                } 
+                else 
+                {
+
+                    for(let i=0;i<cartArrForPrice.length;i++)
+                    {
+                        if(sProductId==cartArrForPrice[i].productId)
+                        {
+                            cartArrForPrice.splice(i,1)
+                        }
+                    }
                 }
+                console.log(cartArrForPrice);
+                computeTotal();
+
+
             }
             
             
-            function computeTotal(quantity, price) {
+            function computeTotal() {
                 var total=0.00;
                 for(let i=0;i<cartArrForPrice.length;i++){
                     
                     total +=cartArrForPrice[i].quantity * cartArrForPrice[i].price;
+                    
                 }
                 var totalID =document.getElementById('total');
                 totalID.innerHTML ="RM"+total;

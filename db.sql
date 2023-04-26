@@ -33,6 +33,7 @@ CREATE TABLE IF NOT EXISTS product(
 
 CREATE TABLE IF NOT EXISTS cart(
     id int(11) AUTO_INCREMENT NOT NULL,
+    productID int(11),
     link varchar(500),
     name varchar(255),
     categories varchar(255),

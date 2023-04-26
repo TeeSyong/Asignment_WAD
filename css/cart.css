@@ -15,6 +15,12 @@ table,th,td {
     width:80%;
   }
 
+  form {
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 50px;
+  }
   .value-button {
     display: inline-block;
     border: 1px solid #ddd;
