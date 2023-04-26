@@ -1,28 +1,21 @@
 *{
   margin: 0;
   padding: 0;
-  background-color: #f6f6f6;
 }
 
 body {
   background-color: #f6f6f6;
 }
 
-#remove_button {
-  color:rgb(155, 4, 4);
-  border: none;
-  background-color: #f6f6f6;
-  text-decoration: underline;
-  font-weight: bold;
-  font-family:Arial, Helvetica, sans-serif;
+.cartPage {
+background-color: #f6f6f6;
 }
-
-#remove_button:hover {
-  cursor: pointer;
-}
-
-td {
+.cartPage > form {
+  
+  margin: 0 auto;
   text-align: center;
+  display:flex;
+  justify-content: center;
 }
 
 .textInput {
@@ -40,9 +33,10 @@ input[type=text]:focus, textarea:focus{
 
 
 .column {
-  
+  margin: 30px 0;
   padding: 30px;
   position:relative;
+  background-color: #f6f6f6;
 }
 
 .column > table > tbody {
@@ -52,6 +46,7 @@ input[type=text]:focus, textarea:focus{
 .column > table > tbody > tr > td {
   font-size: 18px;
   line-height: 40px;
+  text-align: left;
 }
 
 .column > table > tbody > tr > td > h1{
@@ -67,8 +62,8 @@ input[type=text]:focus, textarea:focus{
 }
 
 #checkoutButton {
-  float: right;
-  margin:0 40px;
+  /* float: right;
+  margin:0 40px; */
   padding: 14px 40px;
   background-color:rgb(155, 4, 4);
   color:#f6f6f6;
@@ -77,7 +72,9 @@ input[type=text]:focus, textarea:focus{
   border: none;
   border-radius: 5px;
   transition-duration: 0.3s;
-  
+  position: relative;
+  right: 40px;
+  bottom: 40px;
 }
 
 #checkoutButton:hover {
@@ -104,9 +101,3 @@ span {
   font-size: 24px;
 }
 
-form {
-  width: 300px;
-  margin: 0 auto;
-  text-align: center;
-  padding-top: 50px;
-}
