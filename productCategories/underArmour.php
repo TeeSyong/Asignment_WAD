@@ -16,8 +16,8 @@
 <?php include('../includes/header.php'); ?>
 <?php include('../includes/navigation.php'); ?>
 
-<div class="row mt-5 mx-2">
 <div clsaa="container-fluid mx-2">
+<div class="row mt-5 mx-2">
 <div class="row">
 
 <?php 
