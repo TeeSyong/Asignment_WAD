@@ -4,7 +4,7 @@
         <title>Cart Page</title>
         <link rel="stylesheet" href="../css/header.css">
         <link rel="stylesheet" href="../css/navigation.css">
-        <link rel="stylesheet" href="../css/cart.css">
+        <link rel="stylesheet" href="../css/cartForm.css">
         <link rel="stylesheet" href="../css/footer.css">
         
     </head>
