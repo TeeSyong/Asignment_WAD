@@ -30,7 +30,7 @@
             <a href="#" class="f_item"><p>Email Support</p></a>
           </div>
           <div class="footer_item">
-            <a href="#" class="f_item"><p>FAQ</p></a>
+            <a href="/Asignment_WAD/faq.php" class="f_item"><p>FAQ</p></a>
           </div>
         </div>
   
