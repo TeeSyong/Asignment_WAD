@@ -3,13 +3,13 @@ $conn = new mysqli('localhost', 'root','','move_database');
 if ($conn->connect_error){
   die("Connection failed: " . $conn->connect_error);
 }
-$sql="SELECT * FROM product WHERE name='Nike Sportswear Max90'";
+$sql="SELECT * FROM product WHERE name='Nike Sportswear Max 90'";
 $result = $conn->query($sql);
 $row = $result->fetch_assoc();
 if($row === FALSE)
   echo "Error for product Table: ". $sql."<br>".$conn->error;
 
-$sql="SELECT * FROM images WHERE name='Nike Sportswear Max90'";
+$sql="SELECT * FROM images WHERE name='Nike Sportswear Max 90'";
 $resultImage = $conn->query($sql);
 $rowImage = $resultImage->fetch_assoc();
 if($rowImage === FALSE)
@@ -31,8 +31,8 @@ if($rowImage === FALSE)
     <link rel="stylesheet" href="/ASIGNMENT_WAD/css/footer.css" />
   </head>
   <body>
-  <?php include('../ASIGNMENT_WAD/includes/header.php'); ?>
-  <?php include('../ASIGNMENT_WAD/includes/navigation.php'); ?>
+  <?php include('../../../../includes/header.php'); ?>
+  <?php include('../../../../includes/navigation.php'); ?>
     <div class="content_wrapper">
       <div class="left-container">
         <div class="row">
@@ -61,41 +61,22 @@ if($rowImage === FALSE)
       <div class="right-container">
         <h1 id="product_name"><?php echo $row['name'];?></h1>
         <h2 id="product_subname"><?php echo $row['colour'];?></h2>
-        <p id="price"><?php echo $row['price'];?></p>
-        <div class="othercolours">
-          <div class="othercolours_row">
-            <img src="/ASIGNMENT_WAD/images/nike/NikeDunkHighRetro_BlackWhite_1.png" alt="NikeDunkHighRetro_BlackWhite_1" onclick="location.href = 'NikeDunkHighRetro_BlackWhite.php';">
-          </div>
-          <div class="othercolours_row">
-            <img src="/ASIGNMENT_WAD/images/nike/NikeDunkHighRetro_Orange_1.png" alt="NikeDunkHighRetro_Orange_1" onclick="location.href = 'NikeDunkHighRetro_Orange.php';">
-          </div>
-          <div class="othercolours_row">
-            <img src="/ASIGNMENT_WAD/images/nike/NikeDunkHighRetro_Green_1.png" alt="NikeDunkHighRetro_Green_1" onclick="location.href = 'NikeDunkHighRetro_Green.php';">
-          </div>
-        </div>
+        <p id="price">RM <?php echo $row['price'];?></p>
+        <br><br><br><br><br><br><br>
         <p id="selectsize">Select Size</p>
-        <form action="NikeDunkHighRetro_BlackWhite.php" method="post">
+        <form action="/ASIGNMENT_WAD/productdetails/Clothing/T-Shirt/Nike/NikeSportswearMax90.php" method="post">
         <input type="hidden" name="link" value="<?php echo $row['productLink'];?>">
         <input type="hidden" name="productName" value="<?php echo $row['name'];?>">
         <input type="hidden" name="colour" value="<?php echo $row['colour'];?>">
         <input type="hidden" name="price" value="<?php echo $row['price'];?>">
         
         <div class="size">
-            <button type="button" id="sizing1" onclick="size1()" >UK 5.5</button>
-            <button type="button" id="sizing2" onclick="size2()" >UK 6</button>
-            <button type="button" id="sizing3" onclick="size3()" >UK 6.5</button><br>
-            <button type="button" id="sizing4" onclick="size4()" >UK 7</button>
-            <button type="button" id="sizing5" onclick="size5()" >UK 7.5</button>
-            <button type="button" id="sizing6" onclick="size6()" >UK 8</button><br>
-            <button type="button" id="sizing7" onclick="size7()" >UK 8.5</button>
-            <button type="button" id="sizing8" onclick="size8()" >UK 9</button>
-            <button type="button" id="sizing9" onclick="size9()" >UK 9.5</button><br>
-            <button type="button" id="sizing10" onclick="size10()" >UK 10</button>
-            <button type="button" id="sizing11" onclick="size11()" >UK 10.5</button>
-            <button type="button" id="sizing12" onclick="size12()" >UK 11</button><br>
-            <button type="button" id="sizing13" onclick="size13()" >UK 11.5</button>
-            <button type="button" id="sizing14" onclick="size14()" >UK 12</button>
-            <button type="button" id="sizing15" onclick="size15()" >UK 12.5</button><br>
+            <button type="button" id="sizing1" onclick="size1()" >XS</button>
+            <button type="button" id="sizing2" onclick="size2()" >S</button>
+            <button type="button" id="sizing3" onclick="size3()" >M</button><br>
+            <button type="button" id="sizing4" onclick="size4()" >L</button>
+            <button type="button" id="sizing5" onclick="size5()" >XL</button>
+            <button type="button" id="sizing6" onclick="size6()" >XXL</button><br>
           
         </div>
         <input type="hidden" id="size_id" name="sizing" value="">
@@ -223,9 +204,55 @@ if($rowImage === FALSE)
       </div>
       
     </div>
+    <script>
+      function clickImage(imgs){
+        var expandImg = document.getElementById("expandedImg");
+        expandImg.src = imgs.src;
+      }
 
-    <script src="/ASIGNMENT_WAD/script/productDetails.js"></script>
-    <?php include('/ASIGNMENT_WAD/includes/footer.php'); ?>
+      function fdr() {
+        var x = document.getElementById("myDIV1");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+
+      function review() {
+        var x = document.getElementById("myDIV2");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+
+      function hoverImage(imgs){
+        var expandImg = document.getElementById("expandedImg");
+        expandImg.src = imgs.src;
+      }
+
+      function increaseCount(a, b) {
+        var input = b.previousElementSibling;
+        var value = parseInt(input.value, 10); 
+        value = isNaN(value)? 0 : value;
+        value ++;
+        input.value = value;
+      }
+      function decreaseCount(a, b) {
+        var input = b.nextElementSibling;
+        var value = parseInt(input.value, 10); 
+        if (value > 1) {
+          value = isNaN(value)? 0 : value;
+          value --;
+          input.value = value;
+        }
+      }
+    </script>
+    <script src="/ASIGNMENT_WAD/script/clothing.js"></script>
+
+    <?php include('../../../../includes/footer.php'); ?>
   </body>
 </html>
 

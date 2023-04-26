@@ -1,31 +1,3 @@
-function clickImage(imgs){
-  var expandImg = document.getElementById("expandedImg");
-  expandImg.src = imgs.src;
-}
-
-function fdr() {
-  var x = document.getElementById("myDIV1");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
-
-function review() {
-  var x = document.getElementById("myDIV2");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
-
-function hoverImage(imgs){
-  var expandImg = document.getElementById("expandedImg");
-  expandImg.src = imgs.src;
-}
-
 function size1(){
   document.getElementById('sizing1').style.backgroundColor = "#f6f6f6";
   document.getElementById('sizing2').style.backgroundColor = "#f6f6f6";
@@ -310,21 +282,4 @@ function size15(){
   document.getElementById('sizing15').style.backgroundColor = "#f6f6f6";
   document.getElementById("size_id").value = "UK 12.5";
   document.getElementById('sizing15').style.backgroundColor = "#e2e0e0";
-}
-
-function increaseCount(a, b) {
-  var input = b.previousElementSibling;
-  var value = parseInt(input.value, 10); 
-  value = isNaN(value)? 0 : value;
-  value ++;
-  input.value = value;
-}
-function decreaseCount(a, b) {
-  var input = b.nextElementSibling;
-  var value = parseInt(input.value, 10); 
-  if (value > 1) {
-    value = isNaN(value)? 0 : value;
-    value --;
-    input.value = value;
-  }
 }

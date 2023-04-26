@@ -5,13 +5,13 @@ $conn = new mysqli('localhost', 'root','','move_database');
 if ($conn->connect_error){
   die("Connection failed: " . $conn->connect_error);
 }
-$sql="SELECT * FROM product WHERE name='Nike Dunk High Retro'AND colour='orange'";
+$sql="SELECT * FROM product WHERE name='Nike Dunk High Retro'AND colour='green'";
 $result = $conn->query($sql);
 $row = $result->fetch_assoc();
 if($row === FALSE)
   echo "Error for product Table: ". $sql."<br>".$conn->error;
 
-$sql="SELECT * FROM images WHERE name='Nike Dunk High Retro'AND colour='orange'";
+$sql="SELECT * FROM images WHERE name='Nike Dunk High Retro'AND colour='green'";
 $resultImage = $conn->query($sql);
 $rowImage = $resultImage->fetch_assoc();
 if($rowImage === FALSE)
@@ -33,8 +33,8 @@ if($rowImage === FALSE)
     <link rel="stylesheet" href="/ASIGNMENT_WAD/css/footer.css" />
   </head>
   <body>
-  <?php include('../includes/header.php'); ?>
-  <?php include('../includes/navigation.php'); ?>
+  <?php include('../../../../includes/header.php'); ?>
+  <?php include('../../../../includes/navigation.php'); ?>
     <div class="content_wrapper">
       <div class="left-container">
         <div class="row">
@@ -60,13 +60,13 @@ if($rowImage === FALSE)
         </div>
       </div>
       <div class="middle-container">
-        <img id="expandedImg"  src="/ASIGNMENT_WAD/images/nike/NikeDunkHighRetro_Orange_1.png">
+        <img id="expandedImg"  src="/ASIGNMENT_WAD/images/nike/NikeDunkHighRetro_Green_1.png">
       </div>
 
       <div class="right-container">
         <h1 id="product_name"><?php echo $row['name'];?></h1>
         <h2 id="product_subname"><?php echo $row['colour'];?></h2>
-        <p id="price"><?php echo $row['price'];?></p>
+        <p id="price">RM <?php echo $row['price'];?></p>
         <div class="othercolours">
           <div class="othercolours_row">
             <img src="/ASIGNMENT_WAD/images/nike/NikeDunkHighRetro_BlackWhite_1.png" alt="NikeDunkHighRetro_BlackWhite_1" onclick="location.href = 'NikeDunkHighRetro_BlackWhite.php';">
@@ -79,7 +79,7 @@ if($rowImage === FALSE)
           </div>
         </div>
         <p id="selectsize">Select Size</p>
-        <form action="NikeDunkHighRetro_Orange.php" method="post">
+        <form action="NikeDunkHighRetro_Green.php" method="post">
         <input type="hidden" name="link" value="<?php echo $row['productLink'];?>">
         <input type="hidden" name="productName" value="<?php echo $row['name'];?>">
         <input type="hidden" name="colour" value="<?php echo $row['colour'];?>">
@@ -231,8 +231,55 @@ if($rowImage === FALSE)
       
     </div>
 
-    <script src="../script/productDetails.js"></script>
-    <?php include('../includes/footer.php'); ?>
+    <script>
+      function clickImage(imgs){
+        var expandImg = document.getElementById("expandedImg");
+        expandImg.src = imgs.src;
+      }
+
+      function fdr() {
+        var x = document.getElementById("myDIV1");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+
+      function review() {
+        var x = document.getElementById("myDIV2");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+
+      function hoverImage(imgs){
+        var expandImg = document.getElementById("expandedImg");
+        expandImg.src = imgs.src;
+      }
+
+      function increaseCount(a, b) {
+        var input = b.previousElementSibling;
+        var value = parseInt(input.value, 10); 
+        value = isNaN(value)? 0 : value;
+        value ++;
+        input.value = value;
+      }
+      function decreaseCount(a, b) {
+        var input = b.nextElementSibling;
+        var value = parseInt(input.value, 10); 
+        if (value > 1) {
+          value = isNaN(value)? 0 : value;
+          value --;
+          input.value = value;
+        }
+      }
+    </script>
+    <script src="/ASIGNMENT_WAD/script/footwear.js"></script>
+
+    <?php include('../../../../includes/footer.php'); ?>
   </body>
 </html>
 
