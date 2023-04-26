@@ -1,3 +1,24 @@
+<?php
+$conn = new mysqli('localhost', 'root','','move_database');
+if ($conn->connect_error){
+  die("Connection failed: " . $conn->connect_error);
+}
+$sql="SELECT * FROM product WHERE name='Nike Sportswear Max 90'";
+$result = $conn->query($sql);
+$row = $result->fetch_assoc();
+if($row === FALSE)
+  echo "Error for product Table: ". $sql."<br>".$conn->error;
+
+$sql="SELECT * FROM images WHERE name='Nike Sportswear Max 90'";
+$resultImage = $conn->query($sql);
+$rowImage = $resultImage->fetch_assoc();
+if($rowImage === FALSE)
+  echo "Error for images Table: ". $sql."<br>".$conn->error;
+?>
+
+
+    
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -10,82 +31,71 @@
     <link rel="stylesheet" href="/ASIGNMENT_WAD/css/footer.css" />
   </head>
   <body>
-  <?php include('../includes/header.php'); ?>
-  <?php include('../includes/navigation.php'); ?>
+  <?php include('../../../../includes/header.php'); ?>
+  <?php include('../../../../includes/navigation.php'); ?>
     <div class="content_wrapper">
       <div class="left-container">
         <div class="row">
-          <img src="/ASIGNMENT_WAD/images/nike/NikeDunkHighRetro_Green_1.png" alt="NikeDunkHighRetro_Green_1" onclick="clickImage(this);" onmouseover="hoverImage(this);">
+          <img src="<?php echo $rowImage['image1_link'];?>" alt="<?php echo $rowImage['image1_link'];?>" onclick="clickImage(this);" onmouseover="hoverImage(this);">
         </div>
         <div class="row">
-          <img src="/ASIGNMENT_WAD/images/nike/NikeDunkHighRetro_Green_2.png" alt="NikeDunkHighRetro_Green_2" onclick="clickImage(this);" onmouseover="hoverImage(this);">
+          <img src="<?php echo $rowImage['image2_link'];?>" alt="<?php echo $rowImage['image2_link'];?>" onclick="clickImage(this);" onmouseover="hoverImage(this);">
         </div>
         <div class="row">
-          <img src="/ASIGNMENT_WAD/images/nike/NikeDunkHighRetro_Green_3.png" alt="NikeDunkHighRetro_Green_3" onclick="clickImage(this);" onmouseover="hoverImage(this);">
+          <img src="<?php echo $rowImage['image3_link'];?>" alt="<?php echo $rowImage['image3_link'];?>" onclick="clickImage(this);" onmouseover="hoverImage(this);">
         </div>
         <div class="row">
-          <img src="/ASIGNMENT_WAD/images/nike/NikeDunkHighRetro_Green_4.png" alt="NikeDunkHighRetro_Green_4" onclick="clickImage(this);" onmouseover="hoverImage(this);">
+          <img src="<?php echo $rowImage['image4_link'];?>" alt="<?php echo $rowImage['image4_link'];?>" onclick="clickImage(this);" onmouseover="hoverImage(this);">
         </div>
         <div class="row">
-          <img src="/ASIGNMENT_WAD/images/nike/NikeDunkHighRetro_Green_5.png" alt="NikeDunkHighRetro_Green_5" onclick="clickImage(this);" onmouseover="hoverImage(this);">
+          <img src="<?php echo $rowImage['image5_link'];?>" alt="<?php echo $rowImage['image5_link'];?>" onclick="clickImage(this);" onmouseover="hoverImage(this);">
         </div>
         <div class="row">
-          <img src="/ASIGNMENT_WAD/images/nike/NikeDunkHighRetro_Green_6.png" alt="NikeDunkHighRetro_Green_6" onclick="clickImage(this);" onmouseover="hoverImage(this);">
-        </div>
-        <div class="row">
-          <img src="/ASIGNMENT_WAD/images/nike/NikeDunkHighRetro_Green_7.png" alt="NikeDunkHighRetro_Green_7" onclick="clickImage(this);" onmouseover="hoverImage(this);">
+          <img src="<?php echo $rowImage['image6_link'];?>" alt="<?php echo $rowImage['image6_link'];?>" onclick="clickImage(this);" onmouseover="hoverImage(this);">
         </div>
       </div>
       <div class="middle-container">
-        <img id="expandedImg"  src="/ASIGNMENT_WAD/images/nike/NikeDunkHighRetro_Green_1.png">
+        <img id="expandedImg"  src="<?php echo $rowImage['image1_link'];?>">
       </div>
 
       <div class="right-container">
-        <h1 id="product_name">Nike Dunk High Retro</h1>
-        <h2 id="product_subname">Men's Shoe</h2>
-        <p id="price">RM 1000</p>
-        <div class="othercolours">
-          <div class="othercolours_row">
-            <img src="/ASIGNMENT_WAD/images/nike/NikeDunkHighRetro_BlackWhite_1.png" alt="NikeDunkHighRetro_BlackWhite_1" onclick="location.href = 'NikeDunkHighRetro_BlackWhite.php';">
-          </div>
-          <div class="othercolours_row">
-            <img src="/ASIGNMENT_WAD/images/nike/NikeDunkHighRetro_Orange_1.png" alt="NikeDunkHighRetro_Orange_1" onclick="location.href = 'NikeDunkHighRetro_Orange.php';">
-          </div>
-          <div class="othercolours_row">
-            <img src="/ASIGNMENT_WAD/images/nike/NikeDunkHighRetro_Green_1.png" alt="NikeDunkHighRetro_Green_1" onclick="location.href = 'NikeDunkHighRetro_Green.php';">
-          </div>
-        </div>
+        <h1 id="product_name"><?php echo $row['name'];?></h1>
+        <h2 id="product_subname"><?php echo $row['colour'];?></h2>
+        <p id="price">RM <?php echo $row['price'];?></p>
+        <br><br><br><br><br><br><br>
         <p id="selectsize">Select Size</p>
+        <form action="/ASIGNMENT_WAD/productdetails/Clothing/T-Shirt/Nike/NikeSportswearMax90.php" method="post">
+        <input type="hidden" name="link" value="<?php echo $row['productLink'];?>">
+        <input type="hidden" name="productName" value="<?php echo $row['name'];?>">
+        <input type="hidden" name="colour" value="<?php echo $row['colour'];?>">
+        <input type="hidden" name="price" value="<?php echo $row['price'];?>">
+        
         <div class="size">
+            <button type="button" id="sizing1" onclick="size1()" >XS</button>
+            <button type="button" id="sizing2" onclick="size2()" >S</button>
+            <button type="button" id="sizing3" onclick="size3()" >M</button><br>
+            <button type="button" id="sizing4" onclick="size4()" >L</button>
+            <button type="button" id="sizing5" onclick="size5()" >XL</button>
+            <button type="button" id="sizing6" onclick="size6()" >XXL</button><br>
           
-            <button type="button" class="size_button">UK 5.5</button>
-            <button type="button" class="size_button">UK 6</button>
-            <button type="button" class="size_button">UK 6.5</button><br>
-            <button type="button" class="size_button">UK 7</button>
-            <button type="button" class="size_button">UK 7.5</button>
-            <button type="button" class="size_button">UK 8</button><br>
-            <button type="button" class="size_button">UK 8.5</button>
-            <button type="button" class="size_button">UK 9</button>
-            <button type="button" class="size_button">UK 9.5</button><br>
-            <button type="button" class="size_button">UK 10</button>
-            <button type="button" class="size_button">UK 10.5</button>
-            <button type="button" class="size_button">UK 11</button><br>
-            <button type="button" class="size_button">UK 11.5</button>
-            <button type="button" class="size_button">UK 12</button>
-            <button type="button" class="size_button">UK 12.5</button><br>
-          
+        </div>
+        <input type="hidden" id="size_id" name="sizing" value="">
+        
+        <div class="counter">
+          <span class="down" onClick='decreaseCount(event, this)'>&#8211;</span>
+          <input type="text" name="quantity" value="1">
+          <span class="up"  onClick='increaseCount(event, this)'>+</span>
         </div>
         
 
-        <button type="button" id="addToBag">Add to Bag</button><br>
+        <button type="submit" id="addToBag" >Add to Bag</button><br>
         <button type="button" id="favourite">Favourite</button>
+        </form>
         <div class="details">
-          <p>Created for the hardwood but taken to the streets, the '80s basketball icon returns with perfectly sheened overlays and original university colours. With its classic hoops design, the Nike Dunk High Retro channels '80s vintage back onto the streets while its padded, high-top collar adds an old-school look rooted in comfort.</p>
+          <p><?php echo $row['prod_description'];?></p>
           <br><br>
-          <p>&#x2022 &#160; Foam insole</p>
-          <p>&#x2022 &#160; Perforations on the toe</p>
-          <p>&#x2022 &#160; Style: DD1399-105</p>
-          <p>&#x2022 &#160; Country / Region of Origin: Vietnam, Indonesia</p>
+          <p>&#x2022 &#160; <?php echo $row['prod_attribute1'];?></p>
+          <p>&#x2022 &#160; <?php echo $row['prod_attribute2'];?></p>
           <br><br><hr><br><br>
           <h1 onclick="fdr()">Free Delivery and Returns</h1>
           <br>
@@ -194,7 +204,6 @@
       </div>
       
     </div>
-
     <script>
       function clickImage(imgs){
         var expandImg = document.getElementById("expandedImg");
@@ -224,8 +233,48 @@
         expandImg.src = imgs.src;
       }
 
-
+      function increaseCount(a, b) {
+        var input = b.previousElementSibling;
+        var value = parseInt(input.value, 10); 
+        value = isNaN(value)? 0 : value;
+        value ++;
+        input.value = value;
+      }
+      function decreaseCount(a, b) {
+        var input = b.nextElementSibling;
+        var value = parseInt(input.value, 10); 
+        if (value > 1) {
+          value = isNaN(value)? 0 : value;
+          value --;
+          input.value = value;
+        }
+      }
     </script>
-    <?php include('../includes/footer.php'); ?>
+    <script src="/ASIGNMENT_WAD/script/clothing.js"></script>
+
+    <?php include('../../../../includes/footer.php'); ?>
   </body>
 </html>
+
+<?php
+if($_SERVER["REQUEST_METHOD"]==="POST"){
+  $link=$_POST['link'];
+  $name=$_POST['productName'];
+  $colour=$_POST['colour'];
+  $price=$_POST['price'];
+  $size=$_POST['sizing'];
+  $quantity=$_POST['quantity'];
+
+  $conn = new mysqli('localhost','root','','move_database');
+  if($conn->connect_error){
+    die("Connection failed: ". $conn->connect_error);
+  }
+  $sql="INSERT into cart values('','$link','$name','$colour','$price','$size','$quantity')";
+  if($conn-> query($sql) === FALSE)
+    echo "Error: " . $sql."<br>".$conn->error;
+  
+
+  $conn->close();
+}
+
+?>
