@@ -7,8 +7,13 @@ $sql="SELECT * FROM product WHERE name='Nike Dunk High Retro'AND colour='white'"
 $result = $conn->query($sql);
 $row = $result->fetch_assoc();
 if($row === FALSE)
-  echo "Error: ". $sql."<br>".$conn->error;
+  echo "Error for product Table: ". $sql."<br>".$conn->error;
 
+$sql="SELECT * FROM images WHERE name='Nike Dunk High Retro'AND colour='white'";
+$resultImage = $conn->query($sql);
+$rowImage = $resultImage->fetch_assoc();
+if($rowImage === FALSE)
+  echo "Error for images Table: ". $sql."<br>".$conn->error;
 ?>
 
 
@@ -31,29 +36,29 @@ if($row === FALSE)
     <div class="content_wrapper">
       <div class="left-container">
         <div class="row">
-          <img src="/ASIGNMENT_WAD/images/nike/NikeDunkHighRetro_BlackWhite_1.png" alt="NikeDunkHighRetro_BlackWhite_1" onclick="clickImage(this);" onmouseover="hoverImage(this);">
+          <img src="<?php echo $rowImage['image1_link'];?>" alt="<?php echo $rowImage['image1_link'];?>" onclick="clickImage(this);" onmouseover="hoverImage(this);">
         </div>
         <div class="row">
-          <img src="/ASIGNMENT_WAD/images/nike/NikeDunkHighRetro_BlackWhite_2.png" alt="NikeDunkHighRetro_BlackWhite_2" onclick="clickImage(this);" onmouseover="hoverImage(this);">
+          <img src="<?php echo $rowImage['image2_link'];?>" alt="<?php echo $rowImage['image2_link'];?>" onclick="clickImage(this);" onmouseover="hoverImage(this);">
         </div>
         <div class="row">
-          <img src="/ASIGNMENT_WAD/images/nike/NikeDunkHighRetro_BlackWhite_3.png" alt="NikeDunkHighRetro_BlackWhite_3" onclick="clickImage(this);" onmouseover="hoverImage(this);">
+          <img src="<?php echo $rowImage['image3_link'];?>" alt="<?php echo $rowImage['image3_link'];?>" onclick="clickImage(this);" onmouseover="hoverImage(this);">
         </div>
         <div class="row">
-          <img src="/ASIGNMENT_WAD/images/nike/NikeDunkHighRetro_BlackWhite_4.png" alt="NikeDunkHighRetro_BlackWhite_4" onclick="clickImage(this);" onmouseover="hoverImage(this);">
+          <img src="<?php echo $rowImage['image4_link'];?>" alt="<?php echo $rowImage['image4_link'];?>" onclick="clickImage(this);" onmouseover="hoverImage(this);">
         </div>
         <div class="row">
-          <img src="/ASIGNMENT_WAD/images/nike/NikeDunkHighRetro_BlackWhite_5.png" alt="NikeDunkHighRetro_BlackWhite_5" onclick="clickImage(this);" onmouseover="hoverImage(this);">
+          <img src="<?php echo $rowImage['image5_link'];?>" alt="<?php echo $rowImage['image5_link'];?>" onclick="clickImage(this);" onmouseover="hoverImage(this);">
         </div>
         <div class="row">
-          <img src="/ASIGNMENT_WAD/images/nike/NikeDunkHighRetro_BlackWhite_6.png" alt="NikeDunkHighRetro_BlackWhite_6" onclick="clickImage(this);" onmouseover="hoverImage(this);">
+          <img src="<?php echo $rowImage['image6_link'];?>" alt="<?php echo $rowImage['image6_link'];?>" onclick="clickImage(this);" onmouseover="hoverImage(this);">
         </div>
         <div class="row">
-          <img src="/ASIGNMENT_WAD/images/nike/NikeDunkHighRetro_BlackWhite_7.png" alt="NikeDunkHighRetro_BlackWhite_7" onclick="clickImage(this);" onmouseover="hoverImage(this);">
+          <img src="<?php echo $rowImage['image7_link'];?>" alt="<?php echo $rowImage['image7_link'];?>" onclick="clickImage(this);" onmouseover="hoverImage(this);">
         </div>
       </div>
       <div class="middle-container">
-        <img id="expandedImg"  src="/ASIGNMENT_WAD/images/nike/NikeDunkHighRetro_BlackWhite_1.png">
+        <img id="expandedImg"  src="<?php echo $rowImage['image1_link'];?>">
       </div>
 
       <div class="right-container">
@@ -224,7 +229,7 @@ if($row === FALSE)
       
     </div>
 
-    <script src="../script/prod_details_script.js"></script>
+    <script src="../script/productDetails.js"></script>
     <?php include('../includes/footer.php'); ?>
   </body>
 </html>

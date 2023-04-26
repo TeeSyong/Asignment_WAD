@@ -30,6 +30,21 @@ CREATE TABLE IF NOT EXISTS product(
     imageLink varchar(500)
 );
 
+CREATE TABLE IF NOT EXISTS images(
+    id int(11) AUTO_INCREMENT PRIMARY KEY,
+    name varchar(255),
+    colour varchar(255),
+    image1_link varchar(500),
+    image2_link varchar(500),
+    image3_link varchar(500),
+    image4_link varchar(500),
+    image5_link varchar(500),
+    image6_link varchar(500),
+    image7_link varchar(500)
+);
+
+
+
 
 
 CREATE TABLE IF NOT EXISTS cart(
@@ -78,3 +93,44 @@ INSERT INTO product VALUES ('', 'Nike Dunk High Retro', 'http://localhost/Asignm
 with perfectly sheened overlays and original university colours. With its classic hoops design, the Nike Dunk High Retro channels '80s 
 vintage back onto the streets while its padded, high-top collar adds an old-school look rooted in comfort.", 'Foam insole', 'Perforations 
 on the toe', 'Style: DD1399-105', 'Country / Region of Origin: Vietnam, Indonesia', '/ASIGNMENT_WAD/images/nike/NikeDunkHighRetro_Green_4.png');
+
+INSERT INTO product VALUES ('', 'Nike Sportswear Max90', 'http://localhost/Asignment_WAD/productdetails/T-Shirt/Nike/NikeSportswearMax90.php', 
+'Clothing', 'T-Shirt', 'Nike', '149.00', '', "Keep your tee game fresh with style picked just for you. Made from midweight cotton that has a 
+slight drape, this everyday favourite is cut for comfort.", 'Colour Shown: White/Black', 'Style: FJ5245-100', '', '', 
+'/ASIGNMENT_WAD/images/products/Clothing/T-Shirts/Nike/NikeSportswearMax90_1.png');
+
+INSERT INTO images VALUES ('', 'Nike Dunk High Retro','White',
+'/ASIGNMENT_WAD/images/nike/NikeDunkHighRetro_BlackWhite_1.png',
+'/ASIGNMENT_WAD/images/nike/NikeDunkHighRetro_BlackWhite_2.png',
+'/ASIGNMENT_WAD/images/nike/NikeDunkHighRetro_BlackWhite_3.png',
+'/ASIGNMENT_WAD/images/nike/NikeDunkHighRetro_BlackWhite_4.png',
+'/ASIGNMENT_WAD/images/nike/NikeDunkHighRetro_BlackWhite_5.png',
+'/ASIGNMENT_WAD/images/nike/NikeDunkHighRetro_BlackWhite_6.png',
+'/ASIGNMENT_WAD/images/nike/NikeDunkHighRetro_BlackWhite_7.png');
+
+INSERT INTO images VALUES ('', 'Nike Dunk High Retro','Orange',
+'/ASIGNMENT_WAD/images/nike/NikeDunkHighRetro_Orange_1.png',
+'/ASIGNMENT_WAD/images/nike/NikeDunkHighRetro_Orange_2.png',
+'/ASIGNMENT_WAD/images/nike/NikeDunkHighRetro_Orange_3.png',
+'/ASIGNMENT_WAD/images/nike/NikeDunkHighRetro_Orange_4.png',
+'/ASIGNMENT_WAD/images/nike/NikeDunkHighRetro_Orange_5.png',
+'/ASIGNMENT_WAD/images/nike/NikeDunkHighRetro_Orange_6.png',
+'/ASIGNMENT_WAD/images/nike/NikeDunkHighRetro_Orange_7.png');
+
+INSERT INTO images VALUES ('', 'Nike Dunk High Retro','Green',
+'/ASIGNMENT_WAD/images/nike/NikeDunkHighRetro_Green_1.png',
+'/ASIGNMENT_WAD/images/nike/NikeDunkHighRetro_Green_2.png',
+'/ASIGNMENT_WAD/images/nike/NikeDunkHighRetro_Green_3.png',
+'/ASIGNMENT_WAD/images/nike/NikeDunkHighRetro_Green_4.png',
+'/ASIGNMENT_WAD/images/nike/NikeDunkHighRetro_Green_5.png',
+'/ASIGNMENT_WAD/images/nike/NikeDunkHighRetro_Green_6.png',
+'/ASIGNMENT_WAD/images/nike/NikeDunkHighRetro_Green_7.png');
+
+INSERT INTO images VALUES ('', 'Nike Sportswear Max90','',
+'/ASIGNMENT_WAD/images/products/Clothing/T-Shirts/Nike/NikeSportswearMax90_1.png',
+'/ASIGNMENT_WAD/images/products/Clothing/T-Shirts/Nike/NikeSportswearMax90_2.png',
+'/ASIGNMENT_WAD/images/products/Clothing/T-Shirts/Nike/NikeSportswearMax90_3.png',
+'/ASIGNMENT_WAD/images/products/Clothing/T-Shirts/Nike/NikeSportswearMax90_4.png',
+'/ASIGNMENT_WAD/images/products/Clothing/T-Shirts/Nike/NikeSportswearMax90_5.png',
+'/ASIGNMENT_WAD/images/products/Clothing/T-Shirts/Nike/NikeSportswearMax90_6.png',
+'/ASIGNMENT_WAD/images/products/Clothing/T-Shirts/Nike/NikeSportswearMax90_7.png');

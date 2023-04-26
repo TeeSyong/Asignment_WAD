@@ -1,17 +1,15 @@
 <?php
-//Create connection
 $conn = new mysqli('localhost', 'root','','move_database');
-//Check connection
 if ($conn->connect_error){
   die("Connection failed: " . $conn->connect_error);
 }
-$sql="SELECT * FROM product WHERE name='Nike Dunk High Retro'AND colour='green'";
+$sql="SELECT * FROM product WHERE name='Nike Sportswear Max90'";
 $result = $conn->query($sql);
 $row = $result->fetch_assoc();
 if($row === FALSE)
   echo "Error for product Table: ". $sql."<br>".$conn->error;
 
-$sql="SELECT * FROM images WHERE name='Nike Dunk High Retro'AND colour='green'";
+$sql="SELECT * FROM images WHERE name='Nike Sportswear Max90'";
 $resultImage = $conn->query($sql);
 $rowImage = $resultImage->fetch_assoc();
 if($rowImage === FALSE)
@@ -33,8 +31,8 @@ if($rowImage === FALSE)
     <link rel="stylesheet" href="/ASIGNMENT_WAD/css/footer.css" />
   </head>
   <body>
-  <?php include('../includes/header.php'); ?>
-  <?php include('../includes/navigation.php'); ?>
+  <?php include('../ASIGNMENT_WAD/includes/header.php'); ?>
+  <?php include('../ASIGNMENT_WAD/includes/navigation.php'); ?>
     <div class="content_wrapper">
       <div class="left-container">
         <div class="row">
@@ -55,12 +53,9 @@ if($rowImage === FALSE)
         <div class="row">
           <img src="<?php echo $rowImage['image6_link'];?>" alt="<?php echo $rowImage['image6_link'];?>" onclick="clickImage(this);" onmouseover="hoverImage(this);">
         </div>
-        <div class="row">
-          <img src="<?php echo $rowImage['image7_link'];?>" alt="<?php echo $rowImage['image7_link'];?>" onclick="clickImage(this);" onmouseover="hoverImage(this);">
-        </div>
       </div>
       <div class="middle-container">
-        <img id="expandedImg"  src="/ASIGNMENT_WAD/images/nike/NikeDunkHighRetro_Green_1.png">
+        <img id="expandedImg"  src="<?php echo $rowImage['image1_link'];?>">
       </div>
 
       <div class="right-container">
@@ -79,14 +74,14 @@ if($rowImage === FALSE)
           </div>
         </div>
         <p id="selectsize">Select Size</p>
-        <form action="NikeDunkHighRetro_Green.php" method="post">
+        <form action="NikeDunkHighRetro_BlackWhite.php" method="post">
         <input type="hidden" name="link" value="<?php echo $row['productLink'];?>">
         <input type="hidden" name="productName" value="<?php echo $row['name'];?>">
         <input type="hidden" name="colour" value="<?php echo $row['colour'];?>">
         <input type="hidden" name="price" value="<?php echo $row['price'];?>">
         
         <div class="size">
-            <button type="button" id="sizing1" onclick="size1()">UK 5.5</button>
+            <button type="button" id="sizing1" onclick="size1()" >UK 5.5</button>
             <button type="button" id="sizing2" onclick="size2()" >UK 6</button>
             <button type="button" id="sizing3" onclick="size3()" >UK 6.5</button><br>
             <button type="button" id="sizing4" onclick="size4()" >UK 7</button>
@@ -120,8 +115,6 @@ if($rowImage === FALSE)
           <br><br>
           <p>&#x2022 &#160; <?php echo $row['prod_attribute1'];?></p>
           <p>&#x2022 &#160; <?php echo $row['prod_attribute2'];?></p>
-          <p>&#x2022 &#160; <?php echo $row['prod_attribute3'];?></p>
-          <p>&#x2022 &#160; <?php echo $row['prod_attribute4'];?></p>
           <br><br><hr><br><br>
           <h1 onclick="fdr()">Free Delivery and Returns</h1>
           <br>
@@ -231,8 +224,8 @@ if($rowImage === FALSE)
       
     </div>
 
-    <script src="../script/productDetails.js"></script>
-    <?php include('../includes/footer.php'); ?>
+    <script src="/ASIGNMENT_WAD/script/productDetails.js"></script>
+    <?php include('/ASIGNMENT_WAD/includes/footer.php'); ?>
   </body>
 </html>
 
