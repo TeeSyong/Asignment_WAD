@@ -30,8 +30,8 @@
         if(mysqli_num_rows($result)>0){
             echo "
                 <table>
-                <tr >
-                    <td colspan='5'> <button value='Remove all' id='remove_button'> Remove All </button> </td> 
+                <tr>
+                    <td colspan='5' style='text-align:right;'> <button value='Remove all' id='remove_button'> Remove All </button> </td> 
                 </tr>
             ";
 
@@ -39,8 +39,8 @@
                 $data[] =$row;
                 echo "
                     <tr>
-                        <td rowspan='2'><input type='checkbox' id='checkbox$count' onclick='onCheck($count)'> </td>
-                        <td rowspan='2'> <img width='100%' height='150px' src='../images/products/{$row['link']}' alt='{$row['name']}'> </td>
+                        <td rowspan='2' width='5' height='5'><input type='checkbox' id='checkbox$count' onclick='onCheck($count)'> </td>
+                        <td rowspan='2' style='padding:inherit;'> <img width='100%' height='150px' src='../images/products/{$row['link']}' alt='{$row['name']}'> </td>
                         <td>{$row['name']}</td>                            
                         <td rowspan='2'>  
                         <div class='value-button' id='decrease$count' onclick='decreaseValue($count)' value='Decrease Value'>-</div>
@@ -62,13 +62,19 @@
             <tr>
                 <td colspan='4'>Subtotal </td>
                 <td id='total'> </td>
-        ";
+            </tr>
+
+            <tr>
+                <td><input type='button' value='Proceed to Payment' onclick='location.href='payment.php''></td>
+            </tr>
+            ";
 
 
         }
 
         echo "
         </table>
+        
                 ";
         
         //mysqli_close($conn);
