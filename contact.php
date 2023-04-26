@@ -5,6 +5,7 @@
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Contact us</title>
+    <link rel="icon" type="image/x-icon" href = "images/home/Move_logo_wo_bg.png">
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css"
         integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
@@ -72,7 +73,7 @@
         <div class="container">
             <div class="contactInfo">
                 <div class="box">
-                    <div class="icon"><img src="images/contact/map.png" alt="map" class="logo"></div>
+                    <div class="icon"><img src="images/contact/map.png" alt="map" class="Contactlogo"></div>
                     <div class="text">
                         <h3>Address</h3>
                         <P> Jln Jasa 19, Taman Medan Pejasa<br>Petaling Jaya<br>Selangor<br>46000<br>Malaysia</p>
@@ -80,14 +81,14 @@
                     </div>
                 </div>
                 <div class="box">
-                    <div class="icon"><img src="images/contact/phone2.png" alt="phone" class="logo"></i></div>
+                    <div class="icon"><img src="images/contact/phone2.png" alt="phone" class="Contactlogo"></i></div>
                     <div class="text">
                         <h3>phone</h3>
                         <P> +603 84081066<br>
                     </div>
                 </div>
                 <div class="box">
-                    <div class="icon"><img src="images/contact/mail2.png" alt="email" class="logo"></i></div>
+                    <div class="icon"><img src="images/contact/mail2.png" alt="email" class="Contactlogo"></i></div>
                     <div class="text">
                         <h3>Email</h3>
                         <P> customercare@move.my<br>
