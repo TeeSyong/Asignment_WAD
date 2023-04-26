@@ -64,7 +64,7 @@
             <button type="button" class="size_button">UK 7</button>
             <button type="button" class="size_button">UK 7.5</button>
             <button type="button" class="size_button">UK 8</button><br>
-            <button type="button" class="size_button"> UK 8.5</button>
+            <button type="button" class="size_button">UK 8.5</button>
             <button type="button" class="size_button">UK 9</button>
             <button type="button" class="size_button">UK 9.5</button><br>
             <button type="button" class="size_button">UK 10</button>
