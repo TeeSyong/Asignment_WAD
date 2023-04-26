@@ -32,7 +32,7 @@ $query = "SELECT * FROM product WHERE brands = ? ORDER BY name ASC";
 
 $stmt = mysqli_prepare($conn,$query);
 
-$brands = "Nike";
+$brands = "Jordan";
 
 mysqli_stmt_bind_param($stmt,"s",$brands);
 

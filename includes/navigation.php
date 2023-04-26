@@ -57,8 +57,8 @@
              </div>
              <div class="dropdown-content">
                <a href="/ASiGNMENT_WAD/productCategories/nike.php" class="n_item">Nike</a>
-               <a href="#" class="n_item">Under Armour</a>
-               <a href="#" class="n_item">Jordan</a>
+               <a href="/ASiGNMENT_WAD/productCategories/underArmour.php" class="n_item">Under Armour</a>
+               <a href="/ASiGNMENT_WAD/productCategories/jordan.php" class="n_item">Jordan</a>
                <a href="/ASiGNMENT_WAD/productCategories/adidas.php" class="n_item">Adidas</a>
              </div>
            </div>

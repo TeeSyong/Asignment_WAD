@@ -28,11 +28,11 @@ if(!$conn)
 {
     die("Connection Error".myslqi_connect_error());
 }
-$query = "SELECT * FROM product WHERE brands = ? ORDER BY id ASC";
+$query = "SELECT * FROM product WHERE brands = ? ORDER BY name ASC";
 
 $stmt = mysqli_prepare($conn,$query);
 
-$brands = "nike";
+$brands = "Adidas";
 
 mysqli_stmt_bind_param($stmt,"s",$brands);
 
