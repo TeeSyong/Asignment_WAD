@@ -1,7 +1,5 @@
 <?php
-//Create connection
 $conn = new mysqli('localhost', 'root','','move_database');
-//Check connection
 if ($conn->connect_error){
   die("Connection failed: " . $conn->connect_error);
 }
@@ -75,11 +73,10 @@ if($row === FALSE)
         </div>
         <p id="selectsize">Select Size</p>
         <form action="NikeDunkHighRetro_BlackWhite.php" method="post">
-        <input type="hidden" name="link" value="http://localhost/Asignment_WAD/productdetails/NikeDunkHighRetro_BlackWhite.php">
-        <input type="hidden" name="productName" value="Nike Dunk High Retro">
-        <input type="hidden" name="categories" value="Shoe">
-        <input type="hidden" name="colour" value="White">
-        <input type="hidden" name="price" value="999.99">
+        <input type="hidden" name="link" value="<?php echo $row['productLink'];?>">
+        <input type="hidden" name="productName" value="<?php echo $row['name'];?>">
+        <input type="hidden" name="colour" value="<?php echo $row['colour'];?>">
+        <input type="hidden" name="price" value="<?php echo $row['price'];?>">
         
         <div class="size">
             <button type="button" id="sizing1" onclick="size1()">UK 5.5</button>
@@ -227,340 +224,7 @@ if($row === FALSE)
       
     </div>
 
-    <script>
-      function clickImage(imgs){
-        var expandImg = document.getElementById("expandedImg");
-        expandImg.src = imgs.src;
-      }
-
-      function fdr() {
-        var x = document.getElementById("myDIV1");
-        if (x.style.display === "none") {
-          x.style.display = "block";
-        } else {
-          x.style.display = "none";
-        }
-      }
-
-      function review() {
-        var x = document.getElementById("myDIV2");
-        if (x.style.display === "none") {
-          x.style.display = "block";
-        } else {
-          x.style.display = "none";
-        }
-      }
-
-      function hoverImage(imgs){
-        var expandImg = document.getElementById("expandedImg");
-        expandImg.src = imgs.src;
-      }
-
-      function size1(){
-        document.getElementById('sizing1').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing2').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing3').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing4').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing5').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing6').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing7').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing8').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing9').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing10').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing11').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing12').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing13').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing14').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing15').style.backgroundColor = "#f6f6f6";
-        document.getElementById("size_id").value = "UK5.5"; 
-        document.getElementById('sizing1').style.backgroundColor = "#e2e0e0";
-      }
-      function size2(){
-        document.getElementById('sizing1').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing2').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing3').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing4').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing5').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing6').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing7').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing8').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing9').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing10').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing11').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing12').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing13').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing14').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing15').style.backgroundColor = "#f6f6f6";
-        document.getElementById("size_id").value = "UK 6";
-        document.getElementById('sizing2').style.backgroundColor = "#e2e0e0";
-      }
-      function size3(){
-        document.getElementById('sizing1').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing2').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing3').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing4').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing5').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing6').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing7').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing8').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing9').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing10').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing11').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing12').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing13').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing14').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing15').style.backgroundColor = "#f6f6f6";
-        document.getElementById("size_id").value = "UK 6.5";
-        document.getElementById('sizing3').style.backgroundColor = "#e2e0e0";
-      }
-      function size4(){
-        document.getElementById('sizing1').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing2').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing3').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing4').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing5').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing6').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing7').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing8').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing9').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing10').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing11').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing12').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing13').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing14').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing15').style.backgroundColor = "#f6f6f6";
-        document.getElementById("size_id").value = "UK 7";
-        document.getElementById('sizing4').style.backgroundColor = "#e2e0e0";
-      }
-      function size5(){
-        document.getElementById('sizing1').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing2').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing3').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing4').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing5').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing6').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing7').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing8').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing9').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing10').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing11').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing12').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing13').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing14').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing15').style.backgroundColor = "#f6f6f6";
-        document.getElementById("size_id").value = "UK 7.5";
-        document.getElementById('sizing5').style.backgroundColor = "#e2e0e0";
-      }
-      function size6(){
-        document.getElementById('sizing1').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing2').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing3').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing4').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing5').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing6').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing7').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing8').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing9').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing10').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing11').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing12').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing13').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing14').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing15').style.backgroundColor = "#f6f6f6";
-        document.getElementById("size_id").value = "UK 8";
-        document.getElementById('sizing6').style.backgroundColor = "#e2e0e0";
-      }
-      function size7(){
-        document.getElementById('sizing1').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing2').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing3').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing4').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing5').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing6').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing7').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing8').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing9').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing10').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing11').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing12').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing13').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing14').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing15').style.backgroundColor = "#f6f6f6";
-        document.getElementById("size_id").value = "UK 8.5";
-        document.getElementById('sizing7').style.backgroundColor = "#e2e0e0";
-      }
-      function size8(){
-        document.getElementById('sizing1').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing2').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing3').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing4').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing5').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing6').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing7').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing8').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing9').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing10').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing11').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing12').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing13').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing14').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing15').style.backgroundColor = "#f6f6f6";
-        document.getElementById("size_id").value = "UK 9";
-        document.getElementById('sizing8').style.backgroundColor = "#e2e0e0";
-      }
-      function size9(){
-        document.getElementById('sizing1').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing2').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing3').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing4').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing5').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing6').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing7').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing8').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing9').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing10').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing11').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing12').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing13').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing14').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing15').style.backgroundColor = "#f6f6f6";
-        document.getElementById("size_id").value = "UK 9.5";
-        document.getElementById('sizing9').style.backgroundColor = "#e2e0e0";
-      }
-      function size10(){
-        document.getElementById('sizing1').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing2').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing3').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing4').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing5').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing6').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing7').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing8').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing9').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing10').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing11').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing12').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing13').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing14').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing15').style.backgroundColor = "#f6f6f6";
-        document.getElementById("size_id").value = "UK 10";
-        document.getElementById('sizing10').style.backgroundColor = "#e2e0e0";
-      }
-      function size11(){
-        document.getElementById('sizing1').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing2').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing3').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing4').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing5').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing6').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing7').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing8').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing9').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing10').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing11').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing12').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing13').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing14').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing15').style.backgroundColor = "#f6f6f6";
-        document.getElementById("size_id").value = "UK 10.5";
-        document.getElementById('sizing11').style.backgroundColor = "#e2e0e0";
-      }
-      function size12(){
-        document.getElementById('sizing1').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing2').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing3').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing4').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing5').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing6').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing7').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing8').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing9').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing10').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing11').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing12').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing13').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing14').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing15').style.backgroundColor = "#f6f6f6";
-        document.getElementById("size_id").value = "UK 11";
-        document.getElementById('sizing12').style.backgroundColor = "#e2e0e0";
-      }
-      function size13(){
-        document.getElementById('sizing1').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing2').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing3').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing4').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing5').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing6').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing7').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing8').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing9').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing10').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing11').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing12').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing13').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing14').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing15').style.backgroundColor = "#f6f6f6";
-        document.getElementById("size_id").value = "UK 11.5";
-        document.getElementById('sizing13').style.backgroundColor = "#e2e0e0";
-      }
-      function size14(){
-        document.getElementById('sizing1').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing2').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing3').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing4').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing5').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing6').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing7').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing8').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing9').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing10').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing11').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing12').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing13').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing14').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing15').style.backgroundColor = "#f6f6f6";
-        document.getElementById("size_id").value = "UK 12";
-        document.getElementById('sizing14').style.backgroundColor = "#e2e0e0";
-      }
-      function size15(){
-        document.getElementById('sizing1').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing2').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing3').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing4').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing5').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing6').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing7').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing8').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing9').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing10').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing11').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing12').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing13').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing14').style.backgroundColor = "#f6f6f6";
-        document.getElementById('sizing15').style.backgroundColor = "#f6f6f6";
-        document.getElementById("size_id").value = "UK 12.5";
-        document.getElementById('sizing15').style.backgroundColor = "#e2e0e0";
-      }
-
-      function increaseCount(a, b) {
-        var input = b.previousElementSibling;
-        var value = parseInt(input.value, 10); 
-        value = isNaN(value)? 0 : value;
-        value ++;
-        input.value = value;
-      }
-      function decreaseCount(a, b) {
-        var input = b.nextElementSibling;
-        var value = parseInt(input.value, 10); 
-        if (value > 1) {
-          value = isNaN(value)? 0 : value;
-          value --;
-          input.value = value;
-        }
-      }
-
-
-    </script>
+    <script src="../script/prod_details_script.js"></script>
     <?php include('../includes/footer.php'); ?>
   </body>
 </html>
@@ -569,7 +233,6 @@ if($row === FALSE)
 if($_SERVER["REQUEST_METHOD"]==="POST"){
   $link=$_POST['link'];
   $name=$_POST['productName'];
-  $categories=$_POST['categories'];
   $colour=$_POST['colour'];
   $price=$_POST['price'];
   $size=$_POST['sizing'];
@@ -579,7 +242,7 @@ if($_SERVER["REQUEST_METHOD"]==="POST"){
   if($conn->connect_error){
     die("Connection failed: ". $conn->connect_error);
   }
-  $sql="INSERT into cart values('','$link','$name','$categories','$colour','$price','$size','$quantity')";
+  $sql="INSERT into cart values('','$link','$name','$colour','$price','$size','$quantity')";
   if($conn-> query($sql) === FALSE)
     echo "Error: " . $sql."<br>".$conn->error;
   

@@ -31,11 +31,11 @@ CREATE TABLE IF NOT EXISTS product(
 );
 
 
+
 CREATE TABLE IF NOT EXISTS cart(
     id int(11) AUTO_INCREMENT NOT NULL,
     link varchar(500),
     name varchar(255),
-    categories varchar(255),
     colour varchar(255),
     price float(8,2),
     size varchar(10),
