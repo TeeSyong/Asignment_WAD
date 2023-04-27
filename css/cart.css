@@ -129,4 +129,12 @@ input[type=number]::-webkit-outer-spin-button {
 
 button span {
   border: none;
-}       
+}
+
+#tablediv {
+  height:auto;
+}    
+
+#tablesect {
+  height:1000px;
+} 
