@@ -9,10 +9,13 @@
         require "../env.php";
         
         //Delete each item 
-        if(!isset($_POST['cart-id'])){
+        if(!isset($_POST['cart_id'])){
             $id = $_POST['cart_id'];
         }
-
+        if(!isset($_POST['cart_size'])){
+            $size = $_POST['cart_size'];
+        }
+        
 
         $conn = mysqli_connect(
             DB_HOST,
@@ -25,11 +28,11 @@
             die("Connection Error".mysqli_connect_error());
         }
 
-        $query = "DELETE FROM cart WHERE id=?";
+        $query = "DELETE FROM cart WHERE id=? AND size=?";
 
         $stmt = mysqli_prepare($conn, $query);
-        mysqli_stmt_bind_param($stmt,"s",
-            $id);                   
+        mysqli_stmt_bind_param($stmt,"is",
+            $id,$size);                   
 
         if(mysqli_stmt_execute($stmt)){
             ;
