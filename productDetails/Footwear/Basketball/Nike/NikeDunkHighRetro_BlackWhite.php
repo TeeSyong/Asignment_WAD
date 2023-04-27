@@ -63,7 +63,7 @@ if($rowImage === FALSE)
 
       <div class="right-container">
         <h1 id="product_name"><?php echo $row['name'];?></h1>
-        <h2 id="product_subname"><?php echo $row['colour'];?></h2>
+        <h2 id="product_subname"><?php echo $row['brands'];?></h2>
         <p id="price">RM <?php echo $row['price'];?></p>
         <div class="othercolours">
           <div class="othercolours_row">
@@ -80,8 +80,9 @@ if($rowImage === FALSE)
         <form action="<?php echo $row['productLink'];?>" method="post" id="myForm">
         <input type="hidden" name="link" value="<?php echo $row['productLink'];?>">
         <input type="hidden" name="productName" value="<?php echo $row['name'];?>">
-        <input type="hidden" name="colour" value="<?php echo $row['brands'];?>">
+        <input type="hidden" name="colour" value="<?php echo $row['colour'];?>">
         <input type="hidden" name="price" value="<?php echo $row['price'];?>">
+        <input type="hidden" name="productId" value="<?php echo $row['id'];?>">
         
         <div class="size">
             <button type="button" id="sizing1" onclick="size1()">UK 5.5</button>
@@ -307,12 +308,13 @@ if($_SERVER["REQUEST_METHOD"]==="POST"){
   $price=$_POST['price'];
   $size=$_POST['sizing'];
   $quantity=$_POST['quantity'];
+  $productId=$_POST['productId'];
 
   $conn = new mysqli('localhost','root','','move_database');
   if($conn->connect_error){
     die("Connection failed: ". $conn->connect_error);
   }
-  $sql="INSERT into cart values('','$link','$name','$colour','$price','$size','$quantity')";
+  $sql="INSERT into cart values('','$productId','$link','$name','$colour','$price','$size','$quantity')";
   if($conn-> query($sql) === FALSE)
     echo "Error: " . $sql."<br>".$conn->error;
   
