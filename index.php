@@ -7,7 +7,7 @@
     <link rel="icon" type="image/x-icon" href = "images/home/Move_logo_wo_bg.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="css/header.css"/>
     <link rel="stylesheet" href="css/navigation.css"/>
     <link rel="stylesheet" href="css/home.css"/>
@@ -211,27 +211,27 @@
 <h1 class="subtitle">Looking for Brands?</h1>
 <div class="flex-container">
     <div>  
-        <img class="flex-img" src="images/home/Category-clothing.png" alt="Clothing">
+        <img class="flex-img" src="images/home/Nike.png" alt="Nike">
         <div class="middle">
-            <button type="button" class="button hoverButton" onclick="window.open('http://localhost/ASiGNMENT_WAD/productCategories/nike.php')">Nike</button>
+            <button type="button" class="button hoverButton" onclick="window.open('http:/Asignment_WAD/productCategories/nike.php')">Nike</button>
         </div>
     </div>
     <div>
-        <img class="flex-img" src="images/home/Category-footwear.jpg" alt="Footwear">
+        <img class="flex-img" src="images/home/UnderArmour.png" alt="Under Armour">
         <div class="middle">
-            <button type="button" class="button hoverButton" onclick="window.open('http://localhost/ASiGNMENT_WAD/productCategories/underArmour.php')">Under Armour</button>
+            <button type="button" class="button hoverButton" onclick="window.open('http:/Asignment_WAD/productCategories/underArmour.php')">Under Armour</button>
         </div>
     </div>
     <div>
-        <img class="flex-img" src="images/home/Category-accessories.png" alt="Accessories">
+        <img class="flex-img" src="images/home/Jordan.png" alt="Jordan">
         <div class="middle">
-            <button type="button" class="button hoverButton" onclick="window.open('http://localhost/ASiGNMENT_WAD/productCategories/jordan.php')">Jordan</button>
+            <button type="button" class="button hoverButton" onclick="window.open('http:/Asignment_WAD/productCategories/jordan.php')">Jordan</button>
         </div>
     </div>
     <div>
-        <img class="flex-img" src="images/home/Category-accessories.png" alt="Accessories">
+        <img class="flex-img" src="images/home/Adidas.png" alt="Adidas">
         <div class="middle">
-            <button type="button" class="button hoverButton" onclick="window.open('http://localhost/ASiGNMENT_WAD/productCategories/adidas.php')">Adidas</button>
+            <button type="button" class="button hoverButton" onclick="window.open('http:/Asignment_WAD/productCategories/adidas.php')">Adidas</button>
         </div>
     </div>
 </div>

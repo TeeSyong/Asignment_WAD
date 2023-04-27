@@ -154,6 +154,7 @@ video {
     height:530px;
     display:flex;
     flex-flow: row wrap;
+    flex-wrap: nowrap;
     justify-content:center;
 }
 
@@ -250,15 +251,16 @@ video {
     width: auto;
     height: 350px;
     background-size: cover;
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     margin-top: 70px;
 }
 
 #searchTitle {
+    padding-top: 80px;
     text-align: center;
     margin-top: 100px;
-    margin-bottom: none;
+    margin-bottom: 50px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
