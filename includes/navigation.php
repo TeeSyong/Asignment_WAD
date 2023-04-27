@@ -12,43 +12,43 @@
                <button class="n_item_title" >New & Latest</button>
              </div>
              <div class="dropdown-content">
-               <a href="#" class="n_item">Cloths</a>
-               <a href="#" class="n_item">Footwear</a>
-               <a href="#" class="n_item">Accessories</a>
+               <a href="/ASiGNMENT_WAD/product.php?categories=Clothing" class="n_item">Cloths</a>
+               <a href="/ASiGNMENT_WAD/product.php?categories=Footwear" class="n_item">Footwear</a>
+               <a href="/ASiGNMENT_WAD/product.php?categories=Accessories" class="n_item">Accessories</a>
              </div>
            </div>
            
            <div class="navbar_item2">
              <div class="dropdown">
-               <button href="#" class="n_item_title" >Clothing</button>
-             </div>  
+               <button href="/ASiGNMENT_WAD/product.php?categories=Clothing" class="n_item_title" >Clothing</button>
+             </div>
              <div class="dropdown-content">
-               <a href="#" class="n_item">T-Shirts</a>
-               <a href="#" class="n_item">Hoodies</a>
-               <a href="#" class="n_item">Jackets</a>
-               <a href="#" class="n_item">Trouser & Tights</a>
-               <a href="#" class="n_item">Socks</a>
+               <a href="/ASiGNMENT_WAD/product.php?subCategories=T-Shirts" class="n_item">T-Shirts</a>
+               <a href="/ASiGNMENT_WAD/product.php?subCategories=Hoodies" class="n_item">Hoodies</a>
+               <a href="/ASiGNMENT_WAD/product.php?subCategories=Jackets" class="n_item">Jackets</a>
+               <a href="/ASiGNMENT_WAD/product.php?subCategories=Trouser" class="n_item">Trouser & Tights</a>
+               <a href="/ASiGNMENT_WAD/product.php?subCategories=Socks" class="n_item">Socks</a>
              </div>
            </div>
             <div class="navbar_item2">
              <div class="dropdown">
-               <button href="#" class="n_item_title" >Footwear</button>
+               <button href="/ASiGNMENT_WAD/product.php?categories=Footwear" class="n_item_title" >Footwear</button>
              </div>
              <div class="dropdown-content">
-               <a href="#" class="n_item">Running</a>
-               <a href="#" class="n_item">Basketball</a>
-               <a href="#" class="n_item">Footbal</a>
-               <a href="#" class="n_item">Training & Gym</a>
+               <a href="/ASiGNMENT_WAD/product.php?subCategories=Running" class="n_item">Running</a>
+               <a href="/ASiGNMENT_WAD/product.php?subCategories=Basketball" class="n_item">Basketball</a>
+               <a href="/ASiGNMENT_WAD/product.php?subCategories=Football" class="n_item">Football</a>
+               <a href="/ASiGNMENT_WAD/product.php?subCategories=Gym" class="n_item">Training & Gym</a>
              </div>
            </div>
             <div class="navbar_item2">
              <div class="dropdown">
-               <button href="#" class="n_item_title">Accessories</button>
+               <button href="/ASiGNMENT_WAD/product.php?categories=Accessories" class="n_item_title">Accessories</button>
              </div>
              <div class="dropdown-content">
-               <a href="#" class="n_item">Sports Accessories</a>
-               <a href="#" class="n_item">Bags</a>
-               <a href="#" class="n_item">Fashion</a>
+               <a href="/ASiGNMENT_WAD/product.php?subCategories=Accessories" class="n_item">Sports Accessories</a>
+               <a href="/ASiGNMENT_WAD/product.php?subCategories=Bags" class="n_item">Bags</a>
+               <a href="/ASiGNMENT_WAD/product.php?subCategories=Fashion" class="n_item">Fashion</a>
              </div>
            </div>
             <div class="navbar_item2">
@@ -56,10 +56,12 @@
                <button href="#" class="n_item_title">Brands</button>
              </div>
              <div class="dropdown-content">
-               <a href="/ASiGNMENT_WAD/productCategories/nike.php" class="n_item">Nike</a>
-               <a href="/ASiGNMENT_WAD/productCategories/underArmour.php" class="n_item">Under Armour</a>
-               <a href="/ASiGNMENT_WAD/productCategories/jordan.php" class="n_item">Jordan</a>
-               <a href="/ASiGNMENT_WAD/productCategories/adidas.php" class="n_item">Adidas</a>
+              <form action = "{$SELF}" method="GET" id="brands">
+               <a href="/ASiGNMENT_WAD/product.php?brands=Nike" class="n_item">Nike</a>
+               <a href="/ASiGNMENT_WAD/product.php?brands=underArmour" class="n_item">Under Armour</a>
+               <a href="/ASiGNMENT_WAD/product.php?brands=Jordan" class="n_item">Jordan</a>
+               <a href="/ASiGNMENT_WAD/product.php?brands=Adidas" class="n_item">Adidas</a>
+               </form>
              </div>
            </div>
            
@@ -79,3 +81,13 @@
            
        </div>
  </nav>
+
+<script>
+
+function submit()
+{
+  document.getElementById("brands").submit();
+}
+
+
+</script>
