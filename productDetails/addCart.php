@@ -32,5 +32,5 @@ if($_SERVER["REQUEST_METHOD"]==="POST"){
 
   $conn->close();
 }
-header("Location:Clothing/Socks/Adidas/AdidasOriginalMid-CutCrewSocks.php");
+header("Location:$link");
 ?>
