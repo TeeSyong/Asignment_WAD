@@ -15,11 +15,12 @@
         require "../env.php";
         include('../includes/header.php');
         include('../includes/navigation.php');
-
+        
         echo "
         <div id='headerDiv'>
             <h1>Shopping Cart</h1><hr>    
         </div>
+        <section id='tablesect'>
         ";
         // establish connection
         $conn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);
@@ -31,6 +32,8 @@
         $count = 0;
         if(mysqli_num_rows($result)>0){
             echo "
+                
+                <div id='tablediv'>
                 <table>
                 <tr>
                     <td colspan='6' style='text-align:right;'>
@@ -50,7 +53,7 @@
                 echo "
                     <tr>
                         <td rowspan='2' width='5' height='5'><input type='checkbox' id='checkbox$count' onclick='onCheck($count)'> </td>
-                        <td rowspan='2' style='padding:inherit;'> <img width='100%' height='150px' src='../..{$row['imglink']}' alt='{$row['name']}'> </td>
+                        <td rowspan='2' style='padding:inherit;'> <img width='80%' height='200px' src='../..{$row['imglink']}' alt='{$row['name']}'> </td>
                         <td class='nameStyle'>{$row['name']}</td>                            
                         <td rowspan='2'> 
                         <form id='addMinus'> 
@@ -99,6 +102,8 @@
 
         echo "
         </table>  
+        </div>
+        </section>
                 ";
         //mysqli_close($conn);
 

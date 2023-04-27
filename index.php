@@ -183,16 +183,16 @@ mysqli_close($conn);
         let filter = input.value.toLowerCase();
         let ul = document.getElementById('searchUL');
         li = ul.getElementsByTagName('li');
-        
-        
+        let productLinkID= document.getElementById('hide');
+        var text = document.getElementById('search').value;
+
+
         for (i = 0; i < li.length; i++) {
             a = li[i].getElementsByTagName('a')[0];
             
             txtValue = a.textContent || a.innerText;
             
-            if(document.getElementById('search').value == ''){
-                li[i].style.display = "none";
-            }
+
 
             if (txtValue.toLowerCase().indexOf(filter) > -1) {
                 li[i].style.display = "block";
@@ -201,7 +201,13 @@ mysqli_close($conn);
             else {
                 li[i].style.display = "none";
             }
+
+            if(text.length<1){
+                li[i].style.display = "none";
+                
+            }
         }
+
 
     }
 </script>
