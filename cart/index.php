@@ -33,7 +33,11 @@
             echo "
                 <table>
                 <tr>
-                    <td colspan='6' style='text-align:right;'> <button value='Remove all' id='remove_button'> Remove All </button> </td> 
+                    <td colspan='6' style='text-align:right;'>
+                    <form style='margin:auto;' action='deleteAll.php' method ='POST'>
+                    <button value='Remove all' id='remove_button'> Remove All </button>
+                    </form>
+                    </td> 
                 </tr>
             ";
 
@@ -49,25 +53,24 @@
                         <td rowspan='2' style='padding:inherit;'> <img width='100%' height='150px' src='../images/products/{$row['link']}' alt='{$row['name']}'> </td>
                         <td>{$row['name']}</td>                            
                         <td rowspan='2'> 
-                        <form> 
+                        <form id='addMinus'> 
                         <div class='value-button' id='decrease$count' onclick='decreaseValue($count)' value='Decrease Value'>-</div>
-                        <input type='number' id='number$count' value='{$row['qtt']}'>
+                        <input type='number' id='number$count' value='{$row['quantity']}'>
                         <div class='value-button' id='increase$count' onclick='increaseValue($count)' value='Increase Value'>+</div>
                         </form>
                         </td>
                         <td rowspan='2'>RM{$row['price']}</td>
                         <td rowspan='2'>    
-                        <form style='margin:auto;'action='<?php htmlspecialchars({$_SERVER['PHP_SELF']}); ?>' method ='POST'>
-                         <input type='hidden' name='cart_id' value='{$row['id']}'>
-                        <button type='submit' class='delete$count' value='Delete'>
-                        <span class='material-symbols-outlined'>close
-                        </span>
-                        </button>
+                        <form style='margin:auto;' action='delete.php' method ='POST'>
+                            <input type='hidden' name='cart_id' value='{$row['productId']}'>
+                            <button type='submit' class='delete$count' value='Delete'>
+                            <span class='material-symbols-outlined'>close</span>
+                            </button>
                         </form>
                         </td>
                     </tr>
                     <tr>   
-                        <td>{$row['description']}</td>                 
+                        <td>{$row['colour']} <br> {$row['size']}</td>                 
                     </tr>
                     </hr>
                    
@@ -82,7 +85,9 @@
             </tr>
 
             <tr>
-                <td colspan='6'><a href='payment.php'>Proceed to Payment></a></td>
+                 <td colspan='6'>
+                 <a href='payment.php'>Proceed to Payment</a>
+                </td>
             </tr>
             ";
 
@@ -90,41 +95,59 @@
         }
 
         echo "
-        </table>
-        
+        </table>  
                 ";
-        
-        //mysqli_close($conn);
+        mysqli_close($conn);
 
+        
         include('../includes/footer.php');
         ?>
         
+        <?php
+            // //Delete each item 
+            // if(!isset($_POST['cart-id'])){
+            //     $id = $_POST['cart_id'];
+            // }
+
+
+            // $conn = mysqli_connect(
+            //     DB_HOST,
+            //     DB_USER,
+            //     DB_PASSWORD,
+            //     DB_DATABASE
+            // );
+    
+            // if(!$conn){
+            //     die("Connection Error".mysqli_connect_error());
+            // }
+    
+            // $query = "DELETE FROM cart WHERE id=?";
+    
+            // $stmt = mysqli_prepare($conn, $query);
+            // mysqli_stmt_bind_param($stmt,"s",
+            //     $id);                   
+    
+            // if(mysqli_stmt_execute($stmt)){
+            //     ;
+            // }else{
+            //     die("Insert Error".mysqli_error($conn));
+            // }
+    
+            // mysqli_stmt_close($stmt);
+            // mysqli_close($conn);
+        ?>
         <script>
-            function increaseValue(id) {
-                let value = parseInt(document.getElementById('number'+id).value, 10);
-                value = isNaN(value) ? 0 : value;
-                value++;
-                document.getElementById('number'+id).value = value;
-            }
-
-            function decreaseValue(id) {
-                let value = parseInt(document.getElementById('number'+id).value, 10);
-                value = isNaN(value) ? 0 : value;
-                value < 1 ? value = 1 : '';
-                value--;
-                document.getElementById('number'+id).value = value;
-            }
-
-            
+                
             var cartArr = [];
             class cart {
-            constructor(productId,link, name,description,quantity,price) {
+            constructor(productId,link, name,colour,price,size,quantity) {
                 this.productId= productId;
                 this.link = link;
                 this.name = name;
-                this.description=description;
-                this.quantity = quantity;
+                this.colour=colour;
                 this.price = price;
+                this.size = size;
+                this.quantity = quantity;
             }
             }
 
@@ -134,23 +157,23 @@
                 foreach($data as $row){
                     $productId = htmlspecialchars_decode($row['productId']);
                     $link = htmlspecialchars($row['link']);
-                    $description = htmlspecialchars($row['description']);
                     $name = htmlspecialchars($row['name']);
-                    $qtt = htmlspecialchars($row['qtt']);
+                    $colour = htmlspecialchars($row['colour']);
                     $price = $row['price'];
+                    $size = htmlspecialchars($row['size']);
+                    $qtt = htmlspecialchars($row['quantity']);
                     echo"
                     var qttId = document.getElementById('number$count');
                     var qttText = qttId.value;
                     var productId = encodeURI('$productId');
                     var link = encodeURI('$link');
                     var name = encodeURI('$name');
-                    var description = encodeURI('$description');
-                    var qtt = encodeURI(qttText);
+                    var colour = encodeURI('$colour');
                     var price = encodeURI('$price');
-
-                    
-                                   
-                    var cartObject =new cart(productId,link,name,description,qtt,price);
+                    var size = encodeURI('$size');
+                    var qtt = encodeURI(qttText);
+           
+                    var cartObject =new cart(productId,link,name,colour,price,size,qtt);
                     cartArr.push(cartObject);
                     
                     ";
@@ -158,6 +181,43 @@
                 }
                 
             ?>
+         
+            function computeTotal() {
+                var total=0.00;
+                for(let i=0;i<cartArrForPrice.length;i++){
+                    
+                    total +=cartArrForPrice[i].quantity * cartArrForPrice[i].price;
+                    
+                }
+                var totalID =document.getElementById('total');
+                totalID.innerHTML ="RM"+total;
+            }
+
+            function increaseValue(count) {
+                var checkBox = document.getElementById("checkbox"+count);
+                let value = parseInt(document.getElementById('number'+count).value, 10);
+                value = isNaN(value) ? 0 : value;
+                value++;
+                document.getElementById('number'+count).value = value;
+                cartArr[count].quantity = value;
+                if(checkBox.checked==true){
+                    computeTotal();
+                }
+            }
+
+            function decreaseValue(count) {
+                var checkBox = document.getElementById("checkbox"+count);
+                let value = parseInt(document.getElementById('number'+count).value, 10);
+                value = isNaN(value) ? 0 : value;
+                value < 1 ? value = 1 : '';
+                value--;
+                document.getElementById('number'+count).value = value;
+                cartArr[count].quantity = value;
+                if(checkBox.checked==true){
+                    computeTotal();
+                }
+            }
+
             var cartArrForPrice= [];
             function onCheck(count){               
                 //Get the checkbox
@@ -181,32 +241,10 @@
                         }
                     }
                 }
-                console.log(cartArrForPrice);
                 computeTotal();
 
 
             }
-            
-            
-            function computeTotal() {
-                var total=0.00;
-                for(let i=0;i<cartArrForPrice.length;i++){
-                    
-                    total +=cartArrForPrice[i].quantity * cartArrForPrice[i].price;
-                    
-                }
-                var totalID =document.getElementById('total');
-                totalID.innerHTML ="RM"+total;
-            }
-
-            function getTotal(){
-
-                alert(total);
-            }
-
-            // var total=computeTotal($row['qtt'],$row['price'])
-            //         var totalID= document.getElementById('total');
-            //         totalID.value= total;
         </script>
 
 
