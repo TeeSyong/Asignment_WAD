@@ -34,7 +34,7 @@
                     <p class="contact-item__value">123 bandar Sg long.</p>
                 </div>
             </div>
-            <input type="button" class="logoutProfile" value="Log out" onclick="#">
+            <a href="logout.php"><input type="button" class="logoutProfile" value="Log out" ></a>
         </div>
 
     </section>
