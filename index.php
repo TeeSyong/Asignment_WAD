@@ -146,10 +146,8 @@
         <h1 id="searchTitle">Find more products?</h1>
         <br>
         <input type="text" name="search" id="search" onkeyup="searchFunction()" placeholder="Enter product name to search">
-    
+
 </div>
-<!-- haven't done javascript & php for search -->
-<!-- refer Filter/Search List of w3schools -->
 
 <?php 
 
@@ -210,25 +208,25 @@
 <h1 class="subtitle">Looking for Brands?</h1>
 <div class="flex-container">
     <div>  
-        <img class="flex-img" src="images/home/Nike.png" alt="Nike">
+        <img class="flex-imgBrands" src="images/home/Nike.png" alt="Nike">
         <div class="middle">
             <button type="button" class="button hoverButton" onclick="window.open('http:/Asignment_WAD/productCategories/nike.php')">Nike</button>
         </div>
     </div>
     <div>
-        <img class="flex-img" src="images/home/UnderArmour.png" alt="Under Armour">
+        <img class="flex-imgBrands" src="images/home/UnderArmour.png" alt="Under Armour">
         <div class="middle">
             <button type="button" class="button hoverButton" onclick="window.open('http:/Asignment_WAD/productCategories/underArmour.php')">Under Armour</button>
         </div>
     </div>
     <div>
-        <img class="flex-img" src="images/home/Jordan.png" alt="Jordan">
+        <img class="flex-imgBrands" src="images/home/Jordan.png" alt="Jordan">
         <div class="middle">
             <button type="button" class="button hoverButton" onclick="window.open('http:/Asignment_WAD/productCategories/jordan.php')">Jordan</button>
         </div>
     </div>
     <div>
-        <img class="flex-img" src="images/home/Adidas.png" alt="Adidas">
+        <img class="flex-imgBrands" src="images/home/Adidas.png" alt="Adidas">
         <div class="middle">
             <button type="button" class="button hoverButton" onclick="window.open('http:/Asignment_WAD/productCategories/adidas.php')">Adidas</button>
         </div>

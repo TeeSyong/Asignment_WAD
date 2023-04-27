@@ -6,8 +6,8 @@
         <link rel="stylesheet" href="../css/navigation.css">
         <link rel="stylesheet" href="../css/cart.css">
         <link rel="stylesheet" href="../css/footer.css">
-        <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,0" /> -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,0" />
+        <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0" /> -->
         
     </head>
     <body style="background-image: url(../images/cart/bgrForCart.jpg);">
@@ -64,7 +64,7 @@
                         <form style='margin:auto;' action='delete.php' method ='POST'>
                             <input type='hidden' name='cart_id' value='{$row['productId']}'>
                             <button type='submit' class='delete$count' value='Delete'>
-                            <span class='material-symbols-outlined'>delete</span>
+                            <span class='material-symbols-outlined'>close</span>
                             </button>
                         </form>
                         </td>
