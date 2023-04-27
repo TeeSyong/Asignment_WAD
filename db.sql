@@ -46,7 +46,7 @@ CREATE TABLE IF NOT EXISTS images(
 
 CREATE TABLE IF NOT EXISTS cart(
     id int(11) AUTO_INCREMENT NOT NULL,
-    productId int(11),
+    productId varchar(25),
     link varchar(500),
     name varchar(255),
     colour varchar(255),
@@ -129,10 +129,10 @@ lightweight & extremely durable', 'Mesh lining delivers superior breathability &
 '/ASIGNMENT_WAD/images/products/Clothing/Trouser/UnderArmour/UAVitalWovenPants_1.png');
 
 INSERT INTO product (name, productLink, categories, subCategories, brands, price, colour, prod_description, prod_attribute1, prod_attribute2,
-prod_attribute3, prod_attribute4, imageLink) VALUES ('Curry Logo Heavyweight Short Sleeve', '/Asignment_WAD/productdetails/Clothing/T-Shirt/Jordan/JordanFlightEssentials_White.php', 
+prod_attribute3, prod_attribute4, imageLink) VALUES ('Curry Logo Heavyweight Short Sleeve', '/Asignment_WAD/productdetails/Clothing/T-Shirt/UnderArmour/CurryLogoHeavyweightShortSleeve.php', 
 'Clothing', 'T-Shirt', 'Under Armour', '199.00', '', 'Everything I put my name on has to be good—it has to help you play and it has to support our 
 mission to change the game for good." - Stephen Curry', 'Heavyweight, soft cotton-blend fabric provides all-day comfort', '60% Cotton/40% Polyester', 
-'Style: 1376801', 'Country/Region of Origin: Cambodia', '/ASIGNMENT_WAD/images/products/Clothing/T-Shirts/Adidas/AdicolorClassics3-StripesTee_1.png');
+'Style: 1376801', 'Country/Region of Origin: Cambodia', '/ASIGNMENT_WAD/images/products/Clothing/T-Shirts/UnderArmour/CurryLogoHeavyweightShortSleeve_1.png');
 
 INSERT INTO product (name, productLink, categories, subCategories, brands, price, colour, prod_description, prod_attribute1, prod_attribute2,
 prod_attribute3, prod_attribute4, imageLink) VALUES ('Jordan Flight Essentials', '/Asignment_WAD/productdetails/Clothing/T-Shirt/Jordan/JordanFlightEssentials_White.php', 
