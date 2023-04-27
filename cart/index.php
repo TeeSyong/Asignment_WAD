@@ -6,18 +6,18 @@
         <link rel="stylesheet" href="../css/navigation.css">
         <link rel="stylesheet" href="../css/cart.css">
         <link rel="stylesheet" href="../css/footer.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-
+        <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,0" /> -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0" />
         
     </head>
-    <body>
+    <body style="background-image: url(../images/cart/bgrForCart.jpg);">
         <?php
         require "../env.php";
         include('../includes/header.php');
         include('../includes/navigation.php');
 
         echo "
-        <div>
+        <div id='headerDiv'>
             <h1>Shopping Cart</h1><hr>    
         </div>
         ";
@@ -51,11 +51,11 @@
                     <tr>
                         <td rowspan='2' width='5' height='5'><input type='checkbox' id='checkbox$count' onclick='onCheck($count)'> </td>
                         <td rowspan='2' style='padding:inherit;'> <img width='100%' height='150px' src='../images/products/{$row['link']}' alt='{$row['name']}'> </td>
-                        <td>{$row['name']}</td>                            
+                        <td class='nameStyle'>{$row['name']}</td>                            
                         <td rowspan='2'> 
                         <form id='addMinus'> 
                         <div class='value-button' id='decrease$count' onclick='decreaseValue($count)' value='Decrease Value'>-</div>
-                        <input type='number' id='number$count' value='{$row['quantity']}'>
+                        <input type='number' class='qttStyle' id='number$count' value='{$row['quantity']}'>
                         <div class='value-button' id='increase$count' onclick='increaseValue($count)' value='Increase Value'>+</div>
                         </form>
                         </td>
@@ -64,15 +64,15 @@
                         <form style='margin:auto;' action='delete.php' method ='POST'>
                             <input type='hidden' name='cart_id' value='{$row['productId']}'>
                             <button type='submit' class='delete$count' value='Delete'>
-                            <span class='material-symbols-outlined'>close</span>
+                            <span class='material-symbols-outlined'>delete</span>
                             </button>
                         </form>
                         </td>
                     </tr>
                     <tr>   
-                        <td>{$row['colour']} <br> {$row['size']}</td>                 
+                        <td class='descriptionStyle'>{$row['colour']} <br> {$row['size']}</td>                 
                     </tr>
-                    </hr>
+                    
                    
                 ";
                 $count++;

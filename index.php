@@ -154,26 +154,23 @@
 
 <?php 
 
-$conn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);
-$query = "SELECT * FROM product ORDER BY id ASC";
-$result = mysqli_query($conn, $query);
-$productNameArr = array();
-if(mysqli_num_rows($result)>0){
-    echo "<ul id='searchUL'>";
-    while($row = mysqli_fetch_assoc($result)){
-        $nameFromDB = $row['name'];
-        $productLink = htmlspecialchars($row['productLink']);
-        array_push($productNameArr,$nameFromDB);   
-        
-        echo "<li class='hide'><a href='$productLink'>$nameFromDB</a></li>";
-    }
-} 
-echo"</ul>";
+    $conn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);
+    $query = "SELECT * FROM product ORDER BY id ASC";
+    $result = mysqli_query($conn, $query);
+    $productNameArr = array();
+    if(mysqli_num_rows($result)>0){
+        echo "<ul id='searchUL'>";
+        while($row = mysqli_fetch_assoc($result)){
+            $nameFromDB = $row['name'];
+            $productLink = htmlspecialchars($row['productLink']);
+            array_push($productNameArr,$nameFromDB);   
+            
+            echo "<li width='550' class='hide'><a href='$productLink'>$nameFromDB</a></li>";
+        }
+    } 
+    echo"</ul>";
 
-mysqli_close($conn);
-
-
-
+    mysqli_close($conn);
 ?>
 
 
