@@ -47,7 +47,7 @@
                         <hr>
                         <div class="faq-item">
                             <h3>
-                                Can i change the size/colour of the item i've ordered ?
+                                Can I change the size/colour of the item I've ordered ?
                                 <span class="faq-plus">&plus;</span>
                             </h3>
                             <div class="faq-body">
@@ -58,7 +58,7 @@
                         <hr>
                         <div class="faq-item">
                             <h3>
-                                part of my order is missing
+                                Part of my order is missing
                                 <span class="faq-plus">&plus;</span>
                             </h3>
                             <div class="faq-body">
@@ -80,7 +80,7 @@
                         <hr>
                         <div class="faq-item">
                             <h3>
-                                How do i use a promotion code?
+                                How do I use a promotion code?
                                 <span class="faq-plus">&plus;</span>
                             </h3>
                             <div class="faq-body">
@@ -94,7 +94,7 @@
                         <hr>
                         <div class="faq-item">
                             <h3>
-                                what patment methods can i use?
+                                What payment methods can I use?
                                 <span class="faq-plus">&plus;</span>
                             </h3>
                             <div class="faq-body">
