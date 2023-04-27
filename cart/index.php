@@ -50,8 +50,13 @@
                 echo "
                     <tr>
                         <td rowspan='2' width='5' height='5'><input type='checkbox' id='checkbox$count' onclick='onCheck($count)'> </td>
+<<<<<<< Updated upstream
                         <td rowspan='2' style='padding:inherit;'> <img width='100%' height='150px' src='../images/products/{$row['link']}' alt='{$row['name']}'> </td>
                         <td class='nameStyle'>{$row['name']}</td>                            
+=======
+                        <td rowspan='2' style='padding:inherit;'> <img width='100%' height='150px' src='../../{$row['link']}' alt='{$row['name']}'> </td>
+                        <td>{$row['name']}</td>                            
+>>>>>>> Stashed changes
                         <td rowspan='2'> 
                         <form id='addMinus'> 
                         <div class='value-button' id='decrease$count' onclick='decreaseValue($count)' value='Decrease Value'>-</div>
