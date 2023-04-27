@@ -139,13 +139,13 @@ INSERT INTO product (name, productLink, categories, subCategories, brands, price
 prod_attribute3, prod_attribute4, imageLink) VALUES ('Jordan Flight Essentials', '/Asignment_WAD/productDetails/Clothing/T-Shirt/Jordan/JordanFlightEssentials_White.php', 
 'Clothing', 'T-Shirt', 'Jordan', '149.00', 'White', "Designed with an intentionally oversized fit, this tee is ready for whatever the day brings. 
 With a Jumpman woven patch on the chest, no one will question what you're about.", '100% cotton', 'Machine wash', 'Style: DZ7313-100', 
-'Country/Region of Origin: Cambodia', '/ASIGNMENT_WAD/images/products/Clothing/T-Shirts/Adidas/AdicolorClassics3-StripesTee_1.png');
+'Country/Region of Origin: Cambodia', '/ASIGNMENT_WAD/images/products/Clothing/T-Shirts/Adidas/JordanFlightEssentials_white_1.png');
 
 INSERT INTO product (name, productLink, categories, subCategories, brands, price, colour, prod_description, prod_attribute1, prod_attribute2,
 prod_attribute3, prod_attribute4, imageLink) VALUES ('Jordan Flight Essentials', '/Asignment_WAD/productDetails/Clothing/T-Shirt/Jordan/JordanFlightEssentials_Black.php', 
 'Clothing', 'T-Shirt', 'Jordan', '149.00', 'Black', "Designed with an intentionally oversized fit, this tee is ready for whatever the day brings. 
 With a Jumpman woven patch on the chest, no one will question what you're about.", '100% cotton', 'Machine wash', 'Style: DZ7313-100', 
-'Country/Region of Origin: Cambodia', '/ASIGNMENT_WAD/images/products/Clothing/T-Shirts/Adidas/AdicolorClassics3-StripesTee_1.png');
+'Country/Region of Origin: Cambodia', '/ASIGNMENT_WAD/images/products/Clothing/T-Shirts/Adidas/JordanFlightEssentials_black_1.png');
 
 INSERT INTO product (name, productLink, categories, subCategories, brands, price, colour, prod_description, prod_attribute1, prod_attribute2,
 prod_attribute3, prod_attribute4, imageLink) VALUES ('Adicolor Classics 3-Stripes Tee', '/Asignment_WAD/productDetails/Clothing/T-Shirt/Adidas/AdicolorClassics3-StripesTee.php', 

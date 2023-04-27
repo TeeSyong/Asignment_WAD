@@ -7,6 +7,7 @@
     <link rel="icon" type="image/x-icon" href = "images/home/Move_logo_wo_bg.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="css/header.css"/>
     <link rel="stylesheet" href="css/navigation.css"/>
     <link rel="stylesheet" href="css/home.css"/>
@@ -142,32 +143,37 @@
 
 <!--search-->
 <div id="searchDiv" style="background-image: url('images/home/searchBgr.jpg');">
-    
+    <form action="<?php htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post"> <!-- need form action method? -->
         <h1 id="searchTitle">Find more products?</h1>
         <br>
         <input type="text" name="search" id="search" onkeyup="searchFunction()" placeholder="Enter product name to search">
-
+    </form>
 </div>
+<!-- haven't done javascript & php for search -->
+<!-- refer Filter/Search List of w3schools -->
 
 <?php 
 
-    $conn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);
-    $query = "SELECT * FROM product ORDER BY id ASC";
-    $result = mysqli_query($conn, $query);
-    $productNameArr = array();
-    if(mysqli_num_rows($result)>0){
-        echo "<ul id='searchUL'>";
-        while($row = mysqli_fetch_assoc($result)){
-            $nameFromDB = $row['name'];
-            $productLink = htmlspecialchars($row['productLink']);
-            array_push($productNameArr,$nameFromDB);   
-            
-            echo "<li width='550' class='hide'><a href='$productLink'>$nameFromDB</a></li>";
-        }
-    } 
-    echo"</ul>";
+$conn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);
+$query = "SELECT * FROM product ORDER BY id ASC";
+$result = mysqli_query($conn, $query);
+$productNameArr = array();
+if(mysqli_num_rows($result)>0){
+    echo "<ul id='searchUL'>";
+    while($row = mysqli_fetch_assoc($result)){
+        $nameFromDB = $row['name'];
+        $productLink = htmlspecialchars($row['productLink']);
+        array_push($productNameArr,$nameFromDB);   
+        
+        echo "<li class='hide'><a href='$productLink'>$nameFromDB</a></li>";
+    }
+} 
+echo"</ul>";
 
-    mysqli_close($conn);
+mysqli_close($conn);
+
+
+
 ?>
 
 
@@ -205,30 +211,24 @@
 
 <!--haven't add slider to display products-->
 <!--top picks-->
-<h1 class="subtitle">Looking for Brands?</h1>
+<h1 class="subtitle">What's New</h1>
 <div class="flex-container">
     <div>  
-        <img class="flex-imgBrands" src="images/home/Nike.png" alt="Nike">
+        <img class="flex-img" src="images/home/Category-clothing.png" alt="Clothing">
         <div class="middle">
-            <button type="button" class="button hoverButton" onclick="window.open('http:/Asignment_WAD/productCategories/nike.php')">Nike</button>
+            <button type="button" class="button hoverButton" onclick="window.open('#')">Monthly Favourites</button>
         </div>
     </div>
     <div>
-        <img class="flex-imgBrands" src="images/home/UnderArmour.png" alt="Under Armour">
+        <img class="flex-img" src="images/home/Category-footwear.jpg" alt="Footwear">
         <div class="middle">
-            <button type="button" class="button hoverButton" onclick="window.open('http:/Asignment_WAD/productCategories/underArmour.php')">Under Armour</button>
+            <button type="button" class="button hoverButton" onclick="window.open('#')">Featured Products</button>
         </div>
     </div>
     <div>
-        <img class="flex-imgBrands" src="images/home/Jordan.png" alt="Jordan">
+        <img class="flex-img" src="images/home/Category-accessories.png" alt="Accessories">
         <div class="middle">
-            <button type="button" class="button hoverButton" onclick="window.open('http:/Asignment_WAD/productCategories/jordan.php')">Jordan</button>
-        </div>
-    </div>
-    <div>
-        <img class="flex-imgBrands" src="images/home/Adidas.png" alt="Adidas">
-        <div class="middle">
-            <button type="button" class="button hoverButton" onclick="window.open('http:/Asignment_WAD/productCategories/adidas.php')">Adidas</button>
+            <button type="button" class="button hoverButton" onclick="window.open('#')">2023 Trending</button>
         </div>
     </div>
 </div>
