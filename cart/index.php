@@ -63,6 +63,7 @@
                         <td rowspan='2'>    
                         <form style='margin:auto;' action='delete.php' method ='POST'>
                             <input type='hidden' name='cart_id' value='{$row['productId']}'>
+                            <input type='hidden' name='cart_size' value='{$row['size']}'>
                             <button type='submit' class='delete$count' value='Delete'>
                             <span class='material-symbols-outlined'>close</span>
                             </button>
@@ -97,45 +98,12 @@
         echo "
         </table>  
                 ";
-        mysqli_close($conn);
+        //mysqli_close($conn);
 
         
         include('../includes/footer.php');
         ?>
-        
-        <?php
-            // //Delete each item 
-            // if(!isset($_POST['cart-id'])){
-            //     $id = $_POST['cart_id'];
-            // }
 
-
-            // $conn = mysqli_connect(
-            //     DB_HOST,
-            //     DB_USER,
-            //     DB_PASSWORD,
-            //     DB_DATABASE
-            // );
-    
-            // if(!$conn){
-            //     die("Connection Error".mysqli_connect_error());
-            // }
-    
-            // $query = "DELETE FROM cart WHERE id=?";
-    
-            // $stmt = mysqli_prepare($conn, $query);
-            // mysqli_stmt_bind_param($stmt,"s",
-            //     $id);                   
-    
-            // if(mysqli_stmt_execute($stmt)){
-            //     ;
-            // }else{
-            //     die("Insert Error".mysqli_error($conn));
-            // }
-    
-            // mysqli_stmt_close($stmt);
-            // mysqli_close($conn);
-        ?>
         <script>
                 
             var cartArr = [];
