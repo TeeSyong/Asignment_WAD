@@ -75,7 +75,7 @@
                         </td>
                     </tr>
                     <tr>   
-                        <td class='descriptionStyle'>{$row['colour']} <br> {$row['size']}</td>                 
+                        <td class='descriptionStyle'>{$row['colour']}   {$row['size']}</td>                 
                     </tr>
                     
                    

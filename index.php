@@ -143,11 +143,11 @@
 
 <!--search-->
 <div id="searchDiv" style="background-image: url('images/home/searchBgr.jpg');">
-    <form action="<?php htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post"> <!-- need form action method? -->
+    
         <h1 id="searchTitle">Find more products?</h1>
         <br>
         <input type="text" name="search" id="search" onkeyup="searchFunction()" placeholder="Enter product name to search">
-    </form>
+    
 </div>
 <!-- haven't done javascript & php for search -->
 <!-- refer Filter/Search List of w3schools -->
@@ -208,24 +208,30 @@
 
 <!--haven't add slider to display products-->
 <!--top picks-->
-<h1 class="subtitle">What's New</h1>
+<h1 class="subtitle">Looking for Brands?</h1>
 <div class="flex-container">
     <div>  
         <img class="flex-img" src="images/home/Category-clothing.png" alt="Clothing">
         <div class="middle">
-            <button type="button" class="button hoverButton" onclick="window.open('#')">Monthly Favourites</button>
+            <button type="button" class="button hoverButton" onclick="window.open('http://localhost/ASiGNMENT_WAD/productCategories/nike.php')">Nike</button>
         </div>
     </div>
     <div>
         <img class="flex-img" src="images/home/Category-footwear.jpg" alt="Footwear">
         <div class="middle">
-            <button type="button" class="button hoverButton" onclick="window.open('#')">Featured Products</button>
+            <button type="button" class="button hoverButton" onclick="window.open('http://localhost/ASiGNMENT_WAD/productCategories/underArmour.php')">Under Armour</button>
         </div>
     </div>
     <div>
         <img class="flex-img" src="images/home/Category-accessories.png" alt="Accessories">
         <div class="middle">
-            <button type="button" class="button hoverButton" onclick="window.open('#')">2023 Trending</button>
+            <button type="button" class="button hoverButton" onclick="window.open('http://localhost/ASiGNMENT_WAD/productCategories/jordan.php')">Jordan</button>
+        </div>
+    </div>
+    <div>
+        <img class="flex-img" src="images/home/Category-accessories.png" alt="Accessories">
+        <div class="middle">
+            <button type="button" class="button hoverButton" onclick="window.open('http://localhost/ASiGNMENT_WAD/productCategories/adidas.php')">Adidas</button>
         </div>
     </div>
 </div>
