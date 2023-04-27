@@ -1,6 +1,7 @@
 <?php
 if($_SERVER["REQUEST_METHOD"]==="POST"){
   $link=$_POST['link'];
+  $imagelink= $_POST['imagelink'];
   $name=$_POST['productName'];
   $colour=$_POST['colour'];
   $price=$_POST['price'];
@@ -25,7 +26,7 @@ if($_SERVER["REQUEST_METHOD"]==="POST"){
     }
      
     if(!$isFound){
-      $sql="INSERT into cart values('','$productId','$link','$name','$colour','$price','$size','$quantity')";
+      $sql="INSERT into cart values('','$productId','$link','$imagelink','$name','$colour','$price','$size','$quantity')";
       if($conn-> query($sql) === FALSE)
         echo "Error: " . $sql."<br>".$conn->error;
     }

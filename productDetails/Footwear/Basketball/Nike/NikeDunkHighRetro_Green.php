@@ -81,6 +81,7 @@ if($rowImage === FALSE)
         <p id="selectsize">Select Size</p>
         <form action="../../../addCart.php" method="post" id="myForm">
         <input type="hidden" name="link" value="<?php echo $row['productLink'];?>">
+        <input type="hidden" name="imagelink" value="<?php echo $rowImage['image1_link'];?>">
         <input type="hidden" name="productName" value="<?php echo $row['name'];?>">
         <input type="hidden" name="colour" value="<?php echo $row['colour'];?>">
         <input type="hidden" name="price" value="<?php echo $row['price'];?>">

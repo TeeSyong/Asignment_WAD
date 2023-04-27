@@ -48,6 +48,7 @@ CREATE TABLE IF NOT EXISTS cart(
     id int(11) AUTO_INCREMENT NOT NULL,
     productId varchar(25),
     link varchar(500),
+    imglink varchar(500),
     name varchar(255),
     colour varchar(255),
     price float(8,2),

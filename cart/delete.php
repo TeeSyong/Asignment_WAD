@@ -9,10 +9,9 @@
         require "../env.php";
         
         //Delete each item 
-        if(!isset($_POST['cart-id'])){
+        if(!isset($_POST['cart_id'])){
             $id = $_POST['cart_id'];
         }
-
 
         $conn = mysqli_connect(
             DB_HOST,
@@ -28,7 +27,7 @@
         $query = "DELETE FROM cart WHERE id=?";
 
         $stmt = mysqli_prepare($conn, $query);
-        mysqli_stmt_bind_param($stmt,"s",
+        mysqli_stmt_bind_param($stmt,"i",
             $id);                   
 
         if(mysqli_stmt_execute($stmt)){

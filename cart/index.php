@@ -50,7 +50,7 @@
                 echo "
                     <tr>
                         <td rowspan='2' width='5' height='5'><input type='checkbox' id='checkbox$count' onclick='onCheck($count)'> </td>
-                        <td rowspan='2' style='padding:inherit;'> <img width='100%' height='150px' src='../images/products/{$row['link']}' alt='{$row['name']}'> </td>
+                        <td rowspan='2' style='padding:inherit;'> <img width='100%' height='150px' src='../..{$row['imglink']}' alt='{$row['name']}'> </td>
                         <td class='nameStyle'>{$row['name']}</td>                            
                         <td rowspan='2'> 
                         <form id='addMinus'> 
@@ -70,7 +70,7 @@
                         </td>
                     </tr>
                     <tr>   
-                        <td class='descriptionStyle'>{$row['colour']}   {$row['size']}</td>                 
+                        <td class='descriptionStyle'>{$row['colour']} {$row['size']}</td>                 
                     </tr>
                     
                    
