@@ -68,7 +68,7 @@
          </div>
           <div class="navbar_icons">
            <div class="navbar_item3">
-             <a href="/ASIGNMENT_WAD/login.php" id="login-page"><img src="/ASIGNMENT_WAD/images/icons/user.png"  width="25px"></a>
+             <a href="/ASIGNMENT_WAD/profile.php" id="login-page"><img src="/ASIGNMENT_WAD/images/icons/user.png"  width="25px"></a>
            </div>
            <div class="navbar_item3">
              <a href="#" id="wishlist-page"><img src="/ASIGNMENT_WAD/images/icons/wishlist-icon.png"  width="25px"></a>
