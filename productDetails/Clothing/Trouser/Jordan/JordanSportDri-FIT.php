@@ -64,11 +64,12 @@ if($rowImage === FALSE)
         <p id="price">RM <?php echo $row['price'];?></p>
         <br><br><br><br><br><br><br>
         <p id="selectsize">Select Size</p>
-        <form action="<?php echo $row['productLink'];?>" method="post" id="myForm">
+        <form action="../../../addCart.php" method="post" id="myForm">
         <input type="hidden" name="link" value="<?php echo $row['productLink'];?>">
         <input type="hidden" name="productName" value="<?php echo $row['name'];?>">
         <input type="hidden" name="colour" value="<?php echo $row['colour'];?>">
         <input type="hidden" name="price" value="<?php echo $row['price'];?>">
+        <input type="hidden" name="productId" value="<?php echo $row['id'];?>">
         
         <div class="size">
             <button type="button" id="sizing1" onclick="size1()" >XS</button>
@@ -274,26 +275,3 @@ if($rowImage === FALSE)
     <?php include('../../../../includes/footer.php'); ?>
   </body>
 </html>
-
-<?php
-if($_SERVER["REQUEST_METHOD"]==="POST"){
-  $link=$_POST['link'];
-  $name=$_POST['productName'];
-  $colour=$_POST['colour'];
-  $price=$_POST['price'];
-  $size=$_POST['sizing'];
-  $quantity=$_POST['quantity'];
-
-  $conn = new mysqli('localhost','root','','move_database');
-  if($conn->connect_error){
-    die("Connection failed: ". $conn->connect_error);
-  }
-  $sql="INSERT into cart values('','$link','$name','$colour','$price','$size','$quantity')";
-  if($conn-> query($sql) === FALSE)
-    echo "Error: " . $sql."<br>".$conn->error;
-  
-
-  $conn->close();
-}
-
-?>
