@@ -17,6 +17,7 @@
 
 <body id="homeBody">
 <!--header with navigation bar-->
+<?php require 'env.php';?>
 <?php include('includes/header.php'); ?> 
 <?php include('includes/navigation.php'); ?>
 
@@ -145,11 +146,68 @@
     <form action="<?php htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post"> <!-- need form action method? -->
         <h1 id="searchTitle">Find more products?</h1>
         <br>
-        <input type="text" name="search" id="search" onkeyup="searchFunc()" placeholder="Enter product keyword to search">
+        <input type="text" name="search" id="search" onkeyup="searchFunction()" placeholder="Enter product name to search">
     </form>
 </div>
 <!-- haven't done javascript & php for search -->
 <!-- refer Filter/Search List of w3schools -->
+
+<?php 
+
+$conn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);
+$query = "SELECT * FROM product ORDER BY id ASC";
+$result = mysqli_query($conn, $query);
+$productNameArr = array();
+if(mysqli_num_rows($result)>0){
+    echo "<ul id='searchUL'>";
+    while($row = mysqli_fetch_assoc($result)){
+        $nameFromDB = $row['name'];
+        $productLink = htmlspecialchars($row['productLink']);
+        array_push($productNameArr,$nameFromDB);   
+        
+        echo "<li class='hide'><a href='$productLink'>$nameFromDB</a></li>";
+    }
+} 
+echo"</ul>";
+
+mysqli_close($conn);
+
+
+
+?>
+
+
+<script>
+    function searchFunction() {
+        let input = document.getElementById('search');
+        let filter = input.value.toLowerCase();
+        let ul = document.getElementById('searchUL');
+        li = ul.getElementsByTagName('li');
+        
+        
+        for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName('a')[0];
+            
+            txtValue = a.textContent || a.innerText;
+            
+            if(document.getElementById('search').value == ''){
+                li[i].style.display = "none";
+            }
+
+            if (txtValue.toLowerCase().indexOf(filter) > -1) {
+                li[i].style.display = "block";
+            }             
+            
+            else {
+                li[i].style.display = "none";
+            }
+        }
+
+    }
+</script>
+
+
+
 
 <!--haven't add slider to display products-->
 <!--top picks-->
