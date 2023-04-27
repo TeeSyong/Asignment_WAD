@@ -58,7 +58,7 @@
     <div>  
         <img class="flex-img" src="images/home/Category-clothing.png" alt="Clothing">
         <div class="middle">
-            <button type="button" class="button hoverButton" onclick="window.open('#')">Clothing</button>
+            <button type="button" class="button hoverButton" onclick="window.open('/ASiGNMENT_WAD/product.php?categories=Clothing')">Clothing</button>
         </div>
     </div>
     <div>

@@ -1,5 +1,7 @@
 <?php
-$conn = new mysqli('localhost', 'root','','move_database');
+require "../../../../env.php";
+
+$conn = mysqli_connect(DB_HOST,DB_USER,DB_PASSWORD,DB_DATABASE);
 if ($conn->connect_error){
   die("Connection failed: " . $conn->connect_error);
 }

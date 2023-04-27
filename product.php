@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
     <link rel="stylesheet" href="/ASIGNMENT_WAD/css/header.css">
     <link rel="stylesheet" href="/ASIGNMENT_WAD/css/navigation.css">
-
+    <link rel="stylesheet" href="/ASIGNMENT_WAD/css/footer.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/ASIGNMENT_WAD/css/product.css">           
 </head>
@@ -23,11 +23,13 @@
 
 <?php 
 require "env.php";
+
+
 $conn = mysqli_connect(DB_HOST,DB_USER,DB_PASSWORD,DB_DATABASE);
 
 if(!$conn)
 {
-    die("Connection Error".myslqi_connect_error());
+    die("Connection Error".mysqli_connect_error());
 }
 
 
@@ -67,11 +69,27 @@ if(mysqli_stmt_execute($stmt)){
 }
 
 $result = mysqli_stmt_get_result($stmt);
+$name= Array();
+
 foreach($result as $row){
+
+  $isFound = false;
+
+ 
+  for($i=0;$i<count($name);$i++)
+  {
+    if($row['name'] == $name[$i])
+    {
+      $isFound = true;
+    }
+  }
+  if (!$isFound)
+  {
     echo"
+
     <div class='col-md-3 mb-4'>
     <a href='{$row['productLink']}'>
-    <div class='card' >
+    <div class='card'>
       <img src='{$row['imageLink']}' class='card-img-top'>
       <div class='card-body'>
         <h5 class='card-title'>{$row['name']}</h5>
@@ -82,14 +100,17 @@ foreach($result as $row){
     </a>
     </div>
     ";
+  }
+
+  array_push($name,$row['name']);
+
 }
 ?>
-
-
-
-
-
 </div>
 </div>
 </div>
 
+<?php include('includes/footer.php'); ?>
+
+</body>
+</html>
