@@ -60,26 +60,26 @@ if($rowImage === FALSE)
         </div>
       </div>
       <div class="middle-container">
-        <img id="expandedImg"  src="/ASIGNMENT_WAD/images/nike/NikeDunkHighRetro_Orange_1.png">
+        <img id="expandedImg"  src="<?php echo $rowImage['image1_link'];?>">
       </div>
 
       <div class="right-container">
         <h1 id="product_name"><?php echo $row['name'];?></h1>
-        <h2 id="product_subname"><?php echo $row['colour'];?></h2>
+        <h2 id="product_subname"><?php echo $row['brands'];?></h2>
         <p id="price">RM <?php echo $row['price'];?></p>
         <div class="othercolours">
           <div class="othercolours_row">
-            <img src="/ASIGNMENT_WAD/images/nike/NikeDunkHighRetro_BlackWhite_1.png" alt="NikeDunkHighRetro_BlackWhite_1" onclick="location.href = 'NikeDunkHighRetro_BlackWhite.php';">
+            <img src="/ASIGNMENT_WAD/images/products/Footwear/Basketball/Nike/NikeDunkHighRetro_BlackWhite_1.png" alt="NikeDunkHighRetro_BlackWhite_1" onclick="location.href = 'NikeDunkHighRetro_BlackWhite.php';">
           </div>
           <div class="othercolours_row">
-            <img src="/ASIGNMENT_WAD/images/nike/NikeDunkHighRetro_Orange_1.png" alt="NikeDunkHighRetro_Orange_1" onclick="location.href = 'NikeDunkHighRetro_Orange.php';">
+            <img src="/ASIGNMENT_WAD/images/products/Footwear/Basketball/Nike/NikeDunkHighRetro_Orange_1.png" alt="NikeDunkHighRetro_Orange_1" onclick="location.href = 'NikeDunkHighRetro_Orange.php';">
           </div>
           <div class="othercolours_row">
-            <img src="/ASIGNMENT_WAD/images/nike/NikeDunkHighRetro_Green_1.png" alt="NikeDunkHighRetro_Green_1" onclick="location.href = 'NikeDunkHighRetro_Green.php';">
+            <img src="/ASIGNMENT_WAD/images/products/Footwear/Basketball/Nike/NikeDunkHighRetro_Green_1.png" alt="NikeDunkHighRetro_Green_1" onclick="location.href = 'NikeDunkHighRetro_Green.php';">
           </div>
         </div>
         <p id="selectsize">Select Size</p>
-        <form action="NikeDunkHighRetro_Orange.php" method="post">
+        <form action="<?php echo $row['productLink'];?>" method="post" id="myForm">
         <input type="hidden" name="link" value="<?php echo $row['productLink'];?>">
         <input type="hidden" name="productName" value="<?php echo $row['name'];?>">
         <input type="hidden" name="colour" value="<?php echo $row['colour'];?>">
@@ -103,6 +103,7 @@ if($rowImage === FALSE)
             <button type="button" id="sizing15" onclick="size15()" >UK 12.5</button><br>
           
         </div>
+        <br><div id="err_size"></div><br>
         <input type="hidden" id="size_id" name="sizing" value="">
         
         <div class="counter">
@@ -112,7 +113,7 @@ if($rowImage === FALSE)
         </div>
         
 
-        <button type="submit" id="addToBag" >Add to Bag</button><br>
+        <button type="button" id="addToBag" onclick="check()">Add to Bag</button><br>
         <button type="button" id="favourite">Favourite</button>
         </form>
         <div class="details">
@@ -154,7 +155,7 @@ if($rowImage === FALSE)
           <br>
           <div id="myDIV2" style="display:none">
             <br>
-            <h1 class="reviewTitle">BEST SHOES EVER !!!</h1><br>
+            <h1 class="reviewTitle">LOVE IT !!!</h1><br>
             
             <div class="reviewDetails">
               
@@ -163,7 +164,7 @@ if($rowImage === FALSE)
                 <span class="fa fa-star" style="font-size:30px"></span>
                 <span class="fa fa-star" style="font-size:30px"></span>
                 <span class="fa fa-star" style="font-size:30px"></span>
-                <span class="fa fa-star-half-full" style="font-size:30px"></span>
+                <span class="fa fa-star" style="font-size:30px"></span>
               </div>
               <div>
                 <p class="review_Username_Date">SaraleeG109025694 - 07 Dec 2022</p><br>
@@ -173,11 +174,11 @@ if($rowImage === FALSE)
             </div>
 
             <div class="reviewDescription">
-              <p>When I immediately saw these shoes I really liked the colored! I said I got to purchased these. These were actually my first pair of Nike dunk lows. The comfortability is perfect. Such a comfortable pair of shoes! Recommend to buy.</p>
+              <p>Size and fit as described. Good quality material. Product was shipped promptly and the price was good.</p>
             </div>
             <br><br>
             <br>
-            <h1 class="reviewTitle">Love it</h1><br>
+            <h1 class="reviewTitle">Still the GOAT</h1><br>
             
             <div class="reviewDetails">
               
@@ -186,7 +187,7 @@ if($rowImage === FALSE)
                 <span class="fa fa-star" style="font-size:30px"></span>
                 <span class="fa fa-star" style="font-size:30px"></span>
                 <span class="fa fa-star" style="font-size:30px"></span>
-                <span class="fa fa-star-half-full" style="font-size:30px"></span>
+                <span class="fa fa-star" style="font-size:30px"></span>
               </div>
               <div>
                 <p class="review_Username_Date">LydiaTT - 26 Nov 2022</p><br>
@@ -196,7 +197,7 @@ if($rowImage === FALSE)
             </div>
 
             <div class="reviewDescription">
-              <p>Such a cute shoe, get compliments all the time. It is a super cute baby pink color</p>
+              <p>Great quality, nice comfortable fit and a super price</p>
             </div>
             <br><br>
             <br>
@@ -228,10 +229,28 @@ if($rowImage === FALSE)
         </div>
 
       </div>
+
+      </div>
       
     </div>
 
     <script>
+      function check(){
+        quantity = document.getElementById("size_id").value;
+        document.getElementById('err_size').innerHTML= "";
+        if(quantity == ""){
+          document.getElementById('err_size').innerHTML="Please select a size";
+          document.getElementById('err_size').style.color = "red";
+          document.getElementById('err_size').style.fontSize = "25px";
+          document.getElementById('err_size').style.fontFamily = "'Helvetica Neue',Helvetica,Arial,sans-serif";
+          return false;
+        }
+        else
+        {
+          document.getElementById("myForm").submit();
+        }
+      }
+
       function clickImage(imgs){
         var expandImg = document.getElementById("expandedImg");
         expandImg.src = imgs.src;
