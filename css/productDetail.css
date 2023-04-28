@@ -221,6 +221,10 @@
   border: 1px solid black;
 }
 
+#addToBag:hover {
+  cursor: pointer;
+}
+
 #favourite {
   width: 550px;
   padding:4.5% 0%;

@@ -82,11 +82,13 @@
                     mysqli_stmt_bind_param($stmt,"ssssssssssss",
                     $name,$email,$address,$city,$state,$postcode,$hp,
                     $paymentType,$cardName,$cardNum,$exp,$cvv);
-                                
+                              
                     if(mysqli_stmt_execute($stmt)){
                         ;
+                        $success=true;  
                     }else{
                         die("Insert Error".mysqli_error($conn));
+                        $success=false;
                     }
         
                     mysqli_stmt_close($stmt);
@@ -100,6 +102,11 @@
         
         include('../includes/footer.php');
         ?>
-        
+        <script>
+            let success = <?php echo"$success";?>;
+            if(success){
+                window.alert("Proceeding to transaction...");
+            }
+        </script>
     </body>
 </html>
