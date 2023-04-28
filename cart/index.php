@@ -85,7 +85,7 @@
                             
             echo "
             <tr>
-                <td colspan='5' id='subtotal'>Subtotal </td>
+                <td style=text-align:right; colspan='5' id='subtotal'>Subtotal </td>
                 <td id='total'> RM0 </td>
             </tr>
 
