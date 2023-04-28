@@ -1,12 +1,21 @@
 <?php session_start();
-
-$conn = new mysqli('localhost','root','','move_database');
+require("env.php");
+$conn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);
 if($conn->connect_error){
     die("Connection failed: ". $conn->connect_error);
 }
-$sql = "SELECT * FROM users WHERE email=".$_SESSION['email'];
-$result = $conn-> query($sql);
+$email = $_SESSION['email'];
+$sql = "SELECT * FROM users WHERE email='$email'";
+$result = $conn -> query($sql) or die($conn->error);
+echo "number of rows: " . $result->num_rows;
 $row = $result->fetch_assoc();
+
+
+
+
+$data = array();
+$count = 0;
+
 
 $fname = $row['fname'];
 $lname = $row['lname'];
@@ -38,19 +47,15 @@ $phone = $row['phone'];
         </div>
         <div class="container">
             <img class="profile-picture" src="images\icons\profile.png" alt="Profile Picture">
-            <h1 class="name"><? echo $fname." ".$lname?></h1>
+            <h1 class="name"><?php echo $fname." ".$lname?></h1>
             <div class="contact">
                 <div class="contact-item">
                     <p class="contact-item__label">Email</p>
-                    <p class="contact-item__value"><?echo $email?></p>
+                    <p class="contact-item__value"><?php echo $email?></p>
                 </div>
                 <div class="contact-item">
                     <p class="contact-item__label">Phone</p>
-                    <p class="contact-item__value"><?echo $phone?></p>
-                </div>
-                <div class="contact-item">
-                    <p class="contact-item__label">Address</p>
-                    <p class="contact-item__value">123 bandar Sg long.</p>
+                    <p class="contact-item__value"><?php echo $phone?></p>
                 </div>
             </div>
             <a href="logout.php"><input type="button" class="logoutProfile" value="Log out" ></a>

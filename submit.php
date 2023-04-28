@@ -37,7 +37,7 @@
   if($_SERVER["REQUEST_METHOD"]==="POST"){
     $fname=htmlspecialchars(trim($_POST['fname']));
     $lname=htmlspecialchars(trim($_POST['lname']));
-    $email=trim($_POST['email']);
+    $email=htmlspecialchars(trim($_POST['email']));
     $phone=trim($_POST['phone']);
     $password=MD5(trim($_POST['password']));
     $cpassword=MD5(trim($_POST['cpassword']));
