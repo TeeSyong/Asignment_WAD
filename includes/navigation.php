@@ -68,13 +68,13 @@
          </div>
           <div class="navbar_icons">
            <div class="navbar_item3">
-             <a href="/ASIGNMENT_WAD/profile.php" id="login-page"><img src="/ASIGNMENT_WAD/images/icons/user.png"  width="25px"></a>
+             <a href="/ASIGNMENT_WAD/profile_controller.php" id="login-page"><img src="/ASIGNMENT_WAD/images/icons/user.png"  width="25px"></a>
            </div>
            <div class="navbar_item3">
              <a href="#" id="wishlist-page"><img src="/ASIGNMENT_WAD/images/icons/wishlist-icon.png"  width="25px"></a>
            </div>
            <div class="navbar_item3">
-             <a href="/ASIGNMENT_WAD/cart/index.php" id="shopping-bag-page"><img src="/ASIGNMENT_WAD/images/icons/shopping-bag-icon.png"  width="25px"></a>
+             <a href="/ASIGNMENT_WAD/addToCart_controller.php" id="shopping-bag-page"><img src="/ASIGNMENT_WAD/images/icons/shopping-bag-icon.png"  width="25px"></a>
            </div>
          </div>
          

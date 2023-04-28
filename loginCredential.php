@@ -24,7 +24,7 @@
             echo "Logging in...";
             $_SESSION['id'] = $row['id'];
             $_SESSION['email'] = $row['email'];
-            header('Location: index.php');
+            header('Location: profile.php');
             exit();
           }
           else
