@@ -73,7 +73,7 @@
                 if($isValid) {
                     $conn = mysqli_connect("localhost","root","","move_database");
                     if(!$conn){
-                        die("Connection Error".mysqli_connect_error($conn));
+                        die("Connection Error".mysqli_connect_error());
                     }
         
                     $query = "INSERT INTO checkout(name,email,address,city,state,postcode,hp,paymentType,cardName,cardNum,exp,cvv) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)";
@@ -87,8 +87,9 @@
                         ;
                         $success=true;  
                     }else{
-                        die("Insert Error".mysqli_error($conn));
                         $success=false;
+                        die("Insert Error".mysqli_error($conn));
+                        
                     }
         
                     mysqli_stmt_close($stmt);
