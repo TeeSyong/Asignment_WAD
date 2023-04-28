@@ -53,10 +53,10 @@
       <div class="footer1_right">
         <div class="footer_subcontainer4">
           <div class="footer_item4">
-            <a href="https://www.facebook.com/profile.php?id=100091939221490&is_tour_dismissed=true" id="facebook-icon"><img src=/ASIGNMENT_WAD/images/icons/facebook.png  width="30px"></a>
+            <a href="https://www.facebook.com/profile.php?id=100092339707456" id="facebook-icon"><img src=/ASIGNMENT_WAD/images/icons/facebook.png  width="30px"></a>
           </div>
           <div class="footer_item4">
-            <a href="https://www.instagram.com/" id="instagram-icon"><img src=/ASIGNMENT_WAD/images/icons/instagram.png  width="30px"></a>
+            <a href="https://www.instagram.com/move_sportswear23/" id="instagram-icon"><img src=/ASIGNMENT_WAD/images/icons/instagram.png  width="30px"></a>
           </div>
           <div class="footer_item4">
             <a href="https://twitter.com/" id="twitter-icon"><img src=/ASIGNMENT_WAD/images/icons/twitter.png  width="30px"></a>
