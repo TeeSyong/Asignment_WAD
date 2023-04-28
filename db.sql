@@ -76,6 +76,29 @@ CREATE TABLE IF NOT EXISTS checkout(
 
 
 INSERT INTO product (name, productLink, categories, subCategories, brands, price, colour, prod_description, prod_attribute1, prod_attribute2,
+prod_attribute3, prod_attribute4, imageLink) VALUES ('Nike Sportswear Essential Repel', '/Asignment_WAD/productDetails/Clothing/Jackets/Nike/NikeSportswearEssentialRepel_White.php', 
+'Clothing', 'Jacket', 'Nike', '265.00', 'White', "The Nike Sportswear Essential Repel Jacket is made from smooth, water-repellent fabric to help keep you dry and comfortable 
+in cool, wet weather. Elasticated cuffs hold the sleeves in place while exposed bungees at the hem let you customise the style and fit.", 
+'Oversized fit for a baggy, spacious feel', 'Embroidered Futura logo', 'Style: DM6180-010', 'Country/Region of Origin: Vietnam', 
+'/ASIGNMENT_WAD/images/products/Clothing/Jackets/Nike/NikeSportswearEssentialRepel_White_1.png');
+
+INSERT INTO product (name, productLink, categories, subCategories, brands, price, colour, prod_description, prod_attribute1, prod_attribute2,
+prod_attribute3, prod_attribute4, imageLink) VALUES ('Nike Sportswear Essential Repel', '/Asignment_WAD/productDetails/Clothing/Jackets/Nike/NikeSportswearEssentialRepel_Black.php', 
+'Clothing', 'Jacket', 'Nike', '265.00', 'Black', "The Nike Sportswear Essential Repel Jacket is made from smooth, water-repellent fabric to help keep you dry and comfortable 
+in cool, wet weather. Elasticated cuffs hold the sleeves in place while exposed bungees at the hem let you customise the style and fit.", 
+'Oversized fit for a baggy, spacious feel', 'Embroidered Futura logo', 'Style: DM6180-100', 'Country/Region of Origin: Vietnam', 
+'/ASIGNMENT_WAD/images/products/Clothing/Jackets/Nike/NikeSportswearEssentialRepel_Black_1.png');
+
+
+INSERT INTO product (name, productLink, categories, subCategories, brands, price, colour, prod_description, prod_attribute1, prod_attribute2,
+prod_attribute3, prod_attribute4, imageLink) VALUES ('UA Unstoppable Jacket', '/Asignment_WAD/productDetails/Clothing/Jackets/UnderArmour/UAUnstoppableJacket.php', 
+'Clothing', 'Jacket', 'Under Armour', '459.00', '', "If you're looking for a jacket you can actually train in on cold, wet days—you found it. Super-light 
+and stretchy, rain rolls right off, and it keeps you warm but not hot.", 'UA Storm technology repels water without sacrificing breathability', 
+'Stretch-woven fabric is lightweight, durable & moves with you', 'Style: DX1542-120', 'Country/Region of Origin: India', 
+'/ASIGNMENT_WAD/images/products/Clothing/Jackets/UnderArmour/UAUnstoppableJacket_1.png');
+
+
+INSERT INTO product (name, productLink, categories, subCategories, brands, price, colour, prod_description, prod_attribute1, prod_attribute2,
 prod_attribute3, prod_attribute4, imageLink) VALUES ('Adidas Original Mid-Cut Crew Socks 3 Pairs', '/Asignment_WAD/productDetails/Clothing/Socks/Adidas/AdidasOriginalMid-CutCrewSocks.php', 
 'Clothing', 'Socks', 'Adidas', '69.00', '', "Find your happy place between heel and calf. Not too short and not too tall, adidas Mid-Cut Crew Socks are a great look for working 
 out or just kicking back. The cottony feel hits the sweet spot for comfort and fit.", 'Band around the arch feels snug and supportive.', 'Breathable knit pattern on top adds ventilation.', 
@@ -181,7 +204,33 @@ with perfectly sheened overlays and original university colours. With its classi
 vintage back onto the streets while its padded, high-top collar adds an old-school look rooted in comfort.", 'Foam insole', 'Perforations 
 on the toe', 'Style: DD1399-105', 'Country / Region of Origin: Vietnam, Indonesia', '/ASIGNMENT_WAD/images/products/Footwear/Basketball/Nike/NikeDunkHighRetro_Green_4.png');
 
+INSERT INTO images (name, colour, image1_link, image2_link, image3_link, image4_link, image5_link, 
+image6_link, image7_link) VALUES ('Nike Sportswear Essential Repel','Black',
+'/ASIGNMENT_WAD/images/products/Clothing/Jackets/Nike/NikeSportswearEssentialRepel_Black_1.png',
+'/ASIGNMENT_WAD/images/products/Clothing/Jackets/Nike/NikeSportswearEssentialRepel_Black_2.png',
+'/ASIGNMENT_WAD/images/products/Clothing/Jackets/Nike/NikeSportswearEssentialRepel_Black_3.png',
+'/ASIGNMENT_WAD/images/products/Clothing/Jackets/Nike/NikeSportswearEssentialRepel_Black_4.png',
+'/ASIGNMENT_WAD/images/products/Clothing/Jackets/Nike/NikeSportswearEssentialRepel_Black_5.png',
+'/ASIGNMENT_WAD/images/products/Clothing/Jackets/Nike/NikeSportswearEssentialRepel_Black_6.png','');
 
+INSERT INTO images (name, colour, image1_link, image2_link, image3_link, image4_link, image5_link, 
+image6_link, image7_link) VALUES ('Nike Sportswear Essential Repel','White',
+'/ASIGNMENT_WAD/images/products/Clothing/Jackets/Nike/NikeSportswearEssentialRepel_White_1.png',
+'/ASIGNMENT_WAD/images/products/Clothing/Jackets/Nike/NikeSportswearEssentialRepel_White_2.png',
+'/ASIGNMENT_WAD/images/products/Clothing/Jackets/Nike/NikeSportswearEssentialRepel_White_3.png',
+'/ASIGNMENT_WAD/images/products/Clothing/Jackets/Nike/NikeSportswearEssentialRepel_White_4.png',
+'/ASIGNMENT_WAD/images/products/Clothing/Jackets/Nike/NikeSportswearEssentialRepel_White_5.png',
+'/ASIGNMENT_WAD/images/products/Clothing/Jackets/Nike/NikeSportswearEssentialRepel_White_6.png','');
+
+INSERT INTO images (name, colour, image1_link, image2_link, image3_link, image4_link, image5_link, 
+image6_link, image7_link) VALUES ('UA Unstoppable Jacket','',
+'/ASIGNMENT_WAD/images/products/Clothing/Jackets/UnderArmour/UAUnstoppableJacket_1.png',
+'/ASIGNMENT_WAD/images/products/Clothing/Jackets/UnderArmour/UAUnstoppableJacket_2.png',
+'/ASIGNMENT_WAD/images/products/Clothing/Jackets/UnderArmour/UAUnstoppableJacket_3.png',
+'/ASIGNMENT_WAD/images/products/Clothing/Jackets/UnderArmour/UAUnstoppableJacket_4.png',
+'/ASIGNMENT_WAD/images/products/Clothing/Jackets/UnderArmour/UAUnstoppableJacket_5.png',
+'/ASIGNMENT_WAD/images/products/Clothing/Jackets/UnderArmour/UAUnstoppableJacket_6.png',
+'/ASIGNMENT_WAD/images/products/Clothing/Jackets/UnderArmour/UAUnstoppableJacket_7.png');
 
 INSERT INTO images (name, colour, image1_link, image2_link, image3_link, image4_link, image5_link, 
 image6_link, image7_link) VALUES ('Adidas Original Mid-Cut Crew Socks 3 Pairs','',
