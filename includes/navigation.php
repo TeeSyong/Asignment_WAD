@@ -58,7 +58,7 @@
              <div class="dropdown-content">
               <form action = "{$SELF}" method="GET" id="brands">
                <a href="/ASiGNMENT_WAD/product.php?brands=Nike" class="n_item">Nike</a>
-               <a href="/ASiGNMENT_WAD/product.php?brands=underArmour" class="n_item">Under Armour</a>
+               <a href="/ASiGNMENT_WAD/product.php?brands=Under Armour" class="n_item">Under Armour</a>
                <a href="/ASiGNMENT_WAD/product.php?brands=Jordan" class="n_item">Jordan</a>
                <a href="/ASiGNMENT_WAD/product.php?brands=Adidas" class="n_item">Adidas</a>
                </form>
