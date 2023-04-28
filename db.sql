@@ -85,13 +85,13 @@ CREATE TABLE IF NOT EXISTS contact(
 
 INSERT INTO product (name, productLink, categories, subCategories, brands, price, colour, prod_description, prod_attribute1, prod_attribute2,
 prod_attribute3, prod_attribute4, imageLink) VALUES ('UA Charged Engage 2 Training Shoes', '/Asignment_WAD/productDetails/Footwear/Training/UnderArmour/UAChargedEngage2TrainingShoes.php', 
-'Footwear', 'Training', 'UnderArmour', '249.00', '', "They're versatile, super-responsive, cushioned, and give you the right support, workout after workout.", 
+'Footwear', 'Gym', 'Under Armour', '249.00', '', "They're versatile, super-responsive, cushioned, and give you the right support, workout after workout.", 
 '3D screenprint on upper for added durability & protection','Internal heel counter & TPU films in midfoot to heel for a locked-in, stable fit',
 'Style: DO7123-102', 'Country/Region of Origin: Indonesia', '/ASIGNMENT_WAD/images/products/Footwear/Training/UnderArmour/UAChargedEngage2TrainingShoes_1.png');
 
 INSERT INTO product (name, productLink, categories, subCategories, brands, price, colour, prod_description, prod_attribute1, prod_attribute2,
 prod_attribute3, prod_attribute4, imageLink) VALUES ('All Court 3 Ball', '/Asignment_WAD/productDetails/Accessories/SportAccessories/Adidas/AllCourt3Ball.php', 
-'Accessories', 'Sports Accessories', 'Adidas', '119.00', '', "Take your skills from the hardwood to the blacktop and vice versa. This adidas 
+'Accessories', 'Accessories', 'Adidas', '119.00', '', "Take your skills from the hardwood to the blacktop and vice versa. This adidas 
 basketball works indoors as well as outdoors, so you don't have to worry about bringing the wrong ball to hoop. The durable cover feels smooth 
 and true to the touch to give you that accurate feel from catch to release.", '100% polyurethane leather','Indoor/outdoor use',
 'Style: DO7233-112', 'Country/Region of Origin: Indonesia', '/ASIGNMENT_WAD/images/products/Accessories/SportAccessories/Adidas/AllCourt3Ball_1.png');
@@ -122,7 +122,7 @@ use as Personal Protective Equipment (PPE)','The heel area optimises the landing
 
 INSERT INTO product (name, productLink, categories, subCategories, brands, price, colour, prod_description, prod_attribute1, prod_attribute2,
 prod_attribute3, prod_attribute4, imageLink) VALUES ('UA Surge 3 Running Shoes', '/Asignment_WAD/productDetails/Footwear/Running/UnderArmour/UASurge3RunningShoes.php', 
-'Footwear', 'Running', 'UnderArmour', '179.00', '', "These shoes are going to feel cushioned and comfortable, 
+'Footwear', 'Running', 'Under Armour', '179.00', '', "These shoes are going to feel cushioned and comfortable, 
 but also light and breathable. Why? Because when you never slow down, that's what you need.", 'Lightweight, breathable mesh upper',
 'Enhanced cushioning around ankle collar for superior comfort','Style: AR5233-3231', 'Country/Region of Origin: Malaysia', 
 '/ASIGNMENT_WAD/images/products/Footwear/Running/UnderArmour/UASurge3RunningShoes_1.png');
