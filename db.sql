@@ -82,6 +82,27 @@ CREATE TABLE IF NOT EXISTS contact(
     PRIMARY KEY(id)
 );
 
+
+INSERT INTO product (name, productLink, categories, subCategories, brands, price, colour, prod_description, prod_attribute1, prod_attribute2,
+prod_attribute3, prod_attribute4, imageLink) VALUES ('UA Charged Engage 2 Training Shoes', '/Asignment_WAD/productDetails/Footwear/Training/UnderArmour/UAChargedEngage2TrainingShoes.php', 
+'Footwear', 'Training', 'UnderArmour', '249.00', '', "They're versatile, super-responsive, cushioned, and give you the right support, workout after workout.", 
+'3D screenprint on upper for added durability & protection','Internal heel counter & TPU films in midfoot to heel for a locked-in, stable fit',
+'Style: DO7123-102', 'Country/Region of Origin: Indonesia', '/ASIGNMENT_WAD/images/products/Footwear/Training/UnderArmour/UAChargedEngage2TrainingShoes_1.png');
+
+INSERT INTO product (name, productLink, categories, subCategories, brands, price, colour, prod_description, prod_attribute1, prod_attribute2,
+prod_attribute3, prod_attribute4, imageLink) VALUES ('All Court 3 Ball', '/Asignment_WAD/productDetails/Accessories/SportAccessories/Adidas/AllCourt3Ball.php', 
+'Accessories', 'Sports Accessories', 'Adidas', '119.00', '', "Take your skills from the hardwood to the blacktop and vice versa. This adidas 
+basketball works indoors as well as outdoors, so you don't have to worry about bringing the wrong ball to hoop. The durable cover feels smooth 
+and true to the touch to give you that accurate feel from catch to release.", '100% polyurethane leather','Indoor/outdoor use',
+'Style: DO7233-112', 'Country/Region of Origin: Indonesia', '/ASIGNMENT_WAD/images/products/Accessories/SportAccessories/Adidas/AllCourt3Ball_1.png');
+
+INSERT INTO product (name, productLink, categories, subCategories, brands, price, colour, prod_description, prod_attribute1, prod_attribute2,
+prod_attribute3, prod_attribute4, imageLink) VALUES ('Galaxy 6 Shoes', '/Asignment_WAD/productDetails/Footwear/Running/Adidas/Galaxy6Shoes.php', 
+'Footwear', 'Running', 'Adidas', '229.00', '', "Lace up and go. These adidas running shoes will keep you comfortable, however late your day 
+runs. A great everyday shoe, they have a light and airy mesh upper to keep your feet cool and a Cloudfoam midsole for springiness. The rubber 
+outsole is designed to stay firm across all surfaces, from wet grass to slow clay. Switch up your plans without changing your shoes.", 'Lace closure',
+'Textile upper','Style: DO7123-102', 'Country/Region of Origin: Indonesia', '/ASIGNMENT_WAD/images/products/Footwear/Running/Adidas/Galaxy6Shoes_1.png');
+
 INSERT INTO product (name, productLink, categories, subCategories, brands, price, colour, prod_description, prod_attribute1, prod_attribute2,
 prod_attribute3, prod_attribute4, imageLink) VALUES ('Jordan One Take 4 PF', '/Asignment_WAD/productDetails/Footwear/Running/Jordan/JordanOneTake4PF.php', 
 'Footwear', 'Running', 'Jordan', '419.00', '', "Get that speed you need, just like Russ. Inspired by Russell Westbrook's latest signature shoe, 
@@ -336,6 +357,30 @@ prod_attribute3, prod_attribute4, imageLink) VALUES ('Nike Dunk High Retro', '/A
 with perfectly sheened overlays and original university colours. With its classic hoops design, the Nike Dunk High Retro channels '80s 
 vintage back onto the streets while its padded, high-top collar adds an old-school look rooted in comfort.", 'Foam insole', 'Perforations 
 on the toe', 'Style: DD1399-105', 'Country / Region of Origin: Vietnam, Indonesia', '/ASIGNMENT_WAD/images/products/Footwear/Basketball/Nike/NikeDunkHighRetro_Green_4.png');
+
+INSERT INTO images (name, colour, image1_link, image2_link, image3_link, image4_link, image5_link, 
+image6_link, image7_link) VALUES ('UA Charged Engage 2 Training Shoes','',
+'/ASIGNMENT_WAD/images/products/Footwear/Training/UnderArmour/UAChargedEngage2TrainingShoes_1.png',
+'/ASIGNMENT_WAD/images/products/Footwear/Training/UnderArmour/UAChargedEngage2TrainingShoes_2.png',
+'/ASIGNMENT_WAD/images/products/Footwear/Training/UnderArmour/UAChargedEngage2TrainingShoes_3.png',
+'/ASIGNMENT_WAD/images/products/Footwear/Training/UnderArmour/UAChargedEngage2TrainingShoes_4.png','','','');
+
+INSERT INTO images (name, colour, image1_link, image2_link, image3_link, image4_link, image5_link, 
+image6_link, image7_link) VALUES ('All Court 3 Ball','',
+'/ASIGNMENT_WAD/images/products/Accessories/SportAccessories/Adidas/AllCourt3Ball_1.png',
+'/ASIGNMENT_WAD/images/products/Accessories/SportAccessories/Adidas/AllCourt3Ball_2.png',
+'/ASIGNMENT_WAD/images/products/Accessories/SportAccessories/Adidas/AllCourt3Ball_3.png',
+'/ASIGNMENT_WAD/images/products/Accessories/SportAccessories/Adidas/AllCourt3Ball_4.png','','','');
+
+INSERT INTO images (name, colour, image1_link, image2_link, image3_link, image4_link, image5_link, 
+image6_link, image7_link) VALUES ('Galaxy 6 Shoes','',
+'/ASIGNMENT_WAD/images/products/Footwear/Running/Adidas/Galaxy6Shoes_1.png',
+'/ASIGNMENT_WAD/images/products/Footwear/Running/Adidas/Galaxy6Shoes_2.png',
+'/ASIGNMENT_WAD/images/products/Footwear/Running/Adidas/Galaxy6Shoes_3.png',
+'/ASIGNMENT_WAD/images/products/Footwear/Running/Adidas/Galaxy6Shoes_4.png',
+'/ASIGNMENT_WAD/images/products/Footwear/Running/Adidas/Galaxy6Shoes_5.png',
+'/ASIGNMENT_WAD/images/products/Footwear/Running/Adidas/Galaxy6Shoes_6.png',
+'/ASIGNMENT_WAD/images/products/Footwear/Running/Adidas/Galaxy6Shoes_7.png');
 
 INSERT INTO images (name, colour, image1_link, image2_link, image3_link, image4_link, image5_link, 
 image6_link, image7_link) VALUES ('Jordan One Take 4 PF','',
