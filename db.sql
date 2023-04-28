@@ -107,26 +107,26 @@ and stretchy, rain rolls right off, and it keeps you warm but not hot.", 'UA Sto
 
 INSERT INTO product (name, productLink, categories, subCategories, brands, price, colour, prod_description, prod_attribute1, prod_attribute2,
 prod_attribute3, prod_attribute4, imageLink) VALUES ('Adidas Original Mid-Cut Crew Socks 3 Pairs', '/Asignment_WAD/productDetails/Clothing/Socks/Adidas/AdidasOriginalMid-CutCrewSocks.php', 
-'Clothing', 'Socks', 'Adidas', '69.00', '', "Find your happy place between heel and calf. Not too short and not too tall, adidas Mid-Cut Crew Socks are a great look for working 
+'Clothing', 'Sock', 'Adidas', '69.00', '', "Find your happy place between heel and calf. Not too short and not too tall, adidas Mid-Cut Crew Socks are a great look for working 
 out or just kicking back. The cottony feel hits the sweet spot for comfort and fit.", 'Band around the arch feels snug and supportive.', 'Breathable knit pattern on top adds ventilation.', 
 'Style: DX1232-100', 'Country/Region of Origin: India', '/ASIGNMENT_WAD/images/products/Clothing/Socks/Adidas/adidasOriginalsMid-CutCrewSocks_1.png');
 
 INSERT INTO product (name, productLink, categories, subCategories, brands, price, colour, prod_description, prod_attribute1, prod_attribute2,
 prod_attribute3, prod_attribute4, imageLink) VALUES ('Jordan Everyday Crew Socks 3 Pairs', '/Asignment_WAD/productDetails/Clothing/Socks/Jordan/JordanEverydayCrewSocks.php', 
-'Clothing', 'Socks', 'Jordan', '95.00', '', "Your go-to, everyday, soft and reliable socks. Sweat-wicking technology keeps your feet cool and dry while 
+'Clothing', 'Sock', 'Jordan', '95.00', '', "Your go-to, everyday, soft and reliable socks. Sweat-wicking technology keeps your feet cool and dry while 
 a snug arch band feels supportive.", 'Cushioning under the forefoot and heel helps soften the impact of your workout.', 'Band around the arch feels snug 
 and supportive.', 'Style: DX9632-100', 'Country/Region of Origin: China', '/ASIGNMENT_WAD/images/products/Clothing/Socks/Jordan/JordanEverydayCrewSocks3Pair_1.png');
 
 INSERT INTO product (name, productLink, categories, subCategories, brands, price, colour, prod_description, prod_attribute1, prod_attribute2,
 prod_attribute3, prod_attribute4, imageLink) VALUES ('Adult Heat Gear Crew Socks 3 Pairs', '/Asignment_WAD/productDetails/Clothing/Socks/UnderArmour/AdultHeatGearCrewSocks3Pair.php', 
-'Clothing', 'Socks', 'Under Armour', '79.00', '', "The Adult Heat Gear Crew Socks bring comfort to your workout with extra cushioning under the 
+'Clothing', 'Sock', 'Under Armour', '79.00', '', "The Adult Heat Gear Crew Socks bring comfort to your workout with extra cushioning under the 
 heel and forefoot and a snug, supportive arch band. Sweat-wicking power and breathability up top help keep your feet dry and cool to help push 
 you through that extra set.", 'Strategic Cushion reduces bulk, delivers flexibility & breathability', 'Mesh panels for added breathability', 
 'Style: SX7623-123', 'Country/Region of Origin: Pakistan', '/ASIGNMENT_WAD/images/products/Clothing/Socks/UnderArmour/AdultHeatGearCrewSocks3-Pack_1.png');
 
 INSERT INTO product (name, productLink, categories, subCategories, brands, price, colour, prod_description, prod_attribute1, prod_attribute2,
 prod_attribute3, prod_attribute4, imageLink) VALUES ('Nike Everyday Cushioned 3 Pairs', '/Asignment_WAD/productDetails/Clothing/Socks/Nike/NikeEverydayCushioned.php', 
-'Clothing', 'Socks', 'Nike', '69.00', '', "Power through your workout with the Nike Everyday Cushioned Socks. The thick terry sole gives you 
+'Clothing', 'Sock', 'Nike', '69.00', '', "Power through your workout with the Nike Everyday Cushioned Socks. The thick terry sole gives you 
 extra comfort for foot drills and lifts, while a ribbed arch band wraps your midfoot for a supportive feel.", 'Dri-FIT Technology helps keep your 
 feet dry and comfortable.', 'Thick terry sole provides comfort and impact absorption.', 'Style: SX7664-100', 'Country/Region of Origin: Pakistan,
 Argentina,Vietnam,Turkey,Sri Lanka,China', '/ASIGNMENT_WAD/images/products/Clothing/Socks/Nike/NikeEverydayCushioned_1.png');
