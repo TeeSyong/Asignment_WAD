@@ -215,7 +215,7 @@ mysqli_close($conn);
     <div>
         <img class="flex-imgBrands" src="images/home/UnderArmour.png" alt="Under Armour">            
         <div class="middle">
-            <button type="button" class="button hoverButton" onclick="window.open('product.php?brands=underArmour')">Under Armour</button>        
+            <button type="button" class="button hoverButton" onclick="window.open('product.php?brands=Under Armour')">Under Armour</button>        
         </div>
     </div>
 
