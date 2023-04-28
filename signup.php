@@ -25,7 +25,7 @@
         </center>
 
         <h2 style="text-align: center; padding:15px 0 0 0;"><b>Register Your Details</b></h2><br>
-        <form id = "myForm" class="signupform" action="submit.php" method="post" >
+        <form id = "myForm" class="signupform" action="submitSignUp.php" method="post" >
           <label for="fname" ><b>First Name</b></label> 
           <input type="text" id="fname" name= "fname" placeholder="First Name">
           <div id="err_fname"></div><br>

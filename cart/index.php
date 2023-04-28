@@ -7,7 +7,6 @@
         <link rel="stylesheet" href="../css/navigation.css">
         <link rel="stylesheet" href="../css/cart.css">
         <link rel="stylesheet" href="../css/footer.css">
-        <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,0" /> -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0" />
         
     </head>
