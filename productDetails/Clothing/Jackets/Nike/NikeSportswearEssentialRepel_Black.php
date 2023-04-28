@@ -99,7 +99,7 @@ if($rowImage === FALSE)
         </div>
         
 
-        <button type="button" id="addToBag" onclick="check()">Add to Bag</button><br>
+        <button type="button" id="addToBag" onclick="check();addCartMessage()">Add to Bag</button><br>
         <button type="button" id="favourite">Favourite</button>
         </form>
         <div class="details">
@@ -235,6 +235,14 @@ if($rowImage === FALSE)
         }
       }
 
+      function addCartMessage() {
+        quantity = document.getElementByClassName("quantity").value;
+        addCartButton = document.getElementById("addToBag");
+        if(quantity != ""){
+          alert("Item added to cart");
+        }
+      }
+
       function clickImage(imgs){
         var expandImg = document.getElementById("expandedImg");
         expandImg.src = imgs.src;
@@ -279,6 +287,10 @@ if($rowImage === FALSE)
           input.value = value;
         }
       }
+
+      
+      
+
     </script>
     <script src="/ASIGNMENT_WAD/script/clothing.js"></script>
 
