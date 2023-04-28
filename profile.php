@@ -21,7 +21,7 @@ $lname = $row['lname'];
 $email = $row['email'];
 $phone = $row['phone'];
 
-*/
+
 ?>
 <!DOCTYPE html>
 <html>
