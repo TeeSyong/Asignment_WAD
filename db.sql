@@ -82,6 +82,20 @@ CREATE TABLE IF NOT EXISTS contact(
     PRIMARY KEY(id)
 );
 
+INSERT INTO product (name, productLink, categories, subCategories, brands, price, colour, prod_description, prod_attribute1, prod_attribute2,
+prod_attribute3, prod_attribute4, imageLink) VALUES ('UA Branded Hat', '/Asignment_WAD/productDetails/Accessories/Fashion/UnderArmour/UABrandedHat.php', 
+'Accessories', 'Fashion', 'Under Armour', '69.00', '', "It doesn't just keep the sun off—the HeatGear® sweatband also wicks away 
+sweat to help keep your head cool and dry.", 'Cotton-twill fabric for a soft, comfortable fit & feel','Adjustable strap closure','Style: DO2344-112', 
+'Country/Region of Origin: Indonesia', '/ASIGNMENT_WAD/images/products/Accessories/Fashion/UnderArmour/UALaunchRunHat_1.png');
+
+INSERT INTO product (name, productLink, categories, subCategories, brands, price, colour, prod_description, prod_attribute1, prod_attribute2,
+prod_attribute3, prod_attribute4, imageLink) VALUES ('Nike Brasilia 9.5 Training Backpack', '/Asignment_WAD/productDetails/Accessories/Bags/Nike/NikeBrasilia9.5TrainingBackpack.php', 
+'Accessories', 'Bags', 'Nike', '119.00', '', "Don't worry about packing light with this Medium Brasilia Bag from Nike. In a Black colourway, 
+this bag is made from smooth, durable water-resistant poly fabric for secure storage. It features a zip-around main compartment, with a zip-up 
+inner pocket for keeping clean and dirty items seperate. This bag has an adjustable strap for a custom carry, with outer pockets for extra storage 
+space. Finished up with Nike branding to the side. ", '100% polyurethane leather','Indoor/outdoor use','Style: DO7233-112', 
+'Country/Region of Origin: Indonesia', '/ASIGNMENT_WAD/images/products/Accessories/Bags/Nike/NikeBrasilia9.5TrainingBackpack_1.png');
+
 
 INSERT INTO product (name, productLink, categories, subCategories, brands, price, colour, prod_description, prod_attribute1, prod_attribute2,
 prod_attribute3, prod_attribute4, imageLink) VALUES ('UA Charged Engage 2 Training Shoes', '/Asignment_WAD/productDetails/Footwear/Training/UnderArmour/UAChargedEngage2TrainingShoes.php', 
@@ -357,6 +371,21 @@ prod_attribute3, prod_attribute4, imageLink) VALUES ('Nike Dunk High Retro', '/A
 with perfectly sheened overlays and original university colours. With its classic hoops design, the Nike Dunk High Retro channels '80s 
 vintage back onto the streets while its padded, high-top collar adds an old-school look rooted in comfort.", 'Foam insole', 'Perforations 
 on the toe', 'Style: DD1399-105', 'Country / Region of Origin: Vietnam, Indonesia', '/ASIGNMENT_WAD/images/products/Footwear/Basketball/Nike/NikeDunkHighRetro_Green_4.png');
+
+INSERT INTO images (name, colour, image1_link, image2_link, image3_link, image4_link, image5_link, 
+image6_link, image7_link) VALUES ('UA Branded Hat','',
+'/ASIGNMENT_WAD/images/products/Accessories/Fashion/UnderArmour/UALaunchRunHat_1.png',
+'/ASIGNMENT_WAD/images/products/Accessories/Fashion/UnderArmour/UALaunchRunHat_2.png','','','','','');
+
+INSERT INTO images (name, colour, image1_link, image2_link, image3_link, image4_link, image5_link, 
+image6_link, image7_link) VALUES ('Nike Brasilia 9.5 Training Backpack','',
+'/ASIGNMENT_WAD/images/products/Accessories/Bags/Nike/NikeBrasilia9.5TrainingBackpack_1.png',
+'/ASIGNMENT_WAD/images/products/Accessories/Bags/Nike/NikeBrasilia9.5TrainingBackpack_2.png',
+'/ASIGNMENT_WAD/images/products/Accessories/Bags/Nike/NikeBrasilia9.5TrainingBackpack_3.png',
+'/ASIGNMENT_WAD/images/products/Accessories/Bags/Nike/NikeBrasilia9.5TrainingBackpack_4.png',
+'/ASIGNMENT_WAD/images/products/Accessories/Bags/Nike/NikeBrasilia9.5TrainingBackpack_5.png',
+'/ASIGNMENT_WAD/images/products/Accessories/Bags/Nike/NikeBrasilia9.5TrainingBackpack_6.png',
+'/ASIGNMENT_WAD/images/products/Accessories/Bags/Nike/NikeBrasilia9.5TrainingBackpack_7.png');
 
 INSERT INTO images (name, colour, image1_link, image2_link, image3_link, image4_link, image5_link, 
 image6_link, image7_link) VALUES ('UA Charged Engage 2 Training Shoes','',

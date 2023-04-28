@@ -208,28 +208,28 @@ mysqli_close($conn);
     <div>  
         <img class="flex-imgBrands" src="images/home/Nike.png" alt="Nike">  
         <div class="middle">
-            <button type="button" class="button hoverButton" onclick="window.open('ASiGNMENT_WAD/product.php?brands=Nike')">Nike</button>        
+            <button type="button" class="button hoverButton" onclick="window.open('product.php?brands=Nike')">Nike</button>        
         </div>    
     </div>  
 
     <div>
         <img class="flex-imgBrands" src="images/home/UnderArmour.png" alt="Under Armour">            
         <div class="middle">
-            <button type="button" class="button hoverButton" onclick="window.open('ASiGNMENT_WAD/product.php?brands=underArmour')">Under Armour</button>        
+            <button type="button" class="button hoverButton" onclick="window.open('product.php?brands=underArmour')">Under Armour</button>        
         </div>
     </div>
 
     <div>
         <img class="flex-imgBrands" src="images/home/Jordan.png" alt="Jordan">
         <div class="middle">
-            <button type="button" class="button hoverButton" onclick="window.open('ASiGNMENT_WAD/product.php?brands=Jordan')">Jordan</button>
+            <button type="button" class="button hoverButton" onclick="window.open('product.php?brands=Jordan')">Jordan</button>
         </div>
     </div>
 
     <div>
         <img class="flex-imgBrands" src="images/home/Adidas.png" alt="Adidas">
         <div class="middle">
-            <button type="button" class="button hoverButton" onclick="window.open('ASiGNMENT_WAD/product.php?brands=Adidas')">Adidas</button>
+            <button type="button" class="button hoverButton" onclick="window.open('product.php?brands=Adidas')">Adidas</button>
         </div>
     </div>
 </div>
