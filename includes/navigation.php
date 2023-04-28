@@ -23,11 +23,11 @@
                <button href="/ASiGNMENT_WAD/product.php?categories=Clothing" class="n_item_title" >Clothing</button>
              </div>
              <div class="dropdown-content">
-               <a href="/ASiGNMENT_WAD/product.php?subCategories=T-Shirts" class="n_item">T-Shirts</a>
-               <a href="/ASiGNMENT_WAD/product.php?subCategories=Hoodies" class="n_item">Hoodies</a>
-               <a href="/ASiGNMENT_WAD/product.php?subCategories=Jackets" class="n_item">Jackets</a>
+               <a href="/ASiGNMENT_WAD/product.php?subCategories=T-Shirt" class="n_item">T-Shirts</a>
+               <a href="/ASiGNMENT_WAD/product.php?subCategories=Hoodie" class="n_item">Hoodies</a>
+               <a href="/ASiGNMENT_WAD/product.php?subCategories=Jacket" class="n_item">Jackets</a>
                <a href="/ASiGNMENT_WAD/product.php?subCategories=Trouser" class="n_item">Trouser & Tights</a>
-               <a href="/ASiGNMENT_WAD/product.php?subCategories=Socks" class="n_item">Socks</a>
+               <a href="/ASiGNMENT_WAD/product.php?subCategories=Sock" class="n_item">Socks</a>
              </div>
            </div>
             <div class="navbar_item2">
