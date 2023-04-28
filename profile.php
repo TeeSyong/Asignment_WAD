@@ -1,18 +1,12 @@
 <?php session_start();
-<<<<<<< Updated upstream
 require("env.php");
 $conn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);
-=======
-/*
-$conn = new mysqli('localhost','root','','move_database');
->>>>>>> Stashed changes
 if($conn->connect_error){
     die("Connection failed: ". $conn->connect_error);
 }
 $email = $_SESSION['email'];
 $sql = "SELECT * FROM users WHERE email='$email'";
 $result = $conn -> query($sql) or die($conn->error);
-echo "number of rows: " . $result->num_rows;
 $row = $result->fetch_assoc();
 
 
