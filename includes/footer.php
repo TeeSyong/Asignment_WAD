@@ -6,13 +6,13 @@
             <p class="f_item_title">Product</p>
           </div>
           <div class="footer_item">
-            <a href="#" class="f_item"><p>Clothing</p></a>
+            <a href="product.php?categories=Clothing" class="f_item"><p>Clothing</p></a>
           </div>
           <div class="footer_item">
-            <a href="#" class="f_item"><p>Footwear</p></a>
+            <a href="product.php?categories=Footwear" class="f_item"><p>Footwear</p></a>
           </div>
           <div class="footer_item">
-            <a href="#" class="f_item"><p>Accessories</p></a>
+            <a href="product.php?categories=Accessories" class="f_item"><p>Accessories</p></a>
           </div>
         </div>
   

@@ -153,6 +153,7 @@
                         <tr>
                             <td rowspan="2" id="buttonLocation"><input type="submit" name="task" value="checkout" id="checkoutButton"></td>
                         </tr>
+
                     </table>
                     
                 </div>

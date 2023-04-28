@@ -74,6 +74,13 @@ CREATE TABLE IF NOT EXISTS checkout(
     PRIMARY KEY(id)
 );
 
+CREATE TABLE IF NOT EXISTS contact(
+    id int(11) AUTO_INCREMENT NOT NULL,
+    name varchar(100),
+    email varchar(190),
+    message varchar(255),
+    PRIMARY KEY(id)
+);
 
 INSERT INTO product (name, productLink, categories, subCategories, brands, price, colour, prod_description, prod_attribute1, prod_attribute2,
 prod_attribute3, prod_attribute4, imageLink) VALUES ('Nike Sportswear Essential Repel', '/Asignment_WAD/productDetails/Clothing/Jackets/Nike/NikeSportswearEssentialRepel_White.php', 

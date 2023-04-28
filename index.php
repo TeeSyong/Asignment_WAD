@@ -64,13 +64,13 @@
     <div>
         <img class="flex-img" src="images/home/Category-footwear.jpg" alt="Footwear">
         <div class="middle">
-            <button type="button" class="button hoverButton" onclick="window.open('#')">Footwear</button>
+            <button type="button" class="button hoverButton" onclick="window.open('/ASiGNMENT_WAD/product.php?categories=Footwear')">Footwear</button>
         </div>
     </div>
     <div>
         <img class="flex-img" src="images/home/Category-accessories.png" alt="Accessories">
         <div class="middle">
-            <button type="button" class="button hoverButton" onclick="window.open('#')">Accessories</button>
+            <button type="button" class="button hoverButton" onclick="window.open('/ASiGNMENT_WAD/product.php?categories=Accessories')">Accessories</button>
         </div>
     </div>
 </div>
@@ -142,15 +142,11 @@
 </div>
 
 <!--search-->
-<div id="searchDiv" style="background-image: url('images/home/searchBgr.jpg');">
-    <form action="<?php htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post"> <!-- need form action method? -->
-        <h1 id="searchTitle">Find more products?</h1>
-        <br>
-        <input type="text" name="search" id="search" onkeyup="searchFunction()" placeholder="Enter product name to search">
-    </form>
+<div id="searchDiv" style="background-image: url('images/home/searchBgr.jpg');">  
+    <h1 id="searchTitle">Find more products?</h1>
+    <br>
+    <input type="text" name="search" id="search" onkeyup="searchFunction()" placeholder="Enter product name to search">   
 </div>
-<!-- haven't done javascript & php for search -->
-<!-- refer Filter/Search List of w3schools -->
 
 <?php 
 
@@ -172,10 +168,7 @@ echo"</ul>";
 
 mysqli_close($conn);
 
-
-
 ?>
-
 
 <script>
     function searchFunction() {
@@ -207,34 +200,37 @@ mysqli_close($conn);
                 
             }
         }
-
-
     }
 </script>
 
-
-
-
-<!--haven't add slider to display products-->
-<!--top picks-->
-<h1 class="subtitle">What's New</h1>
+<!--brands-->
+<h1 class="subtitle">Looking for Brands?</h1>
 <div class="flex-container">
     <div>  
-        <img class="flex-img" src="images/home/Category-clothing.png" alt="Clothing">
+        <img class="flex-imgBrands" src="images/home/Nike.png" alt="Nike">  
         <div class="middle">
-            <button type="button" class="button hoverButton" onclick="window.open('#')">Monthly Favourites</button>
+            <button type="button" class="button hoverButton" onclick="window.open('ASiGNMENT_WAD/product.php?brands=Nike')">Nike</button>        
+        </div>    
+    </div>  
+
+    <div>
+        <img class="flex-imgBrands" src="images/home/UnderArmour.png" alt="Under Armour">            
+        <div class="middle">
+            <button type="button" class="button hoverButton" onclick="window.open('ASiGNMENT_WAD/product.php?brands=underArmour')">Under Armour</button>        
         </div>
     </div>
+
     <div>
-        <img class="flex-img" src="images/home/Category-footwear.jpg" alt="Footwear">
+        <img class="flex-imgBrands" src="images/home/Jordan.png" alt="Jordan">
         <div class="middle">
-            <button type="button" class="button hoverButton" onclick="window.open('#')">Featured Products</button>
+            <button type="button" class="button hoverButton" onclick="window.open('ASiGNMENT_WAD/product.php?brands=Jordan')">Jordan</button>
         </div>
     </div>
+
     <div>
-        <img class="flex-img" src="images/home/Category-accessories.png" alt="Accessories">
+        <img class="flex-imgBrands" src="images/home/Adidas.png" alt="Adidas">
         <div class="middle">
-            <button type="button" class="button hoverButton" onclick="window.open('#')">2023 Trending</button>
+            <button type="button" class="button hoverButton" onclick="window.open('ASiGNMENT_WAD/product.php?brands=Adidas')">Adidas</button>
         </div>
     </div>
 </div>
